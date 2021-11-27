@@ -11,8 +11,8 @@ export type ExportPasswordModalProps = {
 
 export type UseExportPasswordModalProps = {
   props: ExportPasswordModalProps
-  requestPasswordForExport: (callback: (password?: string) => void) => void
-  requestPasswordForImport: (callback: (password?: string) => void) => void
+  requestPasswordForExport: () => Promise<string | undefined>
+  requestPasswordForImport: () => Promise<string | undefined>
 }
 
 export const useExportPasswordModal = (): UseExportPasswordModalProps => {
@@ -31,17 +31,21 @@ export const useExportPasswordModal = (): UseExportPasswordModalProps => {
         props.confirm(password)
       },
     },
-    requestPasswordForExport: (callback: (password?: string) => void) =>
-      setProps({
-        show: true,
-        message: t`Enter a password to protect the exported file`,
-        confirm: callback,
+    requestPasswordForExport: () =>
+      new Promise<string | undefined>((resolve) => {
+        setProps({
+          show: true,
+          message: t`Enter a password to protect the exported file`,
+          confirm: resolve,
+        })
       }),
-    requestPasswordForImport: (callback: (password?: string) => void) =>
-      setProps({
-        show: true,
-        message: t`Please enter the password used to protect the file`,
-        confirm: callback,
+    requestPasswordForImport: () =>
+      new Promise<string | undefined>((resolve) => {
+        setProps({
+          show: true,
+          message: t`Please enter the password used to protect the file`,
+          confirm: resolve,
+        })
       }),
   }
 }

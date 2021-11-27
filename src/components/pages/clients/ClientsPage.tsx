@@ -173,19 +173,22 @@ export const ClientsPage = () => {
             </div>
             <Footer
               disabled={clients.length === 0}
-              onImport={(file) => {
-                exportPasswordModal.requestPasswordForImport((password) => {
-                  if (password) {
-                    exporter.import(file, password)
-                  }
-                })
+              onImport={async (file) => {
+                const password = await exportPasswordModal.requestPasswordForImport()
+                if (password) {
+                  const {clients, assessments} = await exporter.import(file, password)
+                  await dataStore.clients.add(...clients)
+                  await dataStore.assessments.add(...assessments)
+                  setClients(await dataStore.clients.list())
+                  return clients.length + assessments.length > 0
+                }
+                return false
               }}
-              onExport={() => {
-                exportPasswordModal.requestPasswordForExport((password) => {
-                  if (password) {
-                    exportSelected(dataStore, password)
-                  }
-                })
+              onExport={async () => {
+                const password = await exportPasswordModal.requestPasswordForExport()
+                if (password) {
+                  return exportSelected(dataStore, password)
+                }
               }}
               onDelete={() => setShowDeleteModal(true)}
               selectMode={selectMode}

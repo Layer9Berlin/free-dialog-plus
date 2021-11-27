@@ -11,6 +11,7 @@ import {Assessment} from "../../../types/Assessment"
 import {Client} from "../../../types/Client"
 import {DataStoreType} from "../../../types/DataStore"
 import {DataStoreContext} from "../../api/DataStore"
+import {loadAssessments} from "../../api/LocalDataStore"
 import {LoginContext} from "../../app/LoginComponent"
 import {CloseButton} from "../../buttons/CloseButton"
 import {ResponsiveButton} from "../../buttons/ResponsiveButton"
@@ -147,7 +148,7 @@ export const AssessmentsPage = () => {
   const confirmDelete = (dataStore: DataStoreType) => async () => {
     closeDeleteModal()
     await dataStore.assessments.remove(...selection)
-    setAssessments(await dataStore.assessments.list())
+    setAssessments((await dataStore.assessments.list()).filter((assessment) => assessment.meta.clientId === client?.id))
   }
 
   const exportSelected = useCallback(
@@ -228,36 +229,30 @@ export const AssessmentsPage = () => {
                 />
               ))}
             </div>
-            <LoginContext.Consumer>
-              {({password}) => (
-                <Footer
-                  disabled={assessments.length === 0}
-                  onImport={(file) => exporter.import(file, password)}
-                  onExport={() => {
-                    exportPasswordModal.requestPasswordForExport((password) => {
-                      if (password) {
-                        exportSelected(dataStore, password)
-                      }
-                    })
-                  }}
-                  onDelete={() => setShowDeleteModal(true)}
-                  selectMode={selectMode}
-                  setSelectMode={(newSelectMode: ExportOrDeleteSelectionType) => {
-                    switch (newSelectMode) {
-                      case "export": {
-                        selectAll()
-                        break
-                      }
-                      case "delete": {
-                        selectNone()
-                        break
-                      }
-                    }
-                    setSelectMode(newSelectMode)
-                  }}
-                />
-              )}
-            </LoginContext.Consumer>
+            <Footer
+              disabled={assessments.length === 0}
+              onExport={async () => {
+                const password = await exportPasswordModal.requestPasswordForExport()
+                if (password) {
+                  return exportSelected(dataStore, password)
+                }
+              }}
+              onDelete={() => setShowDeleteModal(true)}
+              selectMode={selectMode}
+              setSelectMode={(newSelectMode: ExportOrDeleteSelectionType) => {
+                switch (newSelectMode) {
+                  case "export": {
+                    selectAll()
+                    break
+                  }
+                  case "delete": {
+                    selectNone()
+                    break
+                  }
+                }
+                setSelectMode(newSelectMode)
+              }}
+            />
           </div>
         </>
       )}

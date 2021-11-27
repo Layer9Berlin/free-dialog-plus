@@ -16,12 +16,12 @@ export const Footer = ({
   className?: string
   disabled?: boolean
   onDelete?: () => void
-  onImport?: (file: File) => void
+  onImport?: (file: File) => Promise<boolean>
   onExport?: () => void
   selectMode?: ExportOrDeleteSelectionType
   setSelectMode?: (selectMode: ExportOrDeleteSelectionType) => void
 }) => {
-  // const inputRef = useRef<HTMLInputElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const [importFeedbackModalState, setImportFeedbackModalState] = useState<{
     show: boolean
@@ -39,40 +39,44 @@ export const Footer = ({
     >
       <ImportFeedbackModal {...importFeedbackModalState} close={closeImportFeedbackModal} />
       <div className="d-flex">
-        {/*<input*/}
-        {/*  id="import-file-input"*/}
-        {/*  type="file"*/}
-        {/*  ref={inputRef}*/}
-        {/*  style={{display: "none"}}*/}
-        {/*  onInput={(inputElement) => {*/}
-        {/*    const file = (inputElement.target as HTMLInputElement)?.files?.[0]*/}
-        {/*    if (file) {*/}
-        {/*      const importSuccessful = onImport?.(file)*/}
-        {/*      if (importSuccessful) {*/}
-        {/*        setImportFeedbackModalState({*/}
-        {/*          show: true,*/}
-        {/*          title: "Import successful",*/}
-        {/*          message: "The file has been imported.",*/}
-        {/*        })*/}
-        {/*      } else {*/}
-        {/*        setImportFeedbackModalState({*/}
-        {/*          show: true,*/}
-        {/*          title: "Import error",*/}
-        {/*          message: "Sorry, the file could not be imported.",*/}
-        {/*        })*/}
-        {/*      }*/}
-        {/*    }*/}
-        {/*  }}*/}
-        {/*  className="pe-none opacity-0 position-fixed"*/}
-        {/*/>*/}
-        {/*<Button*/}
-        {/*  onClick={() => {*/}
-        {/*    inputRef.current?.click()*/}
-        {/*  }}*/}
-        {/*  icon="box-arrow-in-down"*/}
-        {/*  outline={true}*/}
-        {/*  className="m-3 me-0"*/}
-        {/*/>*/}
+        {onImport && (
+          <>
+            <input
+              id="import-file-input"
+              type="file"
+              ref={inputRef}
+              style={{display: "none"}}
+              onInput={async (inputElement) => {
+                const file = (inputElement.target as HTMLInputElement)?.files?.[0]
+                if (file) {
+                  const importSuccessful = await onImport(file)
+                  if (importSuccessful) {
+                    setImportFeedbackModalState({
+                      show: true,
+                      title: "Import successful",
+                      message: "The file has been imported.",
+                    })
+                  } else {
+                    setImportFeedbackModalState({
+                      show: true,
+                      title: "Import error",
+                      message: "Sorry, the file could not be imported.",
+                    })
+                  }
+                }
+              }}
+              className="pe-none opacity-0 position-fixed"
+            />
+            <Button
+              onClick={() => {
+                inputRef.current?.click()
+              }}
+              icon="box-arrow-in-down"
+              outline={true}
+              className="m-3 me-0"
+            />
+          </>
+        )}
         <Button
           onClick={() => {
             if (selectMode === "export") {

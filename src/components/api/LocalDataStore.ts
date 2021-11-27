@@ -36,7 +36,7 @@ export const localDataStore = (encryptionKey?: string): DataStoreType => ({
       }
       const allIds = new Set(assessments.map((assessment) => assessment.id))
       saveAssessments(
-        loadAssessments(encryptionKey).filter((assessment) => allIds.has(assessment.id)),
+        loadAssessments(encryptionKey).filter((assessment) => !allIds.has(assessment.id)),
         encryptionKey,
       )
       return true
@@ -79,7 +79,7 @@ export const localDataStore = (encryptionKey?: string): DataStoreType => ({
       }
       const allIds = new Set(clients.map((client) => client.id))
       saveClients(
-        loadClients(encryptionKey).filter((client) => allIds.has(client.id)),
+        loadClients(encryptionKey).filter((client) => !allIds.has(client.id)),
         encryptionKey,
       )
       return true

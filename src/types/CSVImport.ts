@@ -77,8 +77,8 @@ export const CSVImportRowSchema = z.object({
   "Leisure Activities Rank": RankSchema,
   "Leisure Activities Additional Help": AdditionalHelpSchema,
   // typo in export from native app
-  "Leisure Activitie Discussed": DiscussedSchema,
-  "Leisure Activities Discussed": DiscussedSchema,
+  "Leisure Activitie Discussed": DiscussedSchema.optional(),
+  "Leisure Activities Discussed": DiscussedSchema.optional(),
   "Partner / Family Rank": RankSchema,
   "Partner / Family Additional Help": AdditionalHelpSchema,
   "Partner / Family Discussed": DiscussedSchema,

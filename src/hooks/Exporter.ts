@@ -2,6 +2,7 @@ import {saveAs} from "file-saver"
 import * as Minizip from "minizip-asm.js"
 import * as PapaParse from "papaparse"
 import {useCallback} from "react"
+import {v4 as uuid} from "uuid"
 import {formatExportDate} from "../helpers/DateFormatter"
 import {Assessment} from "../types/Assessment"
 import {Client} from "../types/Client"
@@ -44,28 +45,33 @@ export const useAssessmentExporter = () => {
   )
   return {
     data,
-    import: useCallback(async (file: File, password?: string): Promise<boolean> => {
-      if (!password) {
-        return false
-      }
-      const buffer = Buffer.from(await file.arrayBuffer())
-      const miniZip = new Minizip(buffer)
-      const zippedFiles = miniZip.list()
-      try {
-        zippedFiles.forEach(({filepath}: {filepath: string}) => {
-          const fileData = miniZip.extract(filepath, {password})
-          const string = new TextDecoder().decode(fileData)
-          const csvData = PapaParse.parse(string, {header: true, skipEmptyLines: true})
-          const parseAttempt = CSVImportSchema.safeParse(csvData)
-          if (parseAttempt.success) {
-            importData(parseAttempt.data)
+    import: useCallback(
+      async (file: File, password?: string): Promise<{clients: Client[]; assessments: Assessment[]}> => {
+        if (!password) {
+          return {clients: [], assessments: []}
+        }
+        try {
+          const buffer = Buffer.from(await file.arrayBuffer())
+          const miniZip = new Minizip(buffer)
+          const zippedFiles = miniZip.list()
+          if (zippedFiles.length > 0) {
+            const {filepath} = zippedFiles[0]
+            const fileData = miniZip.extract(filepath, {password})
+            const string = new TextDecoder().decode(fileData)
+            const csvData = PapaParse.parse(string, {header: true, skipEmptyLines: true})
+            const dataExcludingFirstLine = csvData.data?.filter((_, index) => index > 0)
+            const parseAttempt = CSVImportSchema.safeParse(dataExcludingFirstLine)
+            if (parseAttempt.success) {
+              return importData(parseAttempt.data)
+            }
           }
-        })
-        return true
-      } catch (error) {
-        return false
-      }
-    }, []),
+          return {clients: [], assessments: []}
+        } catch (error) {
+          return {clients: [], assessments: []}
+        }
+      },
+      [],
+    ),
     export: useCallback(
       async (assessments: Assessment[], allClients: Client[], password?: string) => {
         if (!password) {
@@ -81,8 +87,144 @@ export const useAssessmentExporter = () => {
   }
 }
 
-const importData = (csvData: CSVImport) => {
-  console.log("CSV data: " + JSON.stringify(csvData))
+const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assessment[]} => {
+  const clients = csvData.map((row) => ({id: uuid(), ...row["Client Name"]}))
+  const assessments = csvData.map((row, index) => {
+    const client = clients[index]
+    return {
+      id: uuid(),
+      meta: {
+        date: row["Date Start"] ?? new Date(),
+        lastUpdated: row["Date End"] ?? new Date(),
+        clientId: client.id,
+      },
+      questions: [
+        {
+          state: {
+            collapsed: false,
+            selected: row["Mental Health Discussed"] ?? false,
+          },
+          value: {
+            selectedOption: row["Mental Health Rank"],
+            furtherHelp: row["Mental Health Additional Help"],
+            actionItems: row["Mental Health Action Items"],
+          },
+        },
+        {
+          state: {
+            collapsed: false,
+            selected: row["Physical Health Discussed"] ?? false,
+          },
+          value: {
+            selectedOption: row["Physical Health Rank"],
+            furtherHelp: row["Physical Health Additional Help"],
+            actionItems: row["Physical Health Action Items"],
+          },
+        },
+        {
+          state: {
+            collapsed: false,
+            selected: row["Job Situation Discussed"] ?? false,
+          },
+          value: {
+            selectedOption: row["Job Situation Rank"],
+            furtherHelp: row["Job Situation Additional Help"],
+            actionItems: row["Job Situation Action Items"],
+          },
+        },
+        {
+          state: {
+            collapsed: false,
+            selected: row["Accommodation Discussed"] ?? false,
+          },
+          value: {
+            selectedOption: row["Accommodation Rank"],
+            furtherHelp: row["Accommodation Additional Help"],
+            actionItems: row["Accommodation Action Items"],
+          },
+        },
+        {
+          state: {
+            collapsed: false,
+            // note the special case to fix typo in native app export
+            selected: row["Leisure Activities Discussed"] ?? row["Leisure Activitie Discussed"] ?? false,
+          },
+          value: {
+            selectedOption: row["Leisure Activities Rank"],
+            furtherHelp: row["Leisure Activities Additional Help"],
+            actionItems: row["Leisure Activities Action Items"],
+          },
+        },
+        {
+          state: {
+            collapsed: false,
+            selected: row["Partner / Family Discussed"] ?? false,
+          },
+          value: {
+            selectedOption: row["Partner / Family Rank"],
+            furtherHelp: row["Partner / Family Additional Help"],
+            actionItems: row["Partner / Family Action Items"],
+          },
+        },
+        {
+          state: {
+            collapsed: false,
+            selected: row["Friendships Discussed"] ?? false,
+          },
+          value: {
+            selectedOption: row["Friendships Rank"],
+            furtherHelp: row["Friendships Additional Help"],
+            actionItems: row["Friendships Action Items"],
+          },
+        },
+        {
+          state: {
+            collapsed: false,
+            selected: row["Personal Safety Discussed"] ?? false,
+          },
+          value: {
+            selectedOption: row["Personal Safety Rank"],
+            furtherHelp: row["Personal Safety Additional Help"],
+            actionItems: row["Personal Safety Action Items"],
+          },
+        },
+        {
+          state: {
+            collapsed: false,
+            selected: row["Medication Discussed"] ?? false,
+          },
+          value: {
+            selectedOption: row["Medication Rank"],
+            furtherHelp: row["Medication Additional Help"],
+            actionItems: row["Medication Action Items"],
+          },
+        },
+        {
+          state: {
+            collapsed: false,
+            selected: row["Practical Help Discussed"] ?? false,
+          },
+          value: {
+            selectedOption: row["Practical Help Rank"],
+            furtherHelp: row["Practical Help Additional Help"],
+            actionItems: row["Practical Help Action Items"],
+          },
+        },
+        {
+          state: {
+            collapsed: false,
+            selected: row["Meetings Discussed"] ?? false,
+          },
+          value: {
+            selectedOption: row["Meetings Rank"],
+            furtherHelp: row["Meetings Additional Help"],
+            actionItems: row["Meetings Action Items"],
+          },
+        },
+      ],
+    }
+  })
+  return {clients, assessments}
 }
 
 const booleanOrUndefined = (
