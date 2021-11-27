@@ -1,6 +1,6 @@
 {
   "name": "dialog_plus",
-  "version": "0.3",
+  "version": "0.4",
   "private": true,
   "dependencies": {
     "@lingui/detect-locale": "^3.12.1",
