@@ -17,7 +17,7 @@ import {ResponsiveButton} from "../../buttons/ResponsiveButton"
 import {ResponsiveLink} from "../../buttons/ResponsiveLink"
 import {Footer} from "../../menu/Footer"
 import {DeleteAssessmentsModal} from "../../modals/DeleteAssessmentsModal"
-import {useExportPasswordModal} from "../../modals/ExportPasswordModal"
+import {ExportPasswordModal, useExportPasswordModal} from "../../modals/ExportPasswordModal"
 
 const AssessmentsLoader = ({
   dataStore,
@@ -172,6 +172,7 @@ export const AssessmentsPage = () => {
             count={selection.length}
             show={showDeleteModal}
           />
+          <ExportPasswordModal {...exportPasswordModal.props} />
 
           <div className="d-flex flex-column" style={{minHeight: "100vh"}}>
             <div className="d-flex justify-content-between align-items-center border-bottom h-64">

@@ -131,6 +131,7 @@ export const ClientsPage = () => {
             count={selection.length}
           />
           <NewClientModal show={showNewClientModal} close={closeNewClientModal} confirm={confirmNewClient(dataStore)} />
+          <ExportPasswordModal {...exportPasswordModal.props} />
 
           <div className="d-flex flex-column" style={{minHeight: "100vh"}}>
             <div className="d-flex justify-content-between align-items-center border-bottom border-muted h-64">
@@ -170,7 +171,6 @@ export const ClientsPage = () => {
                 />
               ))}
             </div>
-            <ExportPasswordModal {...exportPasswordModal.props} />
             <Footer
               disabled={clients.length === 0}
               onImport={(file) => {
