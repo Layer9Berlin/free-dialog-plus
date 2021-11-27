@@ -101,7 +101,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
       questions: [
         {
           state: {
-            collapsed: false,
+            collapsed: true,
             selected: row["Mental Health Discussed"] ?? false,
           },
           value: {
@@ -112,7 +112,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
         },
         {
           state: {
-            collapsed: false,
+            collapsed: true,
             selected: row["Physical Health Discussed"] ?? false,
           },
           value: {
@@ -123,7 +123,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
         },
         {
           state: {
-            collapsed: false,
+            collapsed: true,
             selected: row["Job Situation Discussed"] ?? false,
           },
           value: {
@@ -134,7 +134,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
         },
         {
           state: {
-            collapsed: false,
+            collapsed: true,
             selected: row["Accommodation Discussed"] ?? false,
           },
           value: {
@@ -145,7 +145,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
         },
         {
           state: {
-            collapsed: false,
+            collapsed: true,
             // note the special case to fix typo in native app export
             selected: row["Leisure Activities Discussed"] ?? row["Leisure Activitie Discussed"] ?? false,
           },
@@ -157,7 +157,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
         },
         {
           state: {
-            collapsed: false,
+            collapsed: true,
             selected: row["Partner / Family Discussed"] ?? false,
           },
           value: {
@@ -168,7 +168,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
         },
         {
           state: {
-            collapsed: false,
+            collapsed: true,
             selected: row["Friendships Discussed"] ?? false,
           },
           value: {
@@ -179,7 +179,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
         },
         {
           state: {
-            collapsed: false,
+            collapsed: true,
             selected: row["Personal Safety Discussed"] ?? false,
           },
           value: {
@@ -190,7 +190,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
         },
         {
           state: {
-            collapsed: false,
+            collapsed: true,
             selected: row["Medication Discussed"] ?? false,
           },
           value: {
@@ -201,7 +201,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
         },
         {
           state: {
-            collapsed: false,
+            collapsed: true,
             selected: row["Practical Help Discussed"] ?? false,
           },
           value: {
@@ -212,7 +212,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
         },
         {
           state: {
-            collapsed: false,
+            collapsed: true,
             selected: row["Meetings Discussed"] ?? false,
           },
           value: {

@@ -4,6 +4,7 @@ import "./index.sass"
 import App from "./components/app/App"
 import reportWebVitals from "./reportWebVitals"
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration"
+import "bootstrap/dist/js/bootstrap.bundle.min"
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,6 +13,6 @@ ReactDOM.render(
   document.getElementById("root"),
 )
 
-serviceWorkerRegistration.unregister()
+serviceWorkerRegistration.register()
 
 reportWebVitals()

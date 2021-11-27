@@ -1,5 +1,5 @@
 import {Trans} from "@lingui/macro"
-import React, {useEffect, useRef, KeyboardEvent, useCallback} from "react"
+import React, {useEffect, useRef} from "react"
 import {Modal} from "react-bootstrap"
 import {filterEnterKey} from "../../helpers/KeyboardEvents"
 import {Client} from "../../types/Client"
