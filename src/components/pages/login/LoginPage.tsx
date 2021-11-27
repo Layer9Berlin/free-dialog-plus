@@ -1,6 +1,7 @@
 import {Trans} from "@lingui/macro"
 import React, {useRef, useState} from "react"
 import {Card} from "react-bootstrap"
+import {filterEnterKey} from "../../../helpers/KeyboardEvents"
 import {useRerouter} from "../../../hooks/Rerouter"
 import {LoginContext} from "../../app/LoginComponent"
 import {AddToHomescreenInfoPanel} from "../../menu/AddToHomescreenInfoPanel"
@@ -10,6 +11,20 @@ export const LoginPage = () => {
   const passwordRef = useRef<HTMLInputElement>(null)
   const [haveError, setHaveError] = useState(false)
   const reroute = useRerouter()
+
+  const onSubmit = async (logIn?: (password: string) => boolean) => {
+    const password = passwordRef.current?.value
+    if (!password || !logIn) {
+      setHaveError(true)
+      return
+    }
+    const result = await logIn(password)
+    if (result) {
+      reroute.to({page: `/`})
+    } else {
+      setHaveError(true)
+    }
+  }
 
   return (
     <LoginContext.Consumer>
@@ -37,6 +52,7 @@ export const LoginPage = () => {
                       onInput={() => setHaveError(false)}
                       ref={passwordRef}
                       type="password"
+                      onKeyDown={filterEnterKey(() => onSubmit(logIn))}
                     />
                     <div className="small text-danger">
                       {haveError ? (
@@ -51,19 +67,7 @@ export const LoginPage = () => {
                   <div className="d-flex">
                     <button
                       className={"ms-auto btn" + (haveError ? " btn-outline-danger disabled" : " btn-outline-primary")}
-                      onClick={async () => {
-                        const password = passwordRef.current?.value
-                        if (!password || !logIn) {
-                          setHaveError(true)
-                          return
-                        }
-                        const result = await logIn(password)
-                        if (result) {
-                          reroute.to({page: `/`})
-                        } else {
-                          setHaveError(true)
-                        }
-                      }}
+                      onClick={() => onSubmit(logIn)}
                     >
                       <Trans>Log in</Trans>
                     </button>

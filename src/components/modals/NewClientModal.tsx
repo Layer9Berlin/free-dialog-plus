@@ -1,6 +1,7 @@
 import {Trans} from "@lingui/macro"
-import React, {useRef} from "react"
+import React, {useEffect, useRef, KeyboardEvent, useCallback} from "react"
 import {Modal} from "react-bootstrap"
+import {filterEnterKey} from "../../helpers/KeyboardEvents"
 import {Client} from "../../types/Client"
 
 export const NewClientModal = ({
@@ -16,6 +17,15 @@ export const NewClientModal = ({
   const middleNameRef = useRef<HTMLInputElement>(null)
   const lastNameRef = useRef<HTMLInputElement>(null)
 
+  useEffect(() => firstNameRef.current?.focus(), [])
+
+  const onConfirm = () =>
+    confirm({
+      first: firstNameRef.current?.value,
+      middle: middleNameRef.current?.value,
+      last: lastNameRef.current?.value,
+    })
+
   return (
     <Modal show={show} onHide={close}>
       <Modal.Header closeButton>
@@ -28,32 +38,42 @@ export const NewClientModal = ({
           <label htmlFor="firstNameInput" className="form-label">
             <Trans>First name</Trans>
           </label>
-          <input type="text" className="form-control" id="firstNameInput" autoFocus ref={firstNameRef} />
+          <input
+            type="text"
+            className="form-control"
+            id="firstNameInput"
+            autoFocus
+            ref={firstNameRef}
+            onKeyDown={filterEnterKey(() => middleNameRef.current?.focus())}
+          />
         </div>
         <div className="mb-3">
           <label htmlFor="middleNameInput" className="form-label">
             <Trans>Middle name</Trans>
           </label>
-          <input type="text" className="form-control" id="middleNameInput" ref={middleNameRef} />
+          <input
+            type="text"
+            className="form-control"
+            id="middleNameInput"
+            ref={middleNameRef}
+            onKeyDown={filterEnterKey(() => lastNameRef.current?.focus())}
+          />
         </div>
         <div className="mb-3">
           <label htmlFor="lastNameInput" className="form-label">
             <Trans>Last name</Trans>
           </label>
-          <input type="text" className="form-control" id="lastNameInput" ref={lastNameRef} />
+          <input
+            type="text"
+            className="form-control"
+            id="lastNameInput"
+            ref={lastNameRef}
+            onKeyDown={filterEnterKey(onConfirm)}
+          />
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <button
-          className="btn btn-primary"
-          onClick={() =>
-            confirm({
-              first: firstNameRef.current?.value,
-              middle: middleNameRef.current?.value,
-              last: lastNameRef.current?.value,
-            })
-          }
-        >
+        <button className="btn btn-primary" onClick={onConfirm}>
           <Trans>Create</Trans>
         </button>
       </Modal.Footer>
