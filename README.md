@@ -1,8 +1,8 @@
-![Open Dialogue Logo](public/android-chrome-192x192.png)
+![Free Dialogue Plus Logo](public/android-chrome-192x192.png)
 
-# Open Dialogue
+# Free Dialogue Plus
 
-Open Dialogue is a free, open-source, web-based implementation of the [DIALOG+ therapeutic intervention](https://dialog.elft.nhs.uk).
+Free Dialogue Plus is a free, open-source, web-based implementation of the [DIALOG+ therapeutic intervention](https://dialog.elft.nhs.uk).
 
 ## Demo
 
@@ -51,6 +51,6 @@ For more information, see [the LinguiJS documentation](https://lingui.js.org).
 
 The application code is made freely available under a [GPLv3 licence](https://en.wikipedia.org/wiki/GNU_General_Public_License). In short, this means that you are free to use it for any purpose, provided that you release your changes under the same terms.
 
-This software is provided without warranty. The software author or license can not be held liable for any damages inflicted by the software.
-
 If you require a different licence, e.g. for use in a closed-source application, please [contact us](https://layer9.berlin).
+
+This software is provided without warranty. The software author or license can not be held liable for any damages inflicted by the software.

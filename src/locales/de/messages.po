@@ -38,8 +38,8 @@ msgstr "Aktion hinzufügen"
 #~ msgstr "Wir empfehlen diese App zum <0>Startbildschirm</0> hinzuzufügen."
 
 #: src/hooks/Exporter.ts:23
-msgid "Additional Help"
-msgstr "Mehr Hilfe"
+#~ msgid "Additional Help"
+#~ msgstr "Mehr Hilfe"
 
 #: src/components/modals/StepInformationModal.tsx:498
 #: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:150
@@ -54,11 +54,11 @@ msgstr "Bewerten"
 msgid "Assessment not found"
 msgstr "Bewertung nicht gefunden"
 
-#: src/components/pages/assessments/AssessmentsPage.tsx:183
+#: src/components/pages/assessments/AssessmentsPage.tsx:185
 msgid "Assessments"
 msgstr "Bewertungen"
 
-#: src/components/pages/assessments/AssessmentsPage.tsx:178
+#: src/components/pages/assessments/AssessmentsPage.tsx:180
 msgid "Back to Clients"
 msgstr "Zurück zu Patienten"
 
@@ -76,10 +76,10 @@ msgid "Cancel"
 msgstr "Abbrechen"
 
 #: src/hooks/Exporter.ts:17
-msgid "Client Name"
-msgstr "Patientenname"
+#~ msgid "Client Name"
+#~ msgstr "Patientenname"
 
-#: src/components/pages/clients/ClientsPage.tsx:140
+#: src/components/pages/clients/ClientsPage.tsx:145
 msgid "Clients"
 msgstr "Patienten"
 
@@ -108,19 +108,19 @@ msgid "Data protection"
 msgstr "Datenschutz"
 
 #: src/hooks/Exporter.ts:19
-msgid "Date End"
-msgstr "Enddatum"
+#~ msgid "Date End"
+#~ msgstr "Enddatum"
 
 #: src/hooks/Exporter.ts:18
-msgid "Date Start"
-msgstr "Startdatum"
+#~ msgid "Date Start"
+#~ msgstr "Startdatum"
 
 #: src/components/modals/DeleteAssessmentsModal.tsx:41
 #: src/components/modals/DeleteClientsModal.tsx:42
 msgid "Delete"
 msgstr "Löschen"
 
-#: src/components/menu/Footer.tsx:82
+#: src/components/menu/Footer.tsx:105
 msgid "Delete selected"
 msgstr "Auswahl löschen"
 
@@ -129,12 +129,16 @@ msgid "Discuss"
 msgstr "Besprechen"
 
 #: src/hooks/Exporter.ts:24
-msgid "Discussed"
-msgstr "Besprochen"
+#~ msgid "Discussed"
+#~ msgstr "Besprochen"
 
 #: src/components/pages/assessment/stages/assess/AssessStage.tsx:69
 msgid "Do you need more help in this area?"
 msgstr "Wünschen Sie mehr Hilfe in diesem Bereich?"
+
+#: src/components/modals/ExportPasswordModal.tsx:37
+msgid "Enter a password to protect the exported file"
+msgstr "Bitte geben Sie das Passwort an, mit dem die Export-Datei geschützt werden soll"
 
 #: src/components/modals/StepInformationModal.tsx:29
 #: src/components/modals/StepInformationModal.tsx:65
@@ -157,7 +161,7 @@ msgstr "Warum unzufrieden oder Wunsch nach mehr Hilfe?"
 msgid "Exploring options"
 msgstr "Möglichkeiten explorieren"
 
-#: src/components/menu/Footer.tsx:65
+#: src/components/menu/Footer.tsx:88
 msgid "Export selected"
 msgstr "Auswahl exportieren"
 
@@ -189,7 +193,7 @@ msgstr "Zuerst sollte der Behandler den Patienten dazu einladen, all die möglic
 msgid "For example, on iOS, tap<0><1/></0>in the bottom menu, followed by \"Add to Home Screen<2><3/></2>\"."
 msgstr "iOS-Nutzer: Tippen Sie auf <0><1/></0>im unteren Menü, dann auf \"Zum Startbildschirm hinzufügen\""
 
-#: src/hooks/QuestionTexts.ts:13
+#: src/hooks/QuestionTexts.ts:18
 msgid "Friendships"
 msgstr "Freundschaften"
 
@@ -201,7 +205,7 @@ msgstr "Nachdem sowohl die positiven als auch die negativen Aspekte der aktuelle
 msgid "Having introduced a forward-looking perspective in Step 2, the aim of Step 3 is for the patient and the clinician to explore a number of options that may help to bring about the desired changes. These options involve things that patient can do by themselves, things the clinician can do with the help of the various services available to the patient, and things other people in the patient’s life can do.In Step 3 the clinician asks the patient what are all the options he/she can think of as potentially helpful. The clinician can also propose different options, and ask for the patient’s opinion about them. Step 3 is concerned with what is possible to do at the present time in order to achieve the patient’s desired changes."
 msgstr "Nachdem in Schritt 2 eine zukunftsorientierte Perspektive eingeführt wurde, wird in Schritt 3 exploriert, wer in der Zeit nach dem Treffen etwas unternehmen könnte, um dem Patienten zu helfen, und was diese Personen konkret unternehmen könnten. Die Optionen beinhalten, was der Patient selbst, was der Behandler und was andere Personen oder Einrichtungen tun könnten, um die in Schritt 2 angedachten Verbesserungen zu erreichen. Der Behandler fragt den Patienten, welche Handlungen und Maßnahmen er sich als potentiell hilfreich vorstellt und wer diese umsetzen könnte. Der Behandler kann dabei auch selbst verschiedene Optionen vorschlagen und im Anschluss daran die Meinung des Patienten zu dem Vorschlag erfragen. Alle Optionen sollten Handlungen beinhalten, die in dem auf das Treffen folgenden Zeitraum mit hoher Wahrscheinlichkeit realisierbar sind."
 
-#: src/hooks/QuestionTexts.ts:16
+#: src/hooks/QuestionTexts.ts:23
 msgid "How satisfied are you with the practical help you receive?"
 msgstr "Wie zufrieden sind Sie mit der praktischen Hilfe durch die Behandlung?"
 
@@ -209,7 +213,7 @@ msgstr "Wie zufrieden sind Sie mit der praktischen Hilfe durch die Behandlung?"
 msgid "How satisfied are you with your accommodation?"
 msgstr "Wie zufrieden sind Sie mit Ihrer Wohnsituation?"
 
-#: src/hooks/QuestionTexts.ts:13
+#: src/hooks/QuestionTexts.ts:18
 msgid "How satisfied are you with your friendships?"
 msgstr "Wie zufrieden sind Sie mit Ihren Freundschaften?"
 
@@ -217,15 +221,15 @@ msgstr "Wie zufrieden sind Sie mit Ihren Freundschaften?"
 msgid "How satisfied are you with your job situation?"
 msgstr "Wie zufrieden sind Sie mit Ihrer beruflichen Situation?"
 
-#: src/hooks/QuestionTexts.ts:8
+#: src/hooks/QuestionTexts.ts:10
 msgid "How satisfied are you with your leisure activities?"
 msgstr "Wie zufrieden sind Sie mit Ihren Freizeitaktivitäten?"
 
-#: src/hooks/QuestionTexts.ts:15
+#: src/hooks/QuestionTexts.ts:20
 msgid "How satisfied are you with your medication?"
 msgstr "Wie zufrieden sind Sie mit Ihrer Medikation?"
 
-#: src/hooks/QuestionTexts.ts:17
+#: src/hooks/QuestionTexts.ts:28
 msgid "How satisfied are you with your meetings with mental health professionals?"
 msgstr "Wie zufrieden sind Sie mit den Gesprächen mit Ihren Behandlern?"
 
@@ -233,7 +237,7 @@ msgstr "Wie zufrieden sind Sie mit den Gesprächen mit Ihren Behandlern?"
 msgid "How satisfied are you with your mental health?"
 msgstr "Wie zufrieden sind Sie mit Ihrer psychischen Gesundheit?"
 
-#: src/hooks/QuestionTexts.ts:14
+#: src/hooks/QuestionTexts.ts:19
 msgid "How satisfied are you with your personal safety?"
 msgstr "Wie zufrieden sind Sie mit Ihrer persönlichen Sicherheit?"
 
@@ -241,7 +245,7 @@ msgstr "Wie zufrieden sind Sie mit Ihrer persönlichen Sicherheit?"
 msgid "How satisfied are you with your physical health?"
 msgstr "Wie zufrieden sind Sie mit Ihrer körperlichen Gesundheit?"
 
-#: src/hooks/QuestionTexts.ts:11
+#: src/hooks/QuestionTexts.ts:15
 msgid "How satisfied are you with your relationship with your partner/family?"
 msgstr "Wie zufrieden sind Sie mit Ihrer Beziehung zu Partner/Familie?"
 
@@ -273,7 +277,7 @@ msgstr "Berufliche Situation"
 msgid "Last name"
 msgstr "Nachname"
 
-#: src/hooks/QuestionTexts.ts:8
+#: src/hooks/QuestionTexts.ts:9
 msgid "Leisure activities"
 msgstr "Freizeitaktivitäten"
 
@@ -281,7 +285,7 @@ msgstr "Freizeitaktivitäten"
 msgid "Log in"
 msgstr "Einloggen"
 
-#: src/components/pages/clients/ClientsPage.tsx:135
+#: src/components/pages/clients/ClientsPage.tsx:140
 msgid "Log out"
 msgstr "Ausloggen"
 
@@ -298,11 +302,11 @@ msgstr "Sich freuen auf"
 msgid "Looks like the passwords you entered do not match. Please try again!"
 msgstr "Die eingegeben Passwörter sind unterschiedlich."
 
-#: src/hooks/QuestionTexts.ts:15
+#: src/hooks/QuestionTexts.ts:20
 msgid "Medication"
 msgstr "Medikation"
 
-#: src/hooks/QuestionTexts.ts:17
+#: src/hooks/QuestionTexts.ts:27
 msgid "Meetings"
 msgstr "Gespräche"
 
@@ -314,12 +318,13 @@ msgstr "Psychische Gesundheit"
 msgid "Middle name"
 msgstr "Mittelname"
 
+#: src/components/modals/ExportPasswordModal.tsx:56
 #: src/components/modals/NewClientModal.tsx:23
-#: src/components/pages/clients/ClientsPage.tsx:144
+#: src/components/pages/clients/ClientsPage.tsx:149
 msgid "New client"
 msgstr "Patient hinzufügen"
 
-#: src/components/pages/assessments/AssessmentsPage.tsx:197
+#: src/components/pages/assessments/AssessmentsPage.tsx:199
 msgid "New session"
 msgstr "Bewertung hinzufügen"
 
@@ -356,6 +361,8 @@ msgstr "Keine Auswahl"
 msgid "Note that all data is stored <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality or install the app (see below) to prevent accidental loss of data."
 msgstr "Bitte beachten Sie, dass alle Daten <0>nur auf diesem Gerät</0> gespeichert werden. Damit es beim Leeren des Browser-Caches nicht zu Datenverlust kommt, nutzen Sie bitte regelmäßig die Import/Export-Funktion oder installieren Sie die App (siehe unten)."
 
+#: src/components/modals/ExportPasswordModal.tsx:69
+#: src/components/modals/ImportErrorModal.tsx:29
 #: src/components/modals/NoSelectionModal.tsx:29
 msgid "OK"
 msgstr "OK"
@@ -373,7 +380,7 @@ msgstr "Passwort"
 msgid "Password mismatch"
 msgstr "Passwörter nicht gleich"
 
-#: src/hooks/QuestionTexts.ts:14
+#: src/hooks/QuestionTexts.ts:19
 msgid "Personal safety"
 msgstr "Persönliche Sicherheit"
 
@@ -385,15 +392,19 @@ msgstr "Körperliche Gesundheit"
 msgid "Please choose a password"
 msgstr "Bitte wählen Sie ein Passwort"
 
-#: src/hooks/QuestionTexts.ts:16
+#: src/components/modals/ExportPasswordModal.tsx:43
+msgid "Please enter the password used to protect the file"
+msgstr "Bitte geben Sie das Entschlüsselungspasswort ein"
+
+#: src/hooks/QuestionTexts.ts:22
 msgid "Practical help"
 msgstr "Praktische Hilfe"
 
 #: src/hooks/Exporter.ts:22
-msgid "Rank"
-msgstr "Bewertung"
+#~ msgid "Rank"
+#~ msgstr "Bewertung"
 
-#: src/hooks/QuestionTexts.ts:10
+#: src/hooks/QuestionTexts.ts:14
 msgid "Relationship with partner/family"
 msgstr "Beziehung zu Partner/Familie"
 
@@ -447,8 +458,8 @@ msgid "Understanding"
 msgstr "Verstehen"
 
 #: src/components/menu/DataInfoPanel.tsx:7
-msgid "Welcome to Open Dialog"
-msgstr "Willkommen bei Open Dialog"
+msgid "Welcome to Free Dialogue Plus"
+msgstr "Willkommen bei Free Dialogue Plus"
 
 #: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:140
 msgid "What can others do?"
@@ -516,8 +527,8 @@ msgstr "Letzte Änderung"
 
 #: src/hooks/Exporter.ts:37
 #: src/hooks/Exporter.ts:38
-msgid "no"
-msgstr "nein"
+#~ msgid "no"
+#~ msgstr "nein"
 
 #: src/components/pages/assessment/stages/assess/AssessStage.tsx:13
 msgid "totally dissatisfied"
@@ -537,8 +548,8 @@ msgstr "sehr zufrieden"
 
 #: src/hooks/Exporter.ts:37
 #: src/hooks/Exporter.ts:38
-msgid "yes"
-msgstr "ja"
+#~ msgid "yes"
+#~ msgstr "ja"
 
 #: src/components/modals/DeleteAssessmentsModal.tsx:24
 #: src/components/modals/DeleteClientsModal.tsx:24
