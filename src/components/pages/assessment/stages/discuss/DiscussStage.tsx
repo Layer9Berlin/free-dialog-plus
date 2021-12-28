@@ -1,11 +1,10 @@
 import {t, Trans} from "@lingui/macro"
 import React, {useMemo, useState} from "react"
-import {useQuestionTexts} from "../../../../../hooks/QuestionTexts"
+import {useSelectedQuestions} from "../../../../../hooks/QuestionTexts"
 import {MutableAssessment} from "../../../../../types/Assessment"
-import {MutableQuestionProps, QuestionProps} from "../../../../../types/Questions"
 import {DialogPlusIcon} from "../../../../icons/DialogPlusIcon"
-import {ResultOverview} from "../common/ResultOverview"
 import {StepInformationModal} from "../../../../modals/StepInformationModal"
+import {ResultOverview} from "../common/ResultOverview"
 
 export const StepNumber = ({step}: {step: number}) => {
   return (
@@ -24,17 +23,9 @@ export const StepNumber = ({step}: {step: number}) => {
 }
 
 export const DiscussStage = ({assessment}: {assessment: MutableAssessment}) => {
-  const questions = useMemo(
-    () => assessment.questions.filter((question) => question.state.selected) as MutableQuestionProps[],
-    [assessment],
-  )
   const [questionIndex, setQuestionIndex] = useState<number>(0)
-  const questionProps = useMemo<QuestionProps & MutableQuestionProps>(
-    () => questions?.[questionIndex],
-    [questionIndex, questions],
-  )
-  const questionTexts = useQuestionTexts()
-  const questionText = useMemo(() => questionTexts?.[questionIndex], [questionIndex, questionTexts])
+  const selectedQuestions = useSelectedQuestions({assessment})
+  const questionProps = useMemo(() => selectedQuestions?.[questionIndex], [questionIndex, selectedQuestions])
 
   const [informationModalIndex, setInformationModalIndex] = useState<number | undefined>(undefined)
 
@@ -42,7 +33,7 @@ export const DiscussStage = ({assessment}: {assessment: MutableAssessment}) => {
     <div className="m-4">
       <StepInformationModal activeStep={informationModalIndex} onClose={() => setInformationModalIndex(undefined)} />
       <div className="d-flex">
-        <h3>{questionText?.short || "-"}</h3>
+        <h3>{questionProps?.short || "-"}</h3>
       </div>
       <div className="d-flex align-items-center mb-3 ms-0">
         <ResultOverview selectedValue={questionProps?.value?.selectedOption} />
@@ -161,7 +152,7 @@ export const DiscussStage = ({assessment}: {assessment: MutableAssessment}) => {
                 </button>
               </div>
               {questionProps?.value?.actionItems?.map((actionItem, index) => (
-                <div className="d-flex align-items-center justify-content-between" key={index}>
+                <div className="d-flex align-items-center justify-content-between" key={index + " " + questionIndex}>
                   <span className="p-1 me-2">
                     <i className="bi bi-dot fs-3" />
                   </span>
@@ -213,21 +204,21 @@ export const DiscussStage = ({assessment}: {assessment: MutableAssessment}) => {
           </div>
         </div>
       </div>
-      {!!questions.length && (
+      {!!selectedQuestions.length && (
         <nav className="mt-5" aria-label="Discuss question navigation">
           <ul className="pagination justify-content-center">
-            {questions.map((question, index) => (
-              <li key={index} className={"page-item link-info" + (index === questionIndex ? " active" : "s")}>
+            {selectedQuestions.map((question, index) => (
+              <li key={index} className={"page-item link-info" + (index === questionIndex ? " active" : "")}>
                 <button className="page-link w-48 h-48" onClick={() => setQuestionIndex(index)}>
                   {index + 1}
                 </button>
               </li>
             ))}
-            <li className={"page-item link-info" + (questionIndex === questions.length - 1 ? " disabled" : "")}>
+            <li className={"page-item link-info" + (questionIndex === selectedQuestions.length - 1 ? " disabled" : "")}>
               <button
                 className="page-link w-48 h-48"
                 onClick={() => setQuestionIndex(questionIndex + 1)}
-                aria-disabled={questionIndex === questions.length - 1 ? "true" : "false"}
+                aria-disabled={questionIndex === selectedQuestions.length - 1 ? "true" : "false"}
               >
                 <span>
                   <i className="bi bi-chevron-right" />

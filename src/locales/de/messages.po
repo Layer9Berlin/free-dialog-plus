@@ -79,15 +79,15 @@ msgstr "Abbrechen"
 #~ msgid "Client Name"
 #~ msgstr "Patientenname"
 
-#: src/components/pages/clients/ClientsPage.tsx:145
+#: src/components/pages/clients/ClientsPage.tsx:146
 msgid "Clients"
 msgstr "Patienten"
 
-#: src/components/pages/welcome/WelcomePage.tsx:32
+#: src/components/pages/welcome/WelcomePage.tsx:46
 msgid "Close"
 msgstr "Schließen"
 
-#: src/components/pages/welcome/WelcomePage.tsx:61
+#: src/components/pages/welcome/WelcomePage.tsx:76
 msgid "Confirm password"
 msgstr "Passwort bestätigen"
 
@@ -95,7 +95,7 @@ msgstr "Passwort bestätigen"
 msgid "Considering options"
 msgstr "Möglichkeiten explorieren"
 
-#: src/components/modals/NewClientModal.tsx:57
+#: src/components/modals/NewClientModal.tsx:77
 msgid "Create"
 msgstr "Erstellen"
 
@@ -120,7 +120,7 @@ msgstr "Datenschutz"
 msgid "Delete"
 msgstr "Löschen"
 
-#: src/components/menu/Footer.tsx:105
+#: src/components/menu/Footer.tsx:109
 msgid "Delete selected"
 msgstr "Auswahl löschen"
 
@@ -136,7 +136,7 @@ msgstr "Besprechen"
 msgid "Do you need more help in this area?"
 msgstr "Wünschen Sie mehr Hilfe in diesem Bereich?"
 
-#: src/components/modals/ExportPasswordModal.tsx:37
+#: src/components/modals/ExportPasswordModal.tsx:38
 msgid "Enter a password to protect the exported file"
 msgstr "Bitte geben Sie das Passwort an, mit dem die Export-Datei geschützt werden soll"
 
@@ -161,7 +161,7 @@ msgstr "Warum unzufrieden oder Wunsch nach mehr Hilfe?"
 msgid "Exploring options"
 msgstr "Möglichkeiten explorieren"
 
-#: src/components/menu/Footer.tsx:88
+#: src/components/menu/Footer.tsx:92
 msgid "Export selected"
 msgstr "Auswahl exportieren"
 
@@ -173,7 +173,7 @@ msgstr "Schließlich sollte der Behandler mit dem Patienten besprechen, was ande
 msgid "Finish"
 msgstr "Beenden"
 
-#: src/components/modals/NewClientModal.tsx:29
+#: src/components/modals/NewClientModal.tsx:39
 msgid "First name"
 msgstr "Vorname"
 
@@ -265,7 +265,7 @@ msgstr "Installieren Sie diese App auf dem <0>Startbildschirm</0>."
 msgid "Installed"
 msgstr "Installiert"
 
-#: src/components/pages/login/LoginPage.tsx:44
+#: src/components/pages/login/LoginPage.tsx:60
 msgid "Invalid password"
 msgstr "Ungültiges Passwort"
 
@@ -273,7 +273,7 @@ msgstr "Ungültiges Passwort"
 msgid "Job situation"
 msgstr "Berufliche Situation"
 
-#: src/components/modals/NewClientModal.tsx:41
+#: src/components/modals/NewClientModal.tsx:64
 msgid "Last name"
 msgstr "Nachname"
 
@@ -281,15 +281,15 @@ msgstr "Nachname"
 msgid "Leisure activities"
 msgstr "Freizeitaktivitäten"
 
-#: src/components/pages/login/LoginPage.tsx:68
+#: src/components/pages/login/LoginPage.tsx:72
 msgid "Log in"
 msgstr "Einloggen"
 
-#: src/components/pages/clients/ClientsPage.tsx:140
+#: src/components/pages/clients/ClientsPage.tsx:141
 msgid "Log out"
 msgstr "Ausloggen"
 
-#: src/components/pages/login/LoginPage.tsx:23
+#: src/components/pages/login/LoginPage.tsx:38
 msgid "Login"
 msgstr "Login"
 
@@ -298,7 +298,7 @@ msgstr "Login"
 msgid "Looking forward"
 msgstr "Sich freuen auf"
 
-#: src/components/pages/welcome/WelcomePage.tsx:28
+#: src/components/pages/welcome/WelcomePage.tsx:42
 msgid "Looks like the passwords you entered do not match. Please try again!"
 msgstr "Die eingegeben Passwörter sind unterschiedlich."
 
@@ -314,13 +314,13 @@ msgstr "Gespräche"
 msgid "Mental health"
 msgstr "Psychische Gesundheit"
 
-#: src/components/modals/NewClientModal.tsx:35
+#: src/components/modals/NewClientModal.tsx:52
 msgid "Middle name"
 msgstr "Mittelname"
 
-#: src/components/modals/ExportPasswordModal.tsx:56
-#: src/components/modals/NewClientModal.tsx:23
-#: src/components/pages/clients/ClientsPage.tsx:149
+#: src/components/modals/ExportPasswordModal.tsx:60
+#: src/components/modals/NewClientModal.tsx:33
+#: src/components/pages/clients/ClientsPage.tsx:150
 msgid "New client"
 msgstr "Patient hinzufügen"
 
@@ -345,7 +345,7 @@ msgid "No"
 msgstr "Nein"
 
 #: src/components/pages/assessment/stages/action-items/ActionItemsStage.tsx:32
-#: src/components/pages/assessments/AssessmentsPage.tsx:119
+#: src/components/pages/assessments/AssessmentsPage.tsx:118
 msgid "No action items defined"
 msgstr "Keine Aktionen vereinbart"
 
@@ -361,7 +361,7 @@ msgstr "Keine Auswahl"
 msgid "Note that all data is stored <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality or install the app (see below) to prevent accidental loss of data."
 msgstr "Bitte beachten Sie, dass alle Daten <0>nur auf diesem Gerät</0> gespeichert werden. Damit es beim Leeren des Browser-Caches nicht zu Datenverlust kommt, nutzen Sie bitte regelmäßig die Import/Export-Funktion oder installieren Sie die App (siehe unten)."
 
-#: src/components/modals/ExportPasswordModal.tsx:69
+#: src/components/modals/ExportPasswordModal.tsx:73
 #: src/components/modals/ImportErrorModal.tsx:29
 #: src/components/modals/NoSelectionModal.tsx:29
 msgid "OK"
@@ -371,12 +371,12 @@ msgstr "OK"
 msgid "Once an action item has been decided, the clinician should document it in the text box provided. Documentation should be brief, but precise. A reminder of the agreed action(s) will appear at the start of the next session, so that patient and clinician can review the progress since the last session before initiating a new session."
 msgstr "Sobald eine Aktion vereinbart wurde, sollte der Behandler dies in dem vorgesehenen Textfeld dokumentieren. Die Dokumentation sollte kurz, aber präzise sein. Eine Erinnerung an die vereinbarten Aktionen erscheint zu Beginn der nächsten Sitzung, so dass Patienten und Behandler die Fortschritte seit dem letzten Treffen überprüfen können, bevor sie in einer neuen DIALOG+ Intervention erneut versuchen, die Situation des Patienten mit Verbesserungswünschen zu explorieren und weitere hilfreiche Aktionen zu vereinbaren."
 
-#: src/components/pages/login/LoginPage.tsx:30
-#: src/components/pages/welcome/WelcomePage.tsx:48
+#: src/components/pages/login/LoginPage.tsx:45
+#: src/components/pages/welcome/WelcomePage.tsx:62
 msgid "Password"
 msgstr "Passwort"
 
-#: src/components/pages/welcome/WelcomePage.tsx:24
+#: src/components/pages/welcome/WelcomePage.tsx:38
 msgid "Password mismatch"
 msgstr "Passwörter nicht gleich"
 
@@ -388,11 +388,11 @@ msgstr "Persönliche Sicherheit"
 msgid "Physical health"
 msgstr "Körperliche Gesundheit"
 
-#: src/components/pages/welcome/WelcomePage.tsx:41
+#: src/components/pages/welcome/WelcomePage.tsx:55
 msgid "Please choose a password"
 msgstr "Bitte wählen Sie ein Passwort"
 
-#: src/components/modals/ExportPasswordModal.tsx:43
+#: src/components/modals/ExportPasswordModal.tsx:46
 msgid "Please enter the password used to protect the file"
 msgstr "Bitte geben Sie das Entschlüsselungspasswort ein"
 
@@ -412,7 +412,7 @@ msgstr "Beziehung zu Partner/Familie"
 msgid "Review"
 msgstr "Überblick"
 
-#: src/components/pages/welcome/WelcomePage.tsx:87
+#: src/components/pages/welcome/WelcomePage.tsx:89
 msgid "Save"
 msgstr "Speichern"
 
@@ -521,7 +521,7 @@ msgstr "ziemlich zufrieden"
 msgid "in the middle"
 msgstr "in der Mitte"
 
-#: src/components/pages/assessments/AssessmentsPage.tsx:96
+#: src/components/pages/assessments/AssessmentsPage.tsx:95
 msgid "last updated"
 msgstr "Letzte Änderung"
 

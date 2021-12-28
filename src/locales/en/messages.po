@@ -79,15 +79,15 @@ msgstr "Cancel"
 #~ msgid "Client Name"
 #~ msgstr "Client Name"
 
-#: src/components/pages/clients/ClientsPage.tsx:145
+#: src/components/pages/clients/ClientsPage.tsx:146
 msgid "Clients"
 msgstr "Clients"
 
-#: src/components/pages/welcome/WelcomePage.tsx:32
+#: src/components/pages/welcome/WelcomePage.tsx:46
 msgid "Close"
 msgstr "Close"
 
-#: src/components/pages/welcome/WelcomePage.tsx:61
+#: src/components/pages/welcome/WelcomePage.tsx:76
 msgid "Confirm password"
 msgstr "Confirm password"
 
@@ -95,7 +95,7 @@ msgstr "Confirm password"
 msgid "Considering options"
 msgstr "Considering options"
 
-#: src/components/modals/NewClientModal.tsx:57
+#: src/components/modals/NewClientModal.tsx:77
 msgid "Create"
 msgstr "Create"
 
@@ -120,7 +120,7 @@ msgstr "Data protection"
 msgid "Delete"
 msgstr "Delete"
 
-#: src/components/menu/Footer.tsx:105
+#: src/components/menu/Footer.tsx:109
 msgid "Delete selected"
 msgstr "Delete selected"
 
@@ -136,7 +136,7 @@ msgstr "Discuss"
 msgid "Do you need more help in this area?"
 msgstr "Do you need more help in this area?"
 
-#: src/components/modals/ExportPasswordModal.tsx:37
+#: src/components/modals/ExportPasswordModal.tsx:38
 msgid "Enter a password to protect the exported file"
 msgstr "Enter a password to protect the exported file"
 
@@ -161,7 +161,7 @@ msgstr "Exploring"
 msgid "Exploring options"
 msgstr "Exploring options"
 
-#: src/components/menu/Footer.tsx:88
+#: src/components/menu/Footer.tsx:92
 msgid "Export selected"
 msgstr "Export selected"
 
@@ -173,7 +173,7 @@ msgstr "Finally, the clinician should ask what other people can do to help the p
 msgid "Finish"
 msgstr "Finish"
 
-#: src/components/modals/NewClientModal.tsx:29
+#: src/components/modals/NewClientModal.tsx:39
 msgid "First name"
 msgstr "First name"
 
@@ -265,7 +265,7 @@ msgstr "Install this app on your <0>Home Screen</0> for a better experience."
 msgid "Installed"
 msgstr "Installed"
 
-#: src/components/pages/login/LoginPage.tsx:44
+#: src/components/pages/login/LoginPage.tsx:60
 msgid "Invalid password"
 msgstr "Invalid password"
 
@@ -273,7 +273,7 @@ msgstr "Invalid password"
 msgid "Job situation"
 msgstr "Job situation"
 
-#: src/components/modals/NewClientModal.tsx:41
+#: src/components/modals/NewClientModal.tsx:64
 msgid "Last name"
 msgstr "Last name"
 
@@ -281,15 +281,15 @@ msgstr "Last name"
 msgid "Leisure activities"
 msgstr "Leisure activities"
 
-#: src/components/pages/login/LoginPage.tsx:68
+#: src/components/pages/login/LoginPage.tsx:72
 msgid "Log in"
 msgstr "Log in"
 
-#: src/components/pages/clients/ClientsPage.tsx:140
+#: src/components/pages/clients/ClientsPage.tsx:141
 msgid "Log out"
 msgstr "Log out"
 
-#: src/components/pages/login/LoginPage.tsx:23
+#: src/components/pages/login/LoginPage.tsx:38
 msgid "Login"
 msgstr "Login"
 
@@ -298,7 +298,7 @@ msgstr "Login"
 msgid "Looking forward"
 msgstr "Looking forward"
 
-#: src/components/pages/welcome/WelcomePage.tsx:28
+#: src/components/pages/welcome/WelcomePage.tsx:42
 msgid "Looks like the passwords you entered do not match. Please try again!"
 msgstr "Looks like the passwords you entered do not match. Please try again!"
 
@@ -314,13 +314,13 @@ msgstr "Meetings"
 msgid "Mental health"
 msgstr "Mental health"
 
-#: src/components/modals/NewClientModal.tsx:35
+#: src/components/modals/NewClientModal.tsx:52
 msgid "Middle name"
 msgstr "Middle name"
 
-#: src/components/modals/ExportPasswordModal.tsx:56
-#: src/components/modals/NewClientModal.tsx:23
-#: src/components/pages/clients/ClientsPage.tsx:149
+#: src/components/modals/ExportPasswordModal.tsx:60
+#: src/components/modals/NewClientModal.tsx:33
+#: src/components/pages/clients/ClientsPage.tsx:150
 msgid "New client"
 msgstr "New client"
 
@@ -345,7 +345,7 @@ msgid "No"
 msgstr "No"
 
 #: src/components/pages/assessment/stages/action-items/ActionItemsStage.tsx:32
-#: src/components/pages/assessments/AssessmentsPage.tsx:119
+#: src/components/pages/assessments/AssessmentsPage.tsx:118
 msgid "No action items defined"
 msgstr "No action items defined"
 
@@ -373,7 +373,7 @@ msgstr "Note that all data is stored <0>on this device</0> only. Take care when 
 #~ msgid "Note that all patient and assessment data stays <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality to prevent accidental loss of data."
 #~ msgstr "Note that all patient and assessment data stays <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality to prevent accidental loss of data."
 
-#: src/components/modals/ExportPasswordModal.tsx:69
+#: src/components/modals/ExportPasswordModal.tsx:73
 #: src/components/modals/ImportErrorModal.tsx:29
 #: src/components/modals/NoSelectionModal.tsx:29
 msgid "OK"
@@ -383,12 +383,12 @@ msgstr "OK"
 msgid "Once an action item has been decided, the clinician should document it in the text box provided. Documentation should be brief, but precise. A reminder of the agreed action(s) will appear at the start of the next session, so that patient and clinician can review the progress since the last session before initiating a new session."
 msgstr "Once an action item has been decided, the clinician should document it in the text box provided. Documentation should be brief, but precise. A reminder of the agreed action(s) will appear at the start of the next session, so that patient and clinician can review the progress since the last session before initiating a new session."
 
-#: src/components/pages/login/LoginPage.tsx:30
-#: src/components/pages/welcome/WelcomePage.tsx:48
+#: src/components/pages/login/LoginPage.tsx:45
+#: src/components/pages/welcome/WelcomePage.tsx:62
 msgid "Password"
 msgstr "Password"
 
-#: src/components/pages/welcome/WelcomePage.tsx:24
+#: src/components/pages/welcome/WelcomePage.tsx:38
 msgid "Password mismatch"
 msgstr "Password mismatch"
 
@@ -400,11 +400,11 @@ msgstr "Personal safety"
 msgid "Physical health"
 msgstr "Physical health"
 
-#: src/components/pages/welcome/WelcomePage.tsx:41
+#: src/components/pages/welcome/WelcomePage.tsx:55
 msgid "Please choose a password"
 msgstr "Please choose a password"
 
-#: src/components/modals/ExportPasswordModal.tsx:43
+#: src/components/modals/ExportPasswordModal.tsx:46
 msgid "Please enter the password used to protect the file"
 msgstr "Please enter the password used to protect the file"
 
@@ -424,7 +424,7 @@ msgstr "Relationship with partner/family"
 msgid "Review"
 msgstr "Review"
 
-#: src/components/pages/welcome/WelcomePage.tsx:87
+#: src/components/pages/welcome/WelcomePage.tsx:89
 msgid "Save"
 msgstr "Save"
 
@@ -537,7 +537,7 @@ msgstr "fairly satisfied"
 msgid "in the middle"
 msgstr "in the middle"
 
-#: src/components/pages/assessments/AssessmentsPage.tsx:96
+#: src/components/pages/assessments/AssessmentsPage.tsx:95
 msgid "last updated"
 msgstr "last updated"
 

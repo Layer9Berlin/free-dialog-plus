@@ -1,4 +1,9 @@
 import {t} from "@lingui/macro"
+import {useMemo} from "react"
+import {MutableAssessment} from "../types/Assessment"
+import {MutableQuestionProps} from "../types/Questions"
+
+export type QuestionText = {short: string; long: string; export: string}
 
 export const useQuestionTexts = () => [
   {short: t`Mental health`, long: t`How satisfied are you with your mental health?`, export: "Mental Health"},
@@ -29,3 +34,18 @@ export const useQuestionTexts = () => [
     export: "Meetings",
   },
 ]
+
+export const useSelectedQuestions = ({
+  assessment,
+}: {
+  assessment: MutableAssessment
+}): (MutableQuestionProps & QuestionText)[] => {
+  const allTexts = useQuestionTexts()
+  return useMemo(
+    () =>
+      assessment.questions
+        .map((question, index) => ({...question, ...allTexts[index]} as MutableQuestionProps & QuestionText))
+        .filter((question) => question.state.selected),
+    [allTexts, assessment.questions],
+  )
+}
