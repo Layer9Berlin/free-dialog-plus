@@ -79,7 +79,7 @@ export const useAssessmentExporter = () => {
         }
         const blob = new Blob([data(assessments, allClients)], {type: "text/csv;charset=utf-8"})
         const miniZip = new Minizip()
-        miniZip.append("DIALOG+ Export.csv", await blob.arrayBuffer(), {password})
+        miniZip.append("DIALOG+ Export.csv", await blob.arrayBuffer(), {compressLevel: 0, password})
         saveAs(new Blob([miniZip.zip()]), "DIALOG+ Export.zip")
       },
       [data],
