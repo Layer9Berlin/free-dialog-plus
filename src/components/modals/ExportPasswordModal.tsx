@@ -57,7 +57,7 @@ export const ExportPasswordModal = ({show, close, message, confirm}: ExportPassw
     <Modal show={show} onHide={close}>
       <Modal.Header closeButton>
         <Modal.Title>
-          <Trans>New client</Trans>
+          <Trans>Choose a password</Trans>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
