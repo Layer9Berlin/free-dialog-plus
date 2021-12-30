@@ -4,9 +4,42 @@
 
 Free Dialogue Plus is a free, open-source, web-based implementation of the [DIALOG+ therapeutic intervention](https://dialog.elft.nhs.uk).
 
+At the time of writing, it is compatible with all modern browsers, both on desktop and mobile. As a [progressive web application (PWA)](https://en.wikipedia.org/wiki/Progressive_web_application), it can be installed and used like a native app on many systems.
+
 ## Demo
 
-Visit [the demo page](https://dialogplus.layer9.technology)
+Visit [the demo page](https://dialogplus.layer9.technology) to see Free Dialogue Plus in action.
+
+## Data protection & compliance
+
+Free Dialogue Plus stores all data in the user's browser cache. No assessment data is transferred to the server under any circumstances.
+
+This means that clearing your browser cache will delete all existing data in Free Dialogue Plus. Moreover, the browser may decide to delete the cache due to lack of resources.
+
+You are encouraged to make regular backups using the export functionality (see below) and to install the app as a PWA, which usually causes a dedicated cache to be created.
+
+To use Free Dialogue Plus in a clinical setting, it is highly recommended that you deploy your own version of the application. You will probably want to adapt the code to satisfy your own technical and compliance requirements.
+
+The demo deployment is intended for demonstration purposes, for use in more casual settings where loss of patient data is of little consequence and as a foundation for further development.
+
+## Device synchronisation
+
+Due to the fact that all data remains on the users' devices, synchronising data between devices currently requires a manual export, followed by an import on the second device (see below).
+
+## Export & import
+
+### Export
+
+In the clients or the assessments screen, tap the ![arrow out of box](public/box-arrow-up.svg) icon to start selecting clients/assessments to export. Tap the button again, enter a password to protect the export and confirm. A password-protected ZIP file containing your data in CSV format will be created.
+
+### Import
+
+In the clients screen, tap the ![arrow into box](public/box-arrow-in-down.svg) icon to import a ZIP file. You will be prompted for the password you specified during the export.
+
+
+## Password recovery
+
+There is currently no way to recover a lost password. If you forget your password, clearing the cache/re-installing the PWA will reset the password, but also cause all existing data to be irretrievably lost. 
 
 ## Languages
 
