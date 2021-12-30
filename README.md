@@ -1,24 +1,24 @@
-![Free Dialogue Plus Logo](public/android-chrome-192x192.png)
+![Free DIALOG+ Logo](public/android-chrome-192x192.png)
 
-# Free Dialogue Plus
+# Free DIALOG+
 
-Free Dialogue Plus is a free, open-source, web-based implementation of the [DIALOG+ therapeutic intervention](https://dialog.elft.nhs.uk).
+Free DIALOG+ is a free, [open-source](https://en.wikipedia.org/wiki/Open_source), web-based implementation of the [DIALOG+ therapeutic intervention](https://dialog.elft.nhs.uk).
 
-At the time of writing, it is compatible with all modern browsers, both on desktop and mobile. As a [progressive web application (PWA)](https://en.wikipedia.org/wiki/Progressive_web_application), it can be installed and used like a native app on many systems.
+At the time of writing, it is compatible with all modern browsers, both on desktop and mobile. As a [progressive web application (PWA)](https://en.wikipedia.org/wiki/Progressive_web_application), it can be installed and used like a native app on many systems. Please refer to [this guide](https://mobilesyrup.com/2020/05/24/how-install-progressive-web-app-pwa-android-ios-pc-mac/) for detailed instructions.
 
 ## Demo
 
-Visit [the demo page](https://dialogplus.layer9.technology) to see Free Dialogue Plus in action.
+Visit [the demo page](https://dialogplus.layer9.technology) to see Free DIALOG+ in action.
 
-## Data protection & compliance
+## Data protection, data safety & compliance
 
-Free Dialogue Plus stores all data in the user's browser cache. No assessment data is transferred to the server under any circumstances.
+Free DIALOG+ stores all data in the user's browser cache. No assessment data is transferred to the server under any circumstances.
 
-This means that clearing your browser cache will delete all existing data in Free Dialogue Plus. Moreover, the browser may decide to delete the cache due to lack of resources.
+This means that clearing your browser cache will delete all existing data in Free DIALOG+. Moreover, the browser may decide to delete the cache due to lack of resources.
 
 You are encouraged to make regular backups using the export functionality (see below) and to install the app as a PWA, which usually causes a dedicated cache to be created.
 
-To use Free Dialogue Plus in a clinical setting, it is highly recommended that you deploy your own version of the application. You will probably want to adapt the code to satisfy your own technical and compliance requirements.
+To use Free DIALOG+ in a clinical setting, it is highly recommended that you deploy your own version of the application. You will probably want to adapt the code to satisfy your own technical and compliance requirements.
 
 The demo deployment is intended for demonstration purposes, for use in more casual settings where loss of patient data is of little consequence and as a foundation for further development.
 

@@ -4,7 +4,7 @@ export const DataInfoPanel = () => {
   return (
     <div className="m-3 alert alert-primary align-self-stretch">
       <h4>
-        <Trans>Welcome to Free Dialogue Plus</Trans>
+        <Trans>Welcome to Free DIALOG+</Trans>
       </h4>
       <p>
         <Trans>

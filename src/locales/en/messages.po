@@ -17,11 +17,11 @@ msgstr ""
 msgid "\"Is there a neighbour or friend who could help you bring your shopping to the top floor with you?”"
 msgstr "\"Is there a neighbour or friend who could help you bring your shopping to the top floor with you?”"
 
-#: src/hooks/QuestionTexts.ts:7
+#: src/hooks/QuestionTexts.ts:12
 msgid "Accommodation"
 msgstr "Accommodation"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:172
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:163
 msgid "Action item"
 msgstr "Action item"
 
@@ -29,7 +29,7 @@ msgstr "Action item"
 msgid "Action items"
 msgstr "Action items"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:208
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:199
 msgid "Add action item"
 msgstr "Add action item"
 
@@ -42,7 +42,7 @@ msgstr "Add action item"
 #~ msgstr "Additional Help"
 
 #: src/components/modals/StepInformationModal.tsx:498
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:150
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:141
 msgid "Agreeing on actions"
 msgstr "Agreeing on actions"
 
@@ -66,7 +66,7 @@ msgstr "Back to Clients"
 msgid "Back to {0}"
 msgstr "Back to {0}"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:106
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:97
 msgid "Best case scenario?"
 msgstr "Best case scenario?"
 
@@ -74,6 +74,10 @@ msgstr "Best case scenario?"
 #: src/components/modals/DeleteClientsModal.tsx:39
 msgid "Cancel"
 msgstr "Cancel"
+
+#: src/components/modals/ExportPasswordModal.tsx:60
+msgid "Choose a password"
+msgstr "Choose a password"
 
 #: src/hooks/Exporter.ts:17
 #~ msgid "Client Name"
@@ -91,7 +95,7 @@ msgstr "Close"
 msgid "Confirm password"
 msgstr "Confirm password"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:119
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:110
 msgid "Considering options"
 msgstr "Considering options"
 
@@ -120,7 +124,7 @@ msgstr "Data protection"
 msgid "Delete"
 msgstr "Delete"
 
-#: src/components/menu/Footer.tsx:109
+#: src/components/menu/Footer.tsx:110
 msgid "Delete selected"
 msgstr "Delete selected"
 
@@ -161,7 +165,7 @@ msgstr "Exploring"
 msgid "Exploring options"
 msgstr "Exploring options"
 
-#: src/components/menu/Footer.tsx:92
+#: src/components/menu/Footer.tsx:93
 msgid "Export selected"
 msgstr "Export selected"
 
@@ -193,7 +197,7 @@ msgstr "First, the clinician should invite the patient to think for themselves o
 msgid "For example, on iOS, tap<0><1/></0>in the bottom menu, followed by \"Add to Home Screen<2><3/></2>\"."
 msgstr "For example, on iOS, tap<0><1/></0>in the bottom menu, followed by \"Add to Home Screen<2><3/></2>\"."
 
-#: src/hooks/QuestionTexts.ts:18
+#: src/hooks/QuestionTexts.ts:23
 msgid "Friendships"
 msgstr "Friendships"
 
@@ -205,47 +209,47 @@ msgstr "Having explored both negative and positive aspects of the situation in S
 msgid "Having introduced a forward-looking perspective in Step 2, the aim of Step 3 is for the patient and the clinician to explore a number of options that may help to bring about the desired changes. These options involve things that patient can do by themselves, things the clinician can do with the help of the various services available to the patient, and things other people in the patient’s life can do.In Step 3 the clinician asks the patient what are all the options he/she can think of as potentially helpful. The clinician can also propose different options, and ask for the patient’s opinion about them. Step 3 is concerned with what is possible to do at the present time in order to achieve the patient’s desired changes."
 msgstr "Having introduced a forward-looking perspective in Step 2, the aim of Step 3 is for the patient and the clinician to explore a number of options that may help to bring about the desired changes. These options involve things that patient can do by themselves, things the clinician can do with the help of the various services available to the patient, and things other people in the patient’s life can do.In Step 3 the clinician asks the patient what are all the options he/she can think of as potentially helpful. The clinician can also propose different options, and ask for the patient’s opinion about them. Step 3 is concerned with what is possible to do at the present time in order to achieve the patient’s desired changes."
 
-#: src/hooks/QuestionTexts.ts:23
+#: src/hooks/QuestionTexts.ts:28
 msgid "How satisfied are you with the practical help you receive?"
 msgstr "How satisfied are you with the practical help you receive?"
 
-#: src/hooks/QuestionTexts.ts:7
+#: src/hooks/QuestionTexts.ts:12
 msgid "How satisfied are you with your accommodation?"
 msgstr "How satisfied are you with your accommodation?"
 
-#: src/hooks/QuestionTexts.ts:18
+#: src/hooks/QuestionTexts.ts:23
 msgid "How satisfied are you with your friendships?"
 msgstr "How satisfied are you with your friendships?"
 
-#: src/hooks/QuestionTexts.ts:6
+#: src/hooks/QuestionTexts.ts:11
 msgid "How satisfied are you with your job situation?"
 msgstr "How satisfied are you with your job situation?"
 
-#: src/hooks/QuestionTexts.ts:10
+#: src/hooks/QuestionTexts.ts:15
 msgid "How satisfied are you with your leisure activities?"
 msgstr "How satisfied are you with your leisure activities?"
 
-#: src/hooks/QuestionTexts.ts:20
+#: src/hooks/QuestionTexts.ts:25
 msgid "How satisfied are you with your medication?"
 msgstr "How satisfied are you with your medication?"
 
-#: src/hooks/QuestionTexts.ts:28
+#: src/hooks/QuestionTexts.ts:33
 msgid "How satisfied are you with your meetings with mental health professionals?"
 msgstr "How satisfied are you with your meetings with mental health professionals?"
 
-#: src/hooks/QuestionTexts.ts:4
+#: src/hooks/QuestionTexts.ts:9
 msgid "How satisfied are you with your mental health?"
 msgstr "How satisfied are you with your mental health?"
 
-#: src/hooks/QuestionTexts.ts:19
+#: src/hooks/QuestionTexts.ts:24
 msgid "How satisfied are you with your personal safety?"
 msgstr "How satisfied are you with your personal safety?"
 
-#: src/hooks/QuestionTexts.ts:5
+#: src/hooks/QuestionTexts.ts:10
 msgid "How satisfied are you with your physical health?"
 msgstr "How satisfied are you with your physical health?"
 
-#: src/hooks/QuestionTexts.ts:15
+#: src/hooks/QuestionTexts.ts:20
 msgid "How satisfied are you with your relationship with your partner/family?"
 msgstr "How satisfied are you with your relationship with your partner/family?"
 
@@ -269,7 +273,7 @@ msgstr "Installed"
 msgid "Invalid password"
 msgstr "Invalid password"
 
-#: src/hooks/QuestionTexts.ts:6
+#: src/hooks/QuestionTexts.ts:11
 msgid "Job situation"
 msgstr "Job situation"
 
@@ -277,7 +281,7 @@ msgstr "Job situation"
 msgid "Last name"
 msgstr "Last name"
 
-#: src/hooks/QuestionTexts.ts:9
+#: src/hooks/QuestionTexts.ts:14
 msgid "Leisure activities"
 msgstr "Leisure activities"
 
@@ -294,7 +298,7 @@ msgid "Login"
 msgstr "Login"
 
 #: src/components/modals/StepInformationModal.tsx:488
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:91
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:82
 msgid "Looking forward"
 msgstr "Looking forward"
 
@@ -302,15 +306,15 @@ msgstr "Looking forward"
 msgid "Looks like the passwords you entered do not match. Please try again!"
 msgstr "Looks like the passwords you entered do not match. Please try again!"
 
-#: src/hooks/QuestionTexts.ts:20
+#: src/hooks/QuestionTexts.ts:25
 msgid "Medication"
 msgstr "Medication"
 
-#: src/hooks/QuestionTexts.ts:27
+#: src/hooks/QuestionTexts.ts:32
 msgid "Meetings"
 msgstr "Meetings"
 
-#: src/hooks/QuestionTexts.ts:4
+#: src/hooks/QuestionTexts.ts:9
 msgid "Mental health"
 msgstr "Mental health"
 
@@ -318,7 +322,6 @@ msgstr "Mental health"
 msgid "Middle name"
 msgstr "Middle name"
 
-#: src/components/modals/ExportPasswordModal.tsx:60
 #: src/components/modals/NewClientModal.tsx:33
 #: src/components/pages/clients/ClientsPage.tsx:150
 msgid "New client"
@@ -392,11 +395,11 @@ msgstr "Password"
 msgid "Password mismatch"
 msgstr "Password mismatch"
 
-#: src/hooks/QuestionTexts.ts:19
+#: src/hooks/QuestionTexts.ts:24
 msgid "Personal safety"
 msgstr "Personal safety"
 
-#: src/hooks/QuestionTexts.ts:5
+#: src/hooks/QuestionTexts.ts:10
 msgid "Physical health"
 msgstr "Physical health"
 
@@ -408,7 +411,7 @@ msgstr "Please choose a password"
 msgid "Please enter the password used to protect the file"
 msgstr "Please enter the password used to protect the file"
 
-#: src/hooks/QuestionTexts.ts:22
+#: src/hooks/QuestionTexts.ts:27
 msgid "Practical help"
 msgstr "Practical help"
 
@@ -416,7 +419,7 @@ msgstr "Practical help"
 #~ msgid "Rank"
 #~ msgstr "Rank"
 
-#: src/hooks/QuestionTexts.ts:14
+#: src/hooks/QuestionTexts.ts:19
 msgid "Relationship with partner/family"
 msgstr "Relationship with partner/family"
 
@@ -432,7 +435,7 @@ msgstr "Save"
 msgid "Select"
 msgstr "Select"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:109
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:100
 msgid "Smallest improvement?"
 msgstr "Smallest improvement?"
 
@@ -465,27 +468,23 @@ msgid "Tip"
 msgstr "Tip"
 
 #: src/components/modals/StepInformationModal.tsx:483
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:63
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:54
 msgid "Understanding"
 msgstr "Understanding"
 
 #: src/components/menu/DataInfoPanel.tsx:7
-msgid "Welcome to Free Dialogue Plus"
-msgstr "Welcome to Free Dialogue Plus"
+msgid "Welcome to Free DIALOG+"
+msgstr "Welcome to Free DIALOG+"
 
-#: src/components/menu/DataInfoPanel.tsx:7
-#~ msgid "Welcome to Open Dialog"
-#~ msgstr "Welcome to Open Dialog"
-
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:140
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:131
 msgid "What can others do?"
 msgstr "What can others do?"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:137
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:128
 msgid "What can the clinician do?"
 msgstr "What can the clinician do?"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:134
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:125
 msgid "What can the patient do?"
 msgstr "What can the patient do?"
 
@@ -493,7 +492,7 @@ msgstr "What can the patient do?"
 msgid "What is the patient’s ‘best-case scenario’?"
 msgstr "What is the patient’s ‘best-case scenario’?"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:81
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:72
 msgid "What is working?"
 msgstr "What is working?"
 
@@ -501,7 +500,7 @@ msgstr "What is working?"
 msgid "What small changes would make a difference?"
 msgstr "What small changes would make a difference?"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:78
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:69
 msgid "Why is this rating not a lower one?"
 msgstr "Why is this rating not a lower one?"
 
