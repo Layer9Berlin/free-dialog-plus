@@ -150,8 +150,8 @@ export const AssessmentsPage = () => {
   }
 
   const exportSelected = useCallback(
-    async (dataStore: DataStoreType, password?: string) => {
-      await exporter.export(selection, await dataStore.clients.list(), password)
+    async (dataStore: DataStoreType) => {
+      await exporter.export(selection, await dataStore.clients.list())
       setSelectMode("none")
     },
     [exporter, selection],
@@ -230,10 +230,7 @@ export const AssessmentsPage = () => {
             <Footer
               disabled={assessments.length === 0}
               onExport={async () => {
-                const password = await exportPasswordModal.requestPasswordForExport()
-                if (password) {
-                  return exportSelected(dataStore, password)
-                }
+                return exportSelected(dataStore)
               }}
               onDelete={() => setShowDeleteModal(true)}
               selectMode={selectMode}

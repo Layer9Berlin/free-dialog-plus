@@ -7,6 +7,7 @@ import {useRerouter} from "../../../hooks/Rerouter"
 import {Client} from "../../../types/Client"
 import {DataStoreType} from "../../../types/DataStore"
 import {DataStoreContext} from "../../api/DataStore"
+import {LoginContext} from "../../app/LoginComponent"
 import {Checkbox} from "../../buttons/Checkbox"
 import {CloseButton} from "../../buttons/CloseButton"
 import {ResponsiveButton} from "../../buttons/ResponsiveButton"
@@ -16,7 +17,6 @@ import {DeleteClientsModal} from "../../modals/DeleteClientsModal"
 import {ExportPasswordModal, useExportPasswordModal} from "../../modals/ExportPasswordModal"
 import {NewClientModal} from "../../modals/NewClientModal"
 import {TitleText} from "../../text/TitleText"
-import {LoginContext} from "../../app/LoginComponent"
 
 const ClientsLoader = ({
   dataStore,
@@ -109,8 +109,8 @@ export const ClientsPage = () => {
   }
 
   const exportSelected = useCallback(
-    async (dataStore: DataStoreType, password?: string) => {
-      await exporter.export(await selectedAssessments(dataStore), clients, password)
+    async (dataStore: DataStoreType) => {
+      await exporter.export(await selectedAssessments(dataStore), clients)
       setSelectMode("none")
     },
     [clients, exporter, selectedAssessments],
@@ -174,21 +174,14 @@ export const ClientsPage = () => {
             <Footer
               disabled={clients.length === 0}
               onImport={async (file) => {
-                const password = await exportPasswordModal.requestPasswordForImport()
-                if (password) {
-                  const {clients, assessments} = await exporter.import(file, password)
-                  await dataStore.clients.add(...clients)
-                  await dataStore.assessments.add(...assessments)
-                  setClients(await dataStore.clients.list())
-                  return clients.length + assessments.length > 0
-                }
-                return false
+                const {clients, assessments} = await exporter.import(file)
+                await dataStore.clients.add(...clients)
+                await dataStore.assessments.add(...assessments)
+                setClients(await dataStore.clients.list())
+                return clients.length + assessments.length > 0
               }}
               onExport={async () => {
-                const password = await exportPasswordModal.requestPasswordForExport()
-                if (password) {
-                  return exportSelected(dataStore, password)
-                }
+                return exportSelected(dataStore)
               }}
               onDelete={() => setShowDeleteModal(true)}
               selectMode={selectMode}

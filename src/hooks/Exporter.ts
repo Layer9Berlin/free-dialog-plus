@@ -1,5 +1,4 @@
 import {saveAs} from "file-saver"
-import * as Minizip from "minizip-asm.js"
 import * as PapaParse from "papaparse"
 import {useCallback} from "react"
 import {v4 as uuid} from "uuid"
@@ -45,42 +44,23 @@ export const useAssessmentExporter = () => {
   )
   return {
     data,
-    import: useCallback(
-      async (file: File, password?: string): Promise<{clients: Client[]; assessments: Assessment[]}> => {
-        if (!password) {
-          return {clients: [], assessments: []}
+    import: useCallback(async (file: File): Promise<{clients: Client[]; assessments: Assessment[]}> => {
+      try {
+        const fileContent = await file.text()
+        const csvData = PapaParse.parse(fileContent, {header: true, skipEmptyLines: true})
+        const dataExcludingFirstLine = csvData.data?.filter((_, index) => index > 0)
+        const parseAttempt = CSVImportSchema.safeParse(dataExcludingFirstLine)
+        if (parseAttempt.success) {
+          return importData(parseAttempt.data)
         }
-        try {
-          const buffer = Buffer.from(await file.arrayBuffer())
-          const miniZip = new Minizip(buffer)
-          const zippedFiles = miniZip.list()
-          if (zippedFiles.length > 0) {
-            const {filepath} = zippedFiles[0]
-            const fileData = miniZip.extract(filepath, {password})
-            const string = new TextDecoder().decode(fileData)
-            const csvData = PapaParse.parse(string, {header: true, skipEmptyLines: true})
-            const dataExcludingFirstLine = csvData.data?.filter((_, index) => index > 0)
-            const parseAttempt = CSVImportSchema.safeParse(dataExcludingFirstLine)
-            if (parseAttempt.success) {
-              return importData(parseAttempt.data)
-            }
-          }
-          return {clients: [], assessments: []}
-        } catch (error) {
-          return {clients: [], assessments: []}
-        }
-      },
-      [],
-    ),
+        return {clients: [], assessments: []}
+      } catch (error) {
+        return {clients: [], assessments: []}
+      }
+    }, []),
     export: useCallback(
-      async (assessments: Assessment[], allClients: Client[], password?: string) => {
-        if (!password) {
-          return
-        }
-        const blob = new Blob([data(assessments, allClients)], {type: "text/csv;charset=utf-8"})
-        const miniZip = new Minizip()
-        miniZip.append("DIALOG+ Export.csv", await blob.arrayBuffer(), {compressLevel: 0, password})
-        saveAs(new Blob([miniZip.zip()]), "DIALOG+ Export.zip")
+      async (assessments: Assessment[], allClients: Client[]) => {
+        saveAs(new Blob([data(assessments, allClients)]), "DIALOG+ Export.csv")
       },
       [data],
     ),
@@ -90,13 +70,18 @@ export const useAssessmentExporter = () => {
 const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assessment[]} => {
   const clients = csvData.map((row) => ({id: uuid(), ...row["Client Name"]}))
   const assessments = csvData.map((row, index) => {
+    // need to dedupe clients so as to not import the same clients over and over again
+    // TODO: also take into account already imported data
     const client = clients[index]
+    const firstInstanceOfClient = clients.find(
+      (_client) => _client.first === client.first && _client.middle === client.middle && _client.last === client.last,
+    ) as Client
     return {
       id: uuid(),
       meta: {
         date: row["Date Start"] ?? new Date(),
         lastUpdated: row["Date End"] ?? new Date(),
-        clientId: client.id,
+        clientId: firstInstanceOfClient.id,
       },
       questions: [
         {
@@ -224,7 +209,10 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
       ],
     }
   })
-  return {clients, assessments}
+  const clientsWithAssessments = clients.filter((client) =>
+    assessments.some((assessment) => assessment.meta.clientId === client.id),
+  )
+  return {clients: clientsWithAssessments, assessments}
 }
 
 const booleanOrUndefined = (

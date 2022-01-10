@@ -42,7 +42,7 @@ export const Footer = ({
         {onImport && (
           <>
             <input
-              accept="application/zip"
+              accept=".csv"
               id="import-file-input"
               type="file"
               ref={inputRef}
