@@ -33,14 +33,6 @@ msgstr "Aktionen"
 msgid "Add action item"
 msgstr "Aktion hinzufügen"
 
-#: src/components/menu/AddToHomescreenInfoPanel.tsx:28
-#~ msgid "Add this app to your <0>Home Screen</0> for a better experience."
-#~ msgstr "Wir empfehlen diese App zum <0>Startbildschirm</0> hinzuzufügen."
-
-#: src/hooks/Exporter.ts:23
-#~ msgid "Additional Help"
-#~ msgstr "Mehr Hilfe"
-
 #: src/components/modals/StepInformationModal.tsx:498
 #: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:141
 msgid "Agreeing on actions"
@@ -79,10 +71,6 @@ msgstr "Abbrechen"
 msgid "Choose a password"
 msgstr "Export-Passwort"
 
-#: src/hooks/Exporter.ts:17
-#~ msgid "Client Name"
-#~ msgstr "Patientenname"
-
 #: src/components/pages/clients/ClientsPage.tsx:146
 msgid "Clients"
 msgstr "Patienten"
@@ -111,14 +99,6 @@ msgstr "Aktuelle Bewertung"
 msgid "Data protection"
 msgstr "Datenschutz"
 
-#: src/hooks/Exporter.ts:19
-#~ msgid "Date End"
-#~ msgstr "Enddatum"
-
-#: src/hooks/Exporter.ts:18
-#~ msgid "Date Start"
-#~ msgstr "Startdatum"
-
 #: src/components/modals/DeleteAssessmentsModal.tsx:41
 #: src/components/modals/DeleteClientsModal.tsx:42
 msgid "Delete"
@@ -131,10 +111,6 @@ msgstr "Auswahl löschen"
 #: src/components/menu/StageNavigation.tsx:34
 msgid "Discuss"
 msgstr "Besprechen"
-
-#: src/hooks/Exporter.ts:24
-#~ msgid "Discussed"
-#~ msgstr "Besprochen"
 
 #: src/components/pages/assessment/stages/assess/AssessStage.tsx:69
 msgid "Do you need more help in this area?"
@@ -403,10 +379,6 @@ msgstr "Bitte geben Sie das Entschlüsselungspasswort ein"
 msgid "Practical help"
 msgstr "Praktische Hilfe"
 
-#: src/hooks/Exporter.ts:22
-#~ msgid "Rank"
-#~ msgstr "Bewertung"
-
 #: src/hooks/QuestionTexts.ts:19
 msgid "Relationship with partner/family"
 msgstr "Beziehung zu Partner/Familie"
@@ -528,11 +500,6 @@ msgstr "in der Mitte"
 msgid "last updated"
 msgstr "Letzte Änderung"
 
-#: src/hooks/Exporter.ts:37
-#: src/hooks/Exporter.ts:38
-#~ msgid "no"
-#~ msgstr "nein"
-
 #: src/components/pages/assessment/stages/assess/AssessStage.tsx:13
 msgid "totally dissatisfied"
 msgstr "vollständig unzufrieden"
@@ -548,11 +515,6 @@ msgstr "sehr unzufrieden"
 #: src/components/pages/assessment/stages/assess/AssessStage.tsx:18
 msgid "very satisfied"
 msgstr "sehr zufrieden"
-
-#: src/hooks/Exporter.ts:37
-#: src/hooks/Exporter.ts:38
-#~ msgid "yes"
-#~ msgstr "ja"
 
 #: src/components/modals/DeleteAssessmentsModal.tsx:24
 #: src/components/modals/DeleteClientsModal.tsx:24

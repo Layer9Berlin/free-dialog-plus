@@ -33,14 +33,6 @@ msgstr "Action items"
 msgid "Add action item"
 msgstr "Add action item"
 
-#: src/components/menu/AddToHomescreenInfoPanel.tsx:28
-#~ msgid "Add this app to your <0>Home Screen</0> for a better experience."
-#~ msgstr "Add this app to your <0>Home Screen</0> for a better experience."
-
-#: src/hooks/Exporter.ts:23
-#~ msgid "Additional Help"
-#~ msgstr "Additional Help"
-
 #: src/components/modals/StepInformationModal.tsx:498
 #: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:141
 msgid "Agreeing on actions"
@@ -79,10 +71,6 @@ msgstr "Cancel"
 msgid "Choose a password"
 msgstr "Choose a password"
 
-#: src/hooks/Exporter.ts:17
-#~ msgid "Client Name"
-#~ msgstr "Client Name"
-
 #: src/components/pages/clients/ClientsPage.tsx:146
 msgid "Clients"
 msgstr "Clients"
@@ -111,14 +99,6 @@ msgstr "Current assessment"
 msgid "Data protection"
 msgstr "Data protection"
 
-#: src/hooks/Exporter.ts:19
-#~ msgid "Date End"
-#~ msgstr "Date End"
-
-#: src/hooks/Exporter.ts:18
-#~ msgid "Date Start"
-#~ msgstr "Date Start"
-
 #: src/components/modals/DeleteAssessmentsModal.tsx:41
 #: src/components/modals/DeleteClientsModal.tsx:42
 msgid "Delete"
@@ -131,10 +111,6 @@ msgstr "Delete selected"
 #: src/components/menu/StageNavigation.tsx:34
 msgid "Discuss"
 msgstr "Discuss"
-
-#: src/hooks/Exporter.ts:24
-#~ msgid "Discussed"
-#~ msgstr "Discussed"
 
 #: src/components/pages/assessment/stages/assess/AssessStage.tsx:69
 msgid "Do you need more help in this area?"
@@ -364,18 +340,6 @@ msgstr "No selection made"
 msgid "Note that all data is stored <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality or install the app (see below) to prevent accidental loss of data."
 msgstr "Note that all data is stored <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality or install the app (see below) to prevent accidental loss of data."
 
-#: src/components/menu/DataInfoPanel.tsx:24
-#~ msgid "Note that all patient and assessment data is stored <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality or install the app (see below) to prevent accidental loss of data."
-#~ msgstr "Note that all patient and assessment data is stored <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality or install the app (see below) to prevent accidental loss of data."
-
-#: src/components/menu/DataInfoPanel.tsx:24
-#~ msgid "Note that all patient and assessment data is stored <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality to prevent accidental loss of data."
-#~ msgstr "Note that all patient and assessment data is stored <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality to prevent accidental loss of data."
-
-#: src/components/menu/DataInfoPanel.tsx:24
-#~ msgid "Note that all patient and assessment data stays <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality to prevent accidental loss of data."
-#~ msgstr "Note that all patient and assessment data stays <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality to prevent accidental loss of data."
-
 #: src/components/modals/ExportPasswordModal.tsx:73
 #: src/components/modals/ImportErrorModal.tsx:29
 #: src/components/modals/NoSelectionModal.tsx:29
@@ -414,10 +378,6 @@ msgstr "Please enter the password used to protect the file"
 #: src/hooks/QuestionTexts.ts:27
 msgid "Practical help"
 msgstr "Practical help"
-
-#: src/hooks/Exporter.ts:22
-#~ msgid "Rank"
-#~ msgstr "Rank"
 
 #: src/hooks/QuestionTexts.ts:19
 msgid "Relationship with partner/family"
@@ -540,11 +500,6 @@ msgstr "in the middle"
 msgid "last updated"
 msgstr "last updated"
 
-#: src/hooks/Exporter.ts:37
-#: src/hooks/Exporter.ts:38
-#~ msgid "no"
-#~ msgstr "no"
-
 #: src/components/pages/assessment/stages/assess/AssessStage.tsx:13
 msgid "totally dissatisfied"
 msgstr "totally dissatisfied"
@@ -560,11 +515,6 @@ msgstr "very dissatisfied"
 #: src/components/pages/assessment/stages/assess/AssessStage.tsx:18
 msgid "very satisfied"
 msgstr "very satisfied"
-
-#: src/hooks/Exporter.ts:37
-#: src/hooks/Exporter.ts:38
-#~ msgid "yes"
-#~ msgstr "yes"
 
 #: src/components/modals/DeleteAssessmentsModal.tsx:24
 #: src/components/modals/DeleteClientsModal.tsx:24
