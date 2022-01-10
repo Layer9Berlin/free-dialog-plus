@@ -4,6 +4,10 @@ version: 0.2
 jobs:
   - deploy:
       steps:
+        - lingui-extract:
+            run: "npm run extract"
+        - lingui-compile:
+            run: "npm run compile"
         - build:
             run: "npm run build"
         - upload:
