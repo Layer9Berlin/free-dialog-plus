@@ -45,7 +45,7 @@ There is currently no way to recover a lost password. If you forget your passwor
 
 The application is currently available in British English and German.
 
-If you would like to contribute a new translation, your translator will need [this file](src/locales/de/messages.po) to know what to translate. They should be familiar with this file type and should be able to convert it into the required language. Once you have the translated file, either open a pull request (if you know this works) or simply [get in touch](https://layer9.berlin).
+If you would like to contribute a new translation, your translator will need [this file](https://raw.githubusercontent.com/Layer9Berlin/free-dialog-plus/main/src/locales/de/messages.po) to know what to translate. They should be familiar with this file type and should be able to convert it into the required language. Once you have the translated file, either open a pull request (if you know this works) or simply [get in touch](https://layer9.berlin).
 
 ## Development
 
