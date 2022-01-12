@@ -22,6 +22,10 @@ To use Free DIALOG+ in a clinical setting, it is highly recommended that you dep
 
 The demo deployment is intended for demonstration purposes, for use in more casual settings where loss of patient data is of little consequence and as a foundation for further development.
 
+## Password recovery
+
+Due to the lack of a data server, there is currently no way to recover a lost password. If you forget your password, clearing the cache/re-installing the PWA will reset the password, but also cause all existing data to be irretrievably lost. Please perform regular exports to mitigate the risk of losing your data.
+
 ## Device synchronisation
 
 Due to the fact that all data remains on the users' devices, synchronising data between devices currently requires a manual export, followed by an import on the second device (see below).
@@ -35,11 +39,6 @@ In the clients or the assessments screen, tap the ![arrow out of box](public/box
 ### Import
 
 In the clients screen, tap the ![arrow into box](public/box-arrow-in-down.svg) icon to import a ZIP file. You will be prompted for the password you specified during the export.
-
-
-## Password recovery
-
-There is currently no way to recover a lost password. If you forget your password, clearing the cache/re-installing the PWA will reset the password, but also cause all existing data to be irretrievably lost. 
 
 ## Languages
 
