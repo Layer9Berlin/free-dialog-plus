@@ -51,7 +51,8 @@
     "compile": "lingui compile",
     "lint": "eslint . && pretty-quick --check",
     "lint:fix": "eslint . --fix && pretty-quick",
-    "lint:staged": "lint-staged && pretty-quick --staged"
+    "lint:staged": "lint-staged && pretty-quick --staged",
+    "upload": "rsync -r build/ misc:/srv/dialogplus"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
