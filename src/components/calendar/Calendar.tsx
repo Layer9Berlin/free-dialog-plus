@@ -18,10 +18,13 @@ export const Calendar = ({
 
   useEffect(() => {
     dataStore?.assessments?.list()?.then((assessments) => {
-      const comparisons = assessments?.filter((assessment) => assessment.id !== current?.id) ?? []
+      const comparisons =
+        assessments?.filter(
+          (assessment) => assessment.id !== current?.id && assessment.meta.clientId === current?.meta?.clientId,
+        ) ?? []
       setCalendarItems(comparisons)
     })
-  }, [current?.id, dataStore?.assessments])
+  }, [current?.id, current?.meta?.clientId, dataStore?.assessments])
 
   return (
     <div className="d-flex overflow-x-scroll h-200 p-2 border-bottom bg-light position-relative overflow-scroll">
