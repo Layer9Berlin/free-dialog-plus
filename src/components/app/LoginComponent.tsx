@@ -1,4 +1,4 @@
-import * as bcrypt from "bcryptjs"
+import * as bcrypt from "bcryptjs-react"
 import React, {createContext, ReactNode, useCallback, useEffect, useState} from "react"
 import {useLocation} from "react-router-dom"
 import {localStoragePasswordHashKey} from "../../constants"
