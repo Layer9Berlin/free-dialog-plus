@@ -10,7 +10,13 @@ import {LocalDataStoreComponent} from "./LocalDataStoreComponent"
 export const RoutesComponent = () => {
   return (
     <LocalDataStoreComponent>
-      <Routes></Routes>
+      <Routes>
+        <Route path="/" element={<ClientsPage />} />
+        <Route path="assessments" element={<AssessmentsPage />} />
+        <Route path="assessment" element={<AssessmentPage />} />
+        <Route path="welcome" element={<WelcomePage />} />
+        <Route path="login" element={<LoginPage />} />
+      </Routes>
     </LocalDataStoreComponent>
   )
 }
