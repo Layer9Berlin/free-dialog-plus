@@ -1,148 +1,97 @@
-import * as CryptoJS from "crypto-js"
-import {localStorageAssessmentsKey, localStorageClientsKey} from "../../constants"
-import {Assessment, LocalStorageAssessment} from "../../types/Assessment"
+import * as localforage from "localforage"
+import {localStorageDatabaseName} from "../../constants"
+import {Assessment} from "../../types/Assessment"
 import {Client} from "../../types/Client"
-import {DataStoreType} from "../../types/DataStore"
-import {v4 as uuid} from "uuid"
+import {DataStoreSlice} from "../../types/DataStore"
+import {NotFoundError} from "./DataStore"
 
-export const localDataStore = (encryptionKey?: string): DataStoreType => ({
-  assessments: {
-    add: async (...assessments: Omit<Assessment, "id">[]) => {
-      if (!encryptionKey) {
-        return undefined
-      }
-      const newAssessments = assessments.map((assessment) => ({
-        id: uuid(),
-        ...assessment,
-      }))
-      saveAssessments([...loadAssessments(encryptionKey), ...newAssessments], encryptionKey)
-      return newAssessments
-    },
-    find: async (id: string) => {
-      if (!encryptionKey) {
-        return undefined
-      }
-      return loadAssessments(encryptionKey).find((assessment) => assessment.id === id)
-    },
-    list: async () => {
-      if (!encryptionKey) {
-        return []
-      }
-      return loadAssessments(encryptionKey)
-    },
-    remove: async (...assessments: Assessment[]) => {
-      if (!encryptionKey) {
-        return false
-      }
-      const allIds = new Set(assessments.map((assessment) => assessment.id))
-      saveAssessments(
-        loadAssessments(encryptionKey).filter((assessment) => !allIds.has(assessment.id)),
-        encryptionKey,
-      )
-      return true
-    },
-    replace: async (...items: Assessment[]) => {
-      if (!encryptionKey) {
-        return false
-      }
-      saveAssessments(items, encryptionKey)
-      return true
-    },
+export class LocalDataStore {
+  public readonly saveKey: string
+  private readonly assessmentsInstance: LocalForage
+  private readonly clientsInstance: LocalForage
+
+  constructor(saveKey: string = localStorageDatabaseName) {
+    this.assessmentsInstance = localforage.createInstance({
+      name: saveKey,
+      storeName: "assessments",
+      description: "DIALOG+ assessments data",
+    })
+    this.clientsInstance = localforage.createInstance({
+      name: saveKey,
+      storeName: "clients",
+      description: "DIALOG+ clients data",
+    })
+    this.saveKey = saveKey
+  }
+
+  public static haveData = async (): Promise<boolean> => {
+    return (
+      (await localforage
+        .createInstance({
+          name: localStorageDatabaseName,
+          storeName: "assessments",
+          description: "DIALOG+ assessments data",
+        })
+        .length()) > 0
+    )
+  }
+
+  get assessments(): DataStoreSlice<Assessment> {
+    const database = this.assessmentsInstance
+    if (!database) {
+      return uninitializedOperations<Assessment>()
+    }
+    return databaseOperations<Assessment>(database)
+  }
+
+  get clients(): DataStoreSlice<Client> {
+    const database = this.clientsInstance
+    if (!database) {
+      return uninitializedOperations<Client>()
+    }
+    return databaseOperations<Client>(database)
+  }
+}
+
+const databaseOperations = <EntityType extends Assessment | Client>(database: LocalForage) => ({
+  add: async (item: EntityType): Promise<void> => {
+    await database.setItem(item.id, item)
   },
-  clients: {
-    add: async (...clients: Omit<Client, "id">[]) => {
-      if (!encryptionKey) {
-        return undefined
-      }
-      const newClients = clients.map((client) => ({
-        id: uuid(),
-        ...client,
-      }))
-      saveClients([...loadClients(encryptionKey), ...newClients], encryptionKey)
-      return newClients
-    },
-    find: async (id: string) => {
-      if (!encryptionKey) {
-        return undefined
-      }
-      return loadClients(encryptionKey).find((client) => client.id === id)
-    },
-    list: async () => {
-      if (!encryptionKey) {
-        return []
-      }
-      return loadClients(encryptionKey)
-    },
-    remove: async (...clients: Client[]) => {
-      if (!encryptionKey) {
-        return false
-      }
-      const allIds = new Set(clients.map((client) => client.id))
-      saveClients(
-        loadClients(encryptionKey).filter((client) => !allIds.has(client.id)),
-        encryptionKey,
-      )
-      return true
-    },
-    replace: async (...items: Client[]) => {
-      if (!encryptionKey) {
-        return false
-      }
-      saveClients(items, encryptionKey)
-      return true
-    },
+  find: async (id: string): Promise<EntityType> => {
+    const result = await database.getItem<EntityType>(id)
+    if (!result) {
+      return Promise.reject(new NotFoundError())
+    }
+    return result
+  },
+  list: async (): Promise<EntityType[]> => {
+    const result: EntityType[] = []
+    await database.iterate<EntityType, void>((item, key) => {
+      result.push(item)
+    })
+    return result
+  },
+  remove: async (...items: EntityType[]): Promise<void> => {
+    for (const item of items) {
+      await database.setItem(item.id, {id: item.id, deletedAt: new Date()})
+    }
+  },
+  set: async (...items: EntityType[]): Promise<void> => {
+    await database.clear()
+    for (const item of items) {
+      await database.setItem(item.id, item)
+    }
+  },
+  change: async (item: Partial<EntityType> & {id: string}): Promise<void> => {
+    await database.setItem(item.id, item)
   },
 })
 
-export const saveAssessments = (assessments: Assessment[], encryptionKey: string) => {
-  const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(assessments), encryptionKey)
-  localStorage.setItem(localStorageAssessmentsKey, encryptedData.toString())
-}
-
-export const loadAssessments = (encryptionKey: string): Assessment[] => {
-  const encryptedBytes = localStorage.getItem(localStorageAssessmentsKey)
-  if (!encryptedBytes) {
-    return []
-  }
-  const decryptedData = CryptoJS.AES.decrypt(encryptedBytes, encryptionKey)
-  if (!decryptedData) {
-    return []
-  }
-  try {
-    const jsonData = JSON.parse(decryptedData.toString(CryptoJS.enc.Utf8))
-    return (jsonData as LocalStorageAssessment[]).map((assessment) => ({
-      ...assessment,
-      meta: {
-        ...assessment.meta,
-        date: new Date(assessment.meta.date),
-        lastUpdated: new Date(assessment.meta.lastUpdated),
-      },
-    }))
-  } catch (err) {
-    console.log(`Failed to parse assessments: ${err}`)
-    return []
-  }
-}
-
-export const saveClients = (clients: Client[], encryptionKey: string) => {
-  const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(clients), encryptionKey)
-  localStorage.setItem(localStorageClientsKey, encryptedData.toString())
-}
-
-export const loadClients = (encryptionKey: string): Client[] => {
-  const encryptedBytes = localStorage.getItem(localStorageClientsKey)
-  if (!encryptedBytes) {
-    return []
-  }
-  const decryptedData = CryptoJS.AES.decrypt(encryptedBytes, encryptionKey)
-  if (!decryptedData) {
-    return []
-  }
-  try {
-    const jsonData = JSON.parse(decryptedData.toString(CryptoJS.enc.Utf8))
-    return jsonData as Client[]
-  } catch (err) {
-    console.log(`Failed to parse clients: ${err}`)
-    return []
-  }
-}
+const uninitializedOperations = <T extends any>() => ({
+  add: () => Promise.reject<void>(new Error("DB not initialized")),
+  find: () => Promise.reject<T>(new Error("DB not initialized")),
+  list: () => Promise.reject<T[]>(new Error("DB not initialized")),
+  remove: () => Promise.reject<void>(new Error("DB not initialized")),
+  set: () => Promise.reject<void>(new Error("DB not initialized")),
+  change: () => Promise.reject<void>(new Error("DB not initialized")),
+})

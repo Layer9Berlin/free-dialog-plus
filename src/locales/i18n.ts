@@ -1,6 +1,6 @@
 import {i18n} from "@lingui/core"
 import {detect, fromNavigator, fromStorage, fromUrl} from "@lingui/detect-locale"
-import {de, en} from "make-plural/plurals"
+import {de, en, es, fr, it} from "make-plural/plurals"
 
 /**
  * Add new locale and plurals data here
@@ -8,10 +8,16 @@ import {de, en} from "make-plural/plurals"
 export const locales = {
   en: "English",
   de: "Deutsch",
+  it: "Italiano",
+  es: "Español",
+  fr: "Français",
 }
 i18n.loadLocaleData({
   en: {plurals: en},
   de: {plurals: de},
+  it: {plurals: it},
+  es: {plurals: es},
+  fr: {plurals: fr},
 })
 
 export const localeForCountryCodedLanguage = (lang: string): string => {

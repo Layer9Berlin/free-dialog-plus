@@ -2,7 +2,7 @@ import {t, Trans} from "@lingui/macro"
 import React, {useEffect, useMemo, useState} from "react"
 import {NavLink, useLocation} from "react-router-dom"
 import {useRerouter} from "../../hooks/Rerouter"
-import {MutableAssessment} from "../../types/Assessment"
+import {Assessment} from "../../types/Assessment"
 
 export type StageIdentifier = "assess" | "review" | "select" | "discuss" | "action-items"
 export type Stage = {id: StageIdentifier; title: string}
@@ -43,7 +43,7 @@ export const useStageNavigation = ({
   assessment,
   onChange,
 }: {
-  assessment?: MutableAssessment
+  assessment?: Assessment
   onChange?: () => void
 }): {
   stage: Stage

@@ -1,0 +1,690 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2022-10-23 11:50+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: it\n"
+
+#: src/components/modals/StepInformationModal.tsx:348
+msgid "\"Is there a neighbour or friend who could help you bring your shopping to the top floor with you?”"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:12
+msgid "Accommodation"
+msgstr ""
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:170
+msgid "Action item"
+msgstr ""
+
+#: src/components/menu/StageNavigation.tsx:38
+msgid "Action items"
+msgstr ""
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:195
+msgid "Add action item"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:498
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:148
+msgid "Agreeing on actions"
+msgstr ""
+
+#: src/components/menu/StageNavigation.tsx:22
+msgid "Assess"
+msgstr ""
+
+#: src/components/pages/assessment/AssessmentPage.tsx:80
+msgid "Assessment not found"
+msgstr ""
+
+#: src/components/pages/assessments/partials/AssessmentsHeader.tsx:12
+msgid "Assessments"
+msgstr ""
+
+#: src/components/pages/assessments/partials/AssessmentsHeader.tsx:15
+msgid "Back to Clients"
+msgstr ""
+
+#: src/components/menu/StageNavigation.tsx:177
+msgid "Back to {0}"
+msgstr ""
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:104
+msgid "Best case scenario?"
+msgstr ""
+
+#: src/components/modals/DeleteAssessmentsModal.tsx:21
+#: src/components/modals/DeleteClientsModal.tsx:16
+msgid "Cancel"
+msgstr ""
+
+#: src/components/modals/ExportPasswordModal.tsx:60
+msgid "Choose a password"
+msgstr ""
+
+#: src/components/pages/clients/partials/ClientsHeader.tsx:22
+msgid "Clients"
+msgstr ""
+
+#: src/components/pages/register/RegisterPage.tsx:50
+msgid "Close"
+msgstr ""
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:117
+msgid "Considering options"
+msgstr ""
+
+#: src/components/modals/ClientDataModal.tsx:60
+#: src/components/pages/register/RegisterPage.tsx:124
+msgid "Create"
+msgstr ""
+
+#: src/components/modals/DataLossWarningModal.tsx:30
+#: src/components/pages/clients/partials/ClientsHeader.tsx:30
+#: src/components/pages/register/RegisterPage.tsx:57
+msgid "Create account"
+msgstr ""
+
+#: src/components/calendar/Calendar.tsx:57
+msgid "Current assessment"
+msgstr ""
+
+#: src/components/modals/DeleteAssessmentsModal.tsx:24
+#: src/components/modals/DeleteClientsModal.tsx:19
+msgid "Delete"
+msgstr ""
+
+#: src/components/menu/StageNavigation.tsx:34
+msgid "Discuss"
+msgstr ""
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:73
+msgid "Do you need more help in this area?"
+msgstr ""
+
+#: src/components/pages/login/LoginPage.tsx:56
+#: src/components/pages/register/RegisterPage.tsx:75
+msgid "E-Mail-Adresse"
+msgstr ""
+
+#: src/components/modals/ClientDataModal.tsx:60
+msgid "Edit"
+msgstr ""
+
+#: src/components/modals/ClientDataModal.tsx:16
+msgid "Edit client"
+msgstr ""
+
+#: src/components/modals/ExportPasswordModal.tsx:38
+msgid "Enter a password to protect the exported file"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:29
+#: src/components/modals/StepInformationModal.tsx:65
+#: src/components/modals/StepInformationModal.tsx:142
+#: src/components/modals/StepInformationModal.tsx:185
+#: src/components/modals/StepInformationModal.tsx:250
+#: src/components/modals/StepInformationModal.tsx:290
+#: src/components/modals/StepInformationModal.tsx:333
+#: src/components/modals/StepInformationModal.tsx:380
+#: src/components/modals/StepInformationModal.tsx:410
+#: src/components/modals/StepInformationModal.tsx:437
+msgid "Examples:"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:19
+msgid "Exploring"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:493
+msgid "Exploring options"
+msgstr ""
+
+#: src/components/buttons/ExportButton.tsx:22
+msgid "Export"
+msgstr ""
+
+#: src/components/buttons/ExportButton.tsx:23
+msgid "Export selected"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:326
+msgid "Finally, the clinician should ask what other people can do to help the patient improve their situation. This might be a friend, family member, relative, neighbour, colleague, befriender, support worker, fellow patient or another supporter."
+msgstr ""
+
+#: src/components/menu/StageNavigation.tsx:196
+msgid "Finish"
+msgstr ""
+
+#: src/components/modals/ClientDataModal.tsx:80
+msgid "First name"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:135
+msgid "First, the clinician should ask the patient to describe the ideal outcome they would like to achieve; essentially, what would be different if the patient scored 7 out of 7 (totally satisfied). The best-case scenario is often, but not always, a long-term outcome."
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:22
+msgid "First, the clinician should explore the patient’s evaluation of the domain, and the reasons why they have requested more help for that domain, or given it a low rating. In the case of special attention to mental health, the clinician should explore the patient’s expression of distress or concern."
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:244
+msgid "First, the clinician should invite the patient to think for themselves of all the possible things they might be able to do to help their own situation."
+msgstr ""
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:45
+msgid "For example, on iOS, tap<0><1/></0>in the bottom menu, followed by \"Add to Home Screen<2><3/></2>\"."
+msgstr ""
+
+#: src/components/pages/login/LoginPage.tsx:86
+msgid "Forgot password?"
+msgstr ""
+
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:9
+msgid "Free DIALOG+"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:23
+msgid "Friendships"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:106
+msgid "Having explored both negative and positive aspects of the situation in Step 1, the aim of step 2 is to now focus on the future and establish the patient’s desired changes to their situation. The intention is to encourage the patient to think about and describe what an improvement in their situation would look like, and what changes would be a sign of progress. The clinician should seek to elicit a clear picture of the future from the patient that is:"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:226
+msgid "Having introduced a forward-looking perspective in Step 2, the aim of Step 3 is for the patient and the clinician to explore a number of options that may help to bring about the desired changes. These options involve things that patient can do by themselves, things the clinician can do with the help of the various services available to the patient, and things other people in the patient’s life can do.In Step 3 the clinician asks the patient what are all the options he/she can think of as potentially helpful. The clinician can also propose different options, and ask for the patient’s opinion about them. Step 3 is concerned with what is possible to do at the present time in order to achieve the patient’s desired changes."
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:28
+msgid "How satisfied are you with the practical help you receive?"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:12
+msgid "How satisfied are you with your accommodation?"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:23
+msgid "How satisfied are you with your friendships?"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:11
+msgid "How satisfied are you with your job situation?"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:15
+msgid "How satisfied are you with your leisure activities?"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:25
+msgid "How satisfied are you with your medication?"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:33
+msgid "How satisfied are you with your meetings with mental health professionals?"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:9
+msgid "How satisfied are you with your mental health?"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:24
+msgid "How satisfied are you with your personal safety?"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:10
+msgid "How satisfied are you with your physical health?"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:20
+msgid "How satisfied are you with your relationship with your partner/family?"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:54
+msgid "Identifying what works"
+msgstr ""
+
+#: src/components/buttons/ImportButton.tsx:31
+msgid "Import"
+msgstr ""
+
+#: src/components/modals/DataLossWarningModal.tsx:20
+msgid "Important information"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:238
+msgid "In step 3, three kinds of questions can be asked:"
+msgstr ""
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:42
+msgid "Install this app on your <0>Home Screen</0> for a better experience."
+msgstr ""
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:21
+msgid "Installed"
+msgstr ""
+
+#: src/components/pages/login/LoginPage.tsx:77
+#: src/components/pages/register/RegisterPage.tsx:112
+msgid "Invalid password"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:11
+msgid "Job situation"
+msgstr ""
+
+#: src/components/modals/ClientDataModal.tsx:90
+msgid "Last name"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:14
+msgid "Leisure activities"
+msgstr ""
+
+#: src/components/pages/login/LoginPage.tsx:92
+msgid "Log in"
+msgstr ""
+
+#: src/components/pages/clients/partials/ClientsHeader.tsx:26
+msgid "Log out"
+msgstr ""
+
+#: src/components/pages/login/LoginPage.tsx:38
+msgid "Login"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:488
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:89
+msgid "Looking forward"
+msgstr ""
+
+#: src/components/pages/register/RegisterPage.tsx:46
+msgid "Looks like the passwords you entered do not match. Please try again!"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:25
+msgid "Medication"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:32
+msgid "Meetings"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:9
+msgid "Mental health"
+msgstr ""
+
+#: src/components/modals/ClientDataModal.tsx:86
+msgid "Middle name"
+msgstr ""
+
+#: src/components/modals/ClientDataModal.tsx:25
+#: src/components/pages/clients/partials/ClientsHeader.tsx:39
+msgid "New client"
+msgstr ""
+
+#: src/components/pages/assessments/partials/AssessmentsHeader.tsx:20
+msgid "New session"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:176
+msgid "Next, the clinician should ask to patient to describe smaller changes that would make a meaningful difference to their life. It may be that the best-case scenario previously described cannot occur instantly, or at all. Here, the patient is asked to consider what small change would mean an improvement of just one point higher on the scale, and help in the long-term process of achieving the best-case scenario, where possible."
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:283
+msgid "Next, the clinician should ask what he/she can do to support the patient, and what resources or services he/she can provide. It may be appropriate to suggest specific resources that are available to the patient that might help in improving the situation."
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:57
+msgid "Next, the clinician should now ask the patient to identify what is working well within the current situation. The assumption is that, no matter how bad things may be, the patient somehow manages to cope. Building an awareness of the strengths within the situation is intended to help promote the patient’s confidence and motivation for change."
+msgstr ""
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:109
+msgid "No"
+msgstr ""
+
+#: src/components/pages/assessment/stages/action-items/ActionItemsStage.tsx:32
+#: src/components/pages/assessments/partials/AssessmentRow.tsx:75
+msgid "No action items defined"
+msgstr ""
+
+#: src/components/calendar/Calendar.tsx:46
+msgid "No past assessments yet"
+msgstr ""
+
+#: src/components/modals/NoSelectionModal.tsx:18
+msgid "No selection made"
+msgstr ""
+
+#: src/components/modals/ExportPasswordModal.tsx:73
+#: src/components/modals/ImportErrorModal.tsx:29
+#: src/components/modals/NoSelectionModal.tsx:29
+msgid "OK"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:457
+msgid "Once an action item has been decided, the clinician should document it in the text box provided. Documentation should be brief, but precise. A reminder of the agreed action(s) will appear at the start of the next session, so that patient and clinician can review the progress since the last session before initiating a new session."
+msgstr ""
+
+#: src/components/pages/login/LoginPage.tsx:72
+#: src/components/pages/register/RegisterPage.tsx:91
+msgid "Password"
+msgstr ""
+
+#: src/components/pages/register/RegisterPage.tsx:107
+msgid "Password confirmation"
+msgstr ""
+
+#: src/components/pages/register/RegisterPage.tsx:42
+msgid "Password mismatch"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:24
+msgid "Personal safety"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:10
+msgid "Physical health"
+msgstr ""
+
+#: src/components/modals/ExportPasswordModal.tsx:46
+msgid "Please enter the password used to protect the file"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:27
+msgid "Practical help"
+msgstr ""
+
+#: src/components/modals/DataLossWarningModal.tsx:34
+msgid "Proceed"
+msgstr ""
+
+#: src/hooks/QuestionTexts.ts:19
+msgid "Relationship with partner/family"
+msgstr ""
+
+#: src/components/menu/StageNavigation.tsx:26
+msgid "Review"
+msgstr ""
+
+#: src/components/menu/StageNavigation.tsx:30
+msgid "Select"
+msgstr ""
+
+#: src/components/buttons/SettingsButton.tsx:7
+#: src/components/pages/settings/partials/SettingsHeader.tsx:10
+msgid "Settings"
+msgstr ""
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:107
+msgid "Smallest improvement?"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:374
+msgid "Sometimes, having considered the various options in Step 3, the patient will have a clear idea of what action should be taken and it is appropriate to invite the patient to take the lead with any decision."
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:404
+msgid "Sometimes, the clinician may take the lead in suggesting one or more actions and explore whether the patient agrees."
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:431
+msgid "Sometimes, the patient and clinician may not agree on an immediate ‘action’; instead, the patient might decide to spend more time thinking aboutthe different options discussed between now and the next meeting."
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:13
+msgid "The aim of step 1 is for both the patient and the clinician to gain a shared understanding of the patient’s current situation. There are two parts to understanding:"
+msgstr ""
+
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:14
+msgid "This is a free, web-based implementation of the <0>DIALOG+ therapeutic intervention</0>."
+msgstr "Si tratta di un'implementazione gratuita e basata sul web dell'<0>intervento terapeutico DIALOG+</0>."
+
+#: src/components/modals/StepInformationModal.tsx:366
+msgid "Through Steps 1 – 3, both the patient and the clinician have developed a thorough understanding of the patient’s current situation, thought about desired changes for the future, and identified options for moving forward. The goal of Step 4 is to reach an agreement on what action(s) should be taken, and by whom."
+msgstr ""
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:38
+msgid "Tip"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:483
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:61
+msgid "Understanding"
+msgstr ""
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:138
+msgid "What can others do?"
+msgstr ""
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:135
+msgid "What can the clinician do?"
+msgstr ""
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:132
+msgid "What can the patient do?"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:132
+msgid "What is the patient’s ‘best-case scenario’?"
+msgstr ""
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:79
+msgid "What is working?"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:173
+msgid "What small changes would make a difference?"
+msgstr ""
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:76
+msgid "Why is this rating not a lower one?"
+msgstr ""
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:90
+msgid "Yes"
+msgstr ""
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:25
+msgid "You have successfully installed the app."
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:119
+msgid "characterised by tangible behaviours rather than vague feelings (e.g. “I would talk more to my neighbours” rather than “I would feel more included in my community”)"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:125
+msgid "defined by the presence rather than the absence of something (e.g. “I would have the energy to get a part-time job” rather than “I would not feel as tired all the time”)."
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:116
+msgid "detailed"
+msgstr ""
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:12
+msgid "fairly dissatisfied"
+msgstr ""
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:14
+msgid "fairly satisfied"
+msgstr ""
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:13
+msgid "in the middle"
+msgstr ""
+
+#: src/components/pages/assessments/partials/AssessmentRow.tsx:52
+msgid "last updated"
+msgstr ""
+
+#: src/components/pages/login/LoginPage.tsx:100
+#: src/components/pages/register/RegisterPage.tsx:132
+msgid "other options"
+msgstr ""
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:10
+msgid "totally dissatisfied"
+msgstr ""
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:16
+msgid "totally satisfied"
+msgstr ""
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:11
+msgid "very dissatisfied"
+msgstr ""
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:15
+msgid "very satisfied"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:241
+msgid "‘What can the patient do?’"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:323
+msgid "‘What other people can do’"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:280
+msgid "‘What the clinician can do’"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:69
+msgid "“Although you are mainly dissatisfied with your physical health, at least you are not at the bottom end of the scale. What is helping to keep you from being totally dissatisfied?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:50
+msgid "“Can you tell me more about the distressing voices you’ve been hearing?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:343
+msgid "“Can you think of anybody that could help you to get to your class on time?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:415
+msgid "“I think a visit to the Day Centre we talked about would be a good start to feeling less isolated. Can we agree that you will try that this month and we’ll see how you got on next time?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:308
+msgid "“I wonder whether a leaflet describing pros and cons of taking medication would be something you may find helpful?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:161
+msgid "“If tomorrow morning you woke up and all your problems with your family had gone, how would the situation be?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:442
+msgid "“If you cannot decide today about whether you’re ready to come off medication. Do you want to think about it and let me know when you have come to a decision?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:450
+msgid "“If you feel uncomfortable, there is no need to decide today whether you want to go back to regular employment. Can we agree that you think about it and we revisit the issue next time?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:154
+msgid "“If your satisfaction with physical health was 7 (totally satisfied), what exactly would be different?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:338
+msgid "“Is there anyone else who could get involved in helping you to exercise more?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:295
+msgid "“Is there anything I can do to help to make you less anxious about leaving the house to attend your meetings?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:212
+msgid "“It can take time to adapt to new medication, especially when you are experiencing side effects. What would be the first sign that you were adjusting to it?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:77
+msgid "“It’s encouraging that your satisfaction with your accommodation is 2 rather than 1. So what is working well with your accommodation?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:397
+msgid "“Let’s decide on the best way forward. Which options shall we try out, before we meet again?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:390
+msgid "“Of all the options we’ve discussed, are there some in particular that you are leaning towards?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:423
+msgid "“Regarding your job situation, I suggest that you ask your partner to help you type up your C.V. and I’ll make an appointment on your behalf with the Back-to-Employment Officer. Is this alright with you?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:268
+msgid "“The next time you hear voices, what can you try to prevent yourself from feeling so distressed?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:316
+msgid "“There is a Hearing Voices group running here. Might that be something you would like to try?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:189
+msgid "“Until you are rehoused in the coming months, what small improvement to your accommodation would make it more acceptable to you?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:385
+msgid "“We‘ve talked about a lot of different options today. Which ones will we go for?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:255
+msgid "“We’ve talked about what needs to change in order for you to feel safe. What is the first thing you can do to ensure your own safety?\""
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:263
+msgid "“What are some of the ways you could start to reach out to others in the community?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:275
+msgid "“What could you do to make sure you remember to take your medication in the morning?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:355
+msgid "“What could your partner do to stop you two from arguing so often?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:38
+msgid "“What in particular makes you dissatisfied with your medication?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:205
+msgid "“What is the smallest noticeable change that you would see as a sign of improved mental health?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:303
+msgid "“What kind of support from our team do you need to help you in finding a job?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:169
+msgid "“What would rating 7 out of 7 for medication mean to you?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:92
+msgid "“When you feel totally dissatisfied with your mental health, what helps you to cope? Are there moments when you feel less distressed?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:33
+msgid "“You asked for more help with physical health. What is lacking in that area?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:197
+msgid "“You rate your friendships as 3 – what would need to be different for you to reach 4 - just one point higher on the scale?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:43
+msgid "“You rated your satisfaction with accommodation as 3 out of 7, mainly dissatisfied. Why is that?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:85
+msgid "“Your satisfaction with your relationship is 3. What makes your situation better than a 2 or a 1?”"
+msgstr ""
+
+#: src/components/modals/StepInformationModal.tsx:146
+msgid "“You’re unhappy with your employment situation: What would be the best possible employment situation for you?”"
+msgstr ""

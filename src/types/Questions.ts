@@ -1,33 +1,23 @@
-export type QuestionStateProps = {
+export type QuestionState = {
   collapsed: boolean
   selected: boolean
   highlighted?: boolean
 }
 
-export type ResultInputValue = {
+export type AnswerValue = {
   selectedOption: number | undefined
   furtherHelp: boolean | undefined
   actionItems: string[]
 }
 
-export type QuestionProps = {
-  state: QuestionStateProps
-  value: ResultInputValue
-}
-
-export type MutableQuestionProps = QuestionProps & {
-  state: {
-    setCollapsed: (collapsed: boolean) => void
-    setSelected: (selected: boolean) => void
-  }
-  value: {
-    setSelectedOption: (selectedOption: number | undefined) => void
-    setFurtherHelp: (furtherHelp: boolean | undefined) => void
-    setActionItems: (actionItems: string[]) => void
-  }
+export type Question = {
+  text: QuestionText
+  state: QuestionState
+  value: AnswerValue
 }
 
 export type QuestionText = {
   short: string
   long: string
+  export: string
 }

@@ -1,19 +1,19 @@
-import React, {useState} from "react"
+import React, {useContext, useState} from "react"
+import {DataStoreContext} from "../../../../../contexts/DataStoreContext"
 import {useQuestionTexts} from "../../../../../hooks/QuestionTexts"
-import {Assessment, MutableAssessment} from "../../../../../types/Assessment"
-import {MutableQuestionProps, QuestionText, ResultInputValue} from "../../../../../types/Questions"
+import {Assessment} from "../../../../../types/Assessment"
+import {Question, QuestionText, AnswerValue} from "../../../../../types/Questions"
 import {Calendar} from "../../../../calendar/Calendar"
 import {IconSpacer} from "../../../../icons/BootstrapIcons"
 import {DialogPlusIcon} from "../../../../icons/DialogPlusIcon"
 import {AssessmentNumbers} from "../common/AssessmentNumbers"
 import {ResultOverview} from "../common/ResultOverview"
-import {DataStoreContext} from "../../../../api/DataStore"
 
 export const ReviewStageRow = ({
   short,
   value,
   comparisonValue,
-}: MutableQuestionProps & QuestionText & {onOpenNext?: () => void; comparisonValue?: ResultInputValue}) => {
+}: Question & QuestionText & {onOpenNext?: () => void; comparisonValue?: AnswerValue}) => {
   return (
     <div className="d-flex flex-column border-bottom">
       <button className="btn btn-accordion d-flex align-items-center" type="button">
@@ -42,26 +42,23 @@ export const ReviewStageRow = ({
   )
 }
 
-export const ReviewStage = ({assessment}: {assessment: MutableAssessment}) => {
+export const ReviewStage = ({assessment}: {assessment: Assessment}) => {
   const [comparison, setComparison] = useState<Assessment | undefined>(undefined)
   const questionTexts = useQuestionTexts()
+  const {dataStore} = useContext(DataStoreContext)
 
   return (
-    <DataStoreContext.Consumer>
-      {(dataStore) => (
-        <>
-          <Calendar current={assessment} onSelectComparison={setComparison} dataStore={dataStore} />
-          <AssessmentNumbers />
-          {questionTexts.map((questionText, questionIndex) => (
-            <ReviewStageRow
-              key={questionIndex}
-              {...questionText}
-              {...assessment.questions[questionIndex]}
-              comparisonValue={comparison?.questions?.[questionIndex]?.value}
-            />
-          ))}
-        </>
-      )}
-    </DataStoreContext.Consumer>
+    <>
+      <Calendar assessment={assessment} onSelectComparison={setComparison} dataStore={dataStore} />
+      <AssessmentNumbers />
+      {questionTexts.map((questionText, questionIndex) => (
+        <ReviewStageRow
+          key={questionIndex}
+          {...questionText}
+          {...assessment.questions[questionIndex]}
+          comparisonValue={comparison?.questions?.[questionIndex]?.value}
+        />
+      ))}
+    </>
   )
 }

@@ -7,7 +7,7 @@ export const Option = ({
   optionIndex,
 }: {
   text: string
-  onSelect: () => void
+  onSelect?: () => void
   selected: boolean
   optionIndex: number
 }) => {

@@ -1,9 +1,9 @@
 import {Trans} from "@lingui/macro"
 import React, {useMemo} from "react"
 import {useQuestionTexts} from "../../../../../hooks/QuestionTexts"
-import {MutableAssessment} from "../../../../../types/Assessment"
+import {Assessment} from "../../../../../types/Assessment"
 
-export const ActionItemsStage = ({assessment}: {assessment: MutableAssessment}) => {
+export const ActionItemsStage = ({assessment}: {assessment: Assessment}) => {
   const questions = useMemo(() => assessment.questions, [assessment.questions])
   const questionTexts = useQuestionTexts()
 

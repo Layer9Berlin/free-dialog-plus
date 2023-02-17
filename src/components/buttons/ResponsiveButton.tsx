@@ -9,7 +9,7 @@ export const ResponsiveButton = ({
   className,
   variant,
 }: {
-  onClick: () => void
+  onClick?: (() => void) | (() => Promise<void>)
   children?: ReactNode
   icon: string
   className?: string
@@ -19,15 +19,17 @@ export const ResponsiveButton = ({
 }) => {
   return (
     <button
-      className={`btn btn-${outline ? "outline-" : ""}${variant ?? "primary"} m-3 text-nowrap text-truncate${
-        className ? " " + className : ""
-      }${disabled ? " disabled" : ""}`}
+      className={`btn btn-${outline ? "outline-" : ""}${
+        variant ?? "primary"
+      } m-3 d-flex align-items-center text-nowrap text-truncate flex-shrink-0 ${className ? " " + className : ""}${
+        disabled ? " disabled" : ""
+      }`}
       onClick={onClick}
     >
       <span>
-        <i className={`bi bi-${icon}`} />
+        <i className={`bi bi-${icon} fs-5`} />
       </span>
-      {children && <span className="d-none d-sm-inline">&nbsp;{children}</span>}
+      {children && <span className="d-none d-lg-inline ms-1">&nbsp;{children}</span>}
     </button>
   )
 }

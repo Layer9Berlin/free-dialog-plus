@@ -1,35 +1,27 @@
 import {t, Trans} from "@lingui/macro"
-import {useEffect, useState} from "react"
+import {useState} from "react"
+import {useAssessments} from "../../hooks/Assessments"
 import {Assessment} from "../../types/Assessment"
 import {DataStoreType} from "../../types/DataStore"
 import {CalendarItem} from "./CalendarItem"
 
 export const Calendar = ({
-  current,
+  assessment,
   onSelectComparison,
   dataStore,
 }: {
-  current?: Assessment
-  dataStore?: DataStoreType
+  assessment?: Assessment
+  dataStore: DataStoreType
   onSelectComparison?: (assessment: Assessment) => void
 }) => {
-  const [calendarItems, setCalendarItems] = useState<Assessment[]>([])
   const [comparisonIndex, setComparisonIndex] = useState<number | undefined>(undefined)
 
-  useEffect(() => {
-    dataStore?.assessments?.list()?.then((assessments) => {
-      const comparisons =
-        assessments?.filter(
-          (assessment) => assessment.id !== current?.id && assessment.meta.clientId === current?.meta?.clientId,
-        ) ?? []
-      setCalendarItems(comparisons)
-    })
-  }, [current?.id, current?.meta?.clientId, dataStore?.assessments])
+  const {assessments} = useAssessments({clientId: assessment?.meta?.clientId, dataStoreSlice: dataStore?.assessments})
 
   return (
     <div className="d-flex overflow-x-scroll h-200 p-2 border-bottom bg-light position-relative overflow-scroll">
       <div className="position-absolute top-0 bottom-0 start-0 d-flex m-1">
-        {calendarItems.map((calendarItem, calendarItemIndex) => {
+        {assessments.map((calendarItem, calendarItemIndex) => {
           const cssClass = calendarItemIndex === comparisonIndex ? "warning" : "warning"
           return (
             <button
@@ -48,20 +40,20 @@ export const Calendar = ({
             </button>
           )
         })}
-        {!calendarItems.length && (
+        {!assessments.length && (
           <div className="d-flex-center">
             <span className="m-3 text-muted fst-italic">
               <Trans>No past assessments yet</Trans>
             </span>
           </div>
         )}
-        {current && (
+        {assessment && (
           <button className="btn mx-2 p-2 bg-white border border-primary link-primary w-200" style={{borderRadius: 6}}>
             <CalendarItem
               assessment={{
-                ...current,
+                ...assessment,
                 meta: {
-                  ...current.meta,
+                  ...assessment.meta,
                   title: t`Current assessment`,
                 },
               }}

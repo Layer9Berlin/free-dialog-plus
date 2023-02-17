@@ -1,13 +1,29 @@
 import React, {ReactNode} from "react"
-import {NavLink} from "react-router-dom"
+import {Link} from "react-router-dom"
 
-export const ResponsiveLink = ({link, children, icon}: {link: string; children: ReactNode; icon: string}) => {
+export const ResponsiveLink = ({
+  className,
+  link,
+  children,
+  icon,
+}: {
+  className?: string
+  link: string
+  children: ReactNode
+  icon: string
+}) => {
   return (
-    <NavLink className="btn btn-outline-primary m-3 text-nowrap text-truncate" to={link} activeClassName="">
+    <Link
+      className={
+        "btn btn-outline-primary m-3 d-flex align-items-center text-nowrap text-truncate flex-shrink-0 " +
+        (className ?? "")
+      }
+      to={link}
+    >
       <span>
-        <i className={`bi bi-${icon}`} />
+        <i className={`bi bi-${icon} fs-5`} />
       </span>
-      {children && <span className="d-none d-sm-inline">&nbsp;{children}</span>}
-    </NavLink>
+      {children && <span className="d-none d-lg-inline ms-1">&nbsp;{children}</span>}
+    </Link>
   )
 }

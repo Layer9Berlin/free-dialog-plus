@@ -1,11 +1,17 @@
+import {t} from "@lingui/macro"
 import {Assessment} from "./types/Assessment"
-import {QuestionProps} from "./types/Questions"
+import {Question} from "./types/Questions"
+import {v4 as uuid} from "uuid"
 
-export const localStorageAssessmentsKey = "dialog_plus_assessments_v0.3"
-export const localStorageClientsKey = "dialog_plus_clients_v0.3"
-export const localStoragePasswordHashKey = "dialog_plus_password_hash_v0.3"
+export const localStorageDatabaseName = "dialog_plus_database_v1.0"
+export const localStorageRemoteUsernameKey = "dialog_plus_username_v1.0"
 
-const defaultQuestionProps: QuestionProps = {
+const defaultQuestionProps: Question = {
+  text: {
+    long: "",
+    short: "",
+    export: "",
+  },
   state: {
     collapsed: true,
     selected: false,
@@ -18,7 +24,11 @@ const defaultQuestionProps: QuestionProps = {
 }
 
 export const initialQuestionsData = [
-  {...defaultQuestionProps, state: {collapsed: false, selected: false}},
+  {
+    ...defaultQuestionProps,
+    state: {collapsed: false, selected: false},
+    text: {short: t`Mental health`, long: t`How satisfied are you with your mental health?`, export: "Mental Health"},
+  },
   defaultQuestionProps,
   defaultQuestionProps,
   defaultQuestionProps,
@@ -31,8 +41,9 @@ export const initialQuestionsData = [
   defaultQuestionProps,
 ]
 
-export const blankAssessment = (clientId: string): Omit<Assessment, "id"> => {
+export const blankAssessment = (clientId: string): Assessment => {
   return {
+    id: uuid(),
     meta: {
       date: new Date(),
       lastUpdated: new Date(),

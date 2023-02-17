@@ -1,7 +1,7 @@
 import {t, Trans} from "@lingui/macro"
 import React, {useMemo, useState} from "react"
-import {useSelectedQuestions} from "../../../../../hooks/QuestionTexts"
-import {MutableAssessment} from "../../../../../types/Assessment"
+import {addActionItem, removeActionItem, setActionItem} from "../../../../../hooks/Assessments"
+import {Assessment} from "../../../../../types/Assessment"
 import {DialogPlusIcon} from "../../../../icons/DialogPlusIcon"
 import {StepInformationModal} from "../../../../modals/StepInformationModal"
 import {ResultOverview} from "../common/ResultOverview"
@@ -22,9 +22,18 @@ export const StepNumber = ({step}: {step: number}) => {
   )
 }
 
-export const DiscussStage = ({assessment}: {assessment: MutableAssessment}) => {
+export const DiscussStage = ({
+  assessment,
+  changeAssessment,
+}: {
+  assessment: Assessment
+  changeAssessment: (newAssessment: Assessment) => void
+}) => {
   const [questionIndex, setQuestionIndex] = useState<number>(0)
-  const selectedQuestions = useSelectedQuestions({assessment})
+  const selectedQuestions = useMemo(
+    () => assessment.questions.filter((question) => question.state.selected),
+    [assessment],
+  )
   const questionProps = useMemo(() => selectedQuestions?.[questionIndex], [questionIndex, selectedQuestions])
 
   const [informationModalIndex, setInformationModalIndex] = useState<number | undefined>(undefined)
@@ -33,7 +42,7 @@ export const DiscussStage = ({assessment}: {assessment: MutableAssessment}) => {
     <div className="m-4">
       <StepInformationModal activeStep={informationModalIndex} onClose={() => setInformationModalIndex(undefined)} />
       <div className="d-flex">
-        <h3>{questionProps?.short || "-"}</h3>
+        <h3>{questionProps?.text?.short || "-"}</h3>
       </div>
       <div className="d-flex align-items-center mb-3 ms-0">
         <ResultOverview selectedValue={questionProps?.value?.selectedOption} />
@@ -162,23 +171,12 @@ export const DiscussStage = ({assessment}: {assessment: MutableAssessment}) => {
                       defaultValue={actionItem}
                       placeholder={t`Action item`}
                       onChange={(event) =>
-                        questionProps.value.setActionItems(
-                          questionProps.value.actionItems.map((actionItem, actionItemIndex) => {
-                            if (index === actionItemIndex) {
-                              return event.target.value
-                            }
-                            return actionItem
-                          }),
-                        )
+                        changeAssessment(setActionItem(questionIndex, index, event.target.value)(assessment))
                       }
                     />
                     <button
                       className="btn btn-outline-default"
-                      onClick={() =>
-                        questionProps.value.setActionItems(
-                          questionProps.value.actionItems.filter((_, actionItemIndex) => index !== actionItemIndex),
-                        )
-                      }
+                      onClick={() => changeAssessment(removeActionItem(questionIndex, index)(assessment))}
                     >
                       <span>
                         <i className="bi bi-x" />
@@ -190,7 +188,7 @@ export const DiscussStage = ({assessment}: {assessment: MutableAssessment}) => {
               <div className="d-flex align-items-center justify-content-between">
                 <button
                   className="btn link-primary border-0 p-0 d-flex align-items-center"
-                  onClick={() => questionProps.value.setActionItems([...questionProps.value.actionItems, ""])}
+                  onClick={() => changeAssessment(addActionItem(questionIndex, "")(assessment))}
                 >
                   <span className="p-1 me-2">
                     <i className="bi bi-plus-square fs-3" />
