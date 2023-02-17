@@ -1,27 +1,17 @@
 import {i18n} from "@lingui/core"
-import {I18nProvider} from "@lingui/react"
-import {fireEvent, render, screen} from "@testing-library/react"
-import {en} from "make-plural/plurals"
-import {ReactNode} from "react"
+import {fireEvent, screen} from "@testing-library/react"
 import {act} from "react-dom/test-utils"
-import {MemoryRouter} from "react-router-dom"
-import {DataStoreContext, defaultSyncState} from "../../../contexts/DataStoreContext"
 import {messages} from "../../../locales/en/messages"
 import {dummyAssessment} from "../../../test/data/dummyAssessment"
 import {renderForTest} from "../../../test/helpers"
-import {DataStoreType} from "../../../types/DataStore"
 import {InMemoryDataStore} from "../../api/InMemoryDataStore"
 import {AssessmentsPage} from "./AssessmentsPage"
 
 // @ts-ignore
 global.IS_REACT_ACT_ENVIRONMENT = true
 
-i18n.load({
-  en: messages,
-})
-i18n.loadLocaleData({
-  en: {plurals: en},
-})
+i18n.load("en", messages)
+i18n.activate("en")
 
 describe("Assessments page", () => {
   test("Should show title", async () => {

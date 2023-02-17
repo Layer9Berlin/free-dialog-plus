@@ -1,22 +1,26 @@
 import {i18n} from "@lingui/core"
 import {screen} from "@testing-library/react"
-import {en} from "make-plural/plurals"
 import {act} from "react-dom/test-utils"
-import {messages} from "../../../locales/en/messages"
+import {messages as enMessages} from "../../../locales/en/messages"
+import {messages as deMessages} from "../../../locales/de/messages"
 import {dummyAssessment} from "../../../test/data/dummyAssessment"
 import {renderForTest} from "../../../test/helpers"
 import {InMemoryDataStore} from "../../api/InMemoryDataStore"
 import {AssessmentPage} from "./AssessmentPage"
+import {en, de} from "make-plural/plurals"
 
 // @ts-ignore
 global.IS_REACT_ACT_ENVIRONMENT = true
 
-i18n.load({
-  en: messages,
-})
 i18n.loadLocaleData({
   en: {plurals: en},
+  de: {plurals: de},
 })
+i18n.load({
+  en: enMessages,
+  de: deMessages,
+})
+i18n.activate("en")
 
 describe("Assessment 404 page", () => {
   test("Should show assess stage", async () => {
