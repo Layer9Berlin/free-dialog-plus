@@ -1,49 +1,85 @@
-import {ReactNode, useState} from "react"
-import {defaultLoginContextState, LoginState, LoginStateContext} from "../../contexts/LoginStateContext"
+import * as bcrypt from "bcryptjs-react"
+import React, {createContext, ReactNode, useCallback, useEffect, useState} from "react"
+import {useLocation} from "react-router-dom"
+import {localStoragePasswordHashKey} from "../../constants"
 import {useRerouter} from "../../hooks/Rerouter"
 
-export const LoginComponent = ({children}: {children: ReactNode | ReactNode[]}) => {
-  const [loginState, setLoginState] = useState<LoginState>(defaultLoginContextState.current)
+export const LoginComponent = ({children}: {children?: ReactNode}) => {
   const reroute = useRerouter()
+  const location = useLocation()
+  const [finalRedirectRoute, setFinalRedirectRoute] = useState<string | undefined>(undefined)
+  const [haveLoadedHash, setHaveLoadedHash] = useState<boolean>(false)
+  const [haveRedirected, setHaveRedirected] = useState<boolean>(false)
 
-  const logOut = () => {
-    setLoginState({loggedIn: false, anonymous: false})
-    reroute.to({page: "/login"})
-  }
-  const logIn = () => {
-    setLoginState({loggedIn: true, anonymous: false})
-    reroute.to({page: "/clients"})
-  }
-  const register = () => {
-    setLoginState({loggedIn: true, anonymous: false})
-    reroute.to({page: "/clients"})
-  }
-  const startAnonymousSession = () => {
-    setLoginState({loggedIn: false, anonymous: true})
-    reroute.to({page: "/clients"})
-  }
-  // const reroute = useRerouter()
-  // const {show: showWarningModal, props: dataLossWarningModalProps} = useModal({})
-  // const {dataStore, loadState, syncState} = useDataStore()
-  //
-  // useEffect(() => {
-  //   if (loginState) {
-  //     if (loginState.loggedIn) {
-  //     } else {
-  //       if (loginState?.anonymous) {
-  //         showWarningModal()
-  //       } else {
-  //         reroute.to({page: "/"})
-  //       }
-  //     }
-  //   }
-  // }, [loadState, loginState, reroute, showWarningModal])
-  return (
-    <>
-      {/*<DataLossWarningModal {...dataLossWarningModalProps}></DataLossWarningModal>*/}
-      <LoginStateContext.Provider value={{loginState, logIn, logOut, register, startAnonymousSession}}>
-        {children}
-      </LoginStateContext.Provider>
-    </>
+  const [password, setPassword] = useState<string | undefined>(undefined)
+  const [passwordHash, setPasswordHash] = useState<string | undefined>(undefined)
+  const [loggedIn, setLoggedIn] = useState<boolean>(false)
+
+  // on first page load only,
+  // redirect to login screen if saved data is present,
+  // the welcome screen otherwise
+  useEffect(() => {
+    if (haveLoadedHash) {
+      return
+    }
+    const loadedHash = localStorage.getItem(localStoragePasswordHashKey)
+    setHaveLoadedHash(true)
+    const startedOnLoginOrWelcomeRoute = [`/login`, `/welcome`].includes(location.pathname)
+
+    if (startedOnLoginOrWelcomeRoute) {
+      setFinalRedirectRoute("/")
+    } else {
+      setFinalRedirectRoute(location.pathname)
+    }
+    if (loadedHash) {
+      setPasswordHash(loadedHash)
+      reroute.to({page: `/login`})
+    } else {
+      reroute.to({page: `/welcome`})
+    }
+  }, [haveLoadedHash, location.pathname, location.search, reroute])
+
+  // after login, redirect back to orgiinal page
+  useEffect(() => {
+    if (loggedIn && finalRedirectRoute && !haveRedirected) {
+      reroute.to({page: finalRedirectRoute, replace: true})
+      setHaveRedirected(true)
+    }
+  }, [finalRedirectRoute, haveRedirected, loggedIn, reroute])
+
+  const logIn = useCallback(
+    (passwordCandidate: string) => {
+      if (!passwordHash) {
+        return false
+      }
+      const result = bcrypt.compareSync(passwordCandidate, passwordHash)
+      if (result) {
+        setPassword(passwordCandidate)
+        setLoggedIn(true)
+      }
+      return result
+    },
+    [passwordHash],
   )
+
+  const savePassword = (password: string) => {
+    const passwordHash = bcrypt.hashSync(password, 10)
+    localStorage.setItem(localStoragePasswordHashKey, passwordHash)
+    reroute.to({page: "/"})
+    setPassword(password)
+  }
+
+  const logOut = useCallback(() => {
+    setPassword(undefined)
+    reroute.to({page: "/login"})
+  }, [reroute])
+
+  return <LoginContext.Provider value={{password, savePassword, logIn, logOut}}>{children}</LoginContext.Provider>
 }
+
+export const LoginContext = createContext<{
+  password?: string
+  savePassword?: (password: string) => void
+  logIn?: (password: string) => boolean
+  logOut?: () => void
+}>({password: undefined, savePassword: undefined, logIn: undefined, logOut: undefined})

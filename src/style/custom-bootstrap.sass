@@ -18,13 +18,26 @@ $nav-tabs-link-active-bg: rgb(248, 249, 250)
 $nav-tabs-link-active-color: $primary
 
 @import ~bootstrap/scss/functions
+
 @import ~bootstrap/scss/variables
+
 @import ~bootstrap/scss/maps
+@import ~bootstrap/scss/mixins
+@import ~bootstrap/scss/root
+
+
 @import ~bootstrap/scss/utilities
 
-@import styles/utilities
+@import ./utilities
 
-@import ~bootstrap/scss/bootstrap
+@import ~bootstrap/scss/reboot
+@import ~bootstrap/scss/type
+@import ~bootstrap/scss/images
+@import ~bootstrap/scss/containers
+@import ~bootstrap/scss/grid
+@import ~bootstrap/scss/helpers
+
+@import ~bootstrap/scss/utilities/api
 
 .d-flex-center
   display: flex
@@ -33,5 +46,3 @@ $nav-tabs-link-active-color: $primary
 
 .flex-basis-0
   flex-basis: 0
-
-@import ~bootstrap-icons/font/bootstrap-icons

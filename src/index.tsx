@@ -5,6 +5,9 @@ import App from "./components/app/App"
 import reportWebVitals from "./reportWebVitals"
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration"
 import "bootstrap/dist/js/bootstrap.bundle.min"
+// import Bootstrap Icons here to bypass webpack 5 issue
+// https://stackoverflow.com/questions/69208829/bootstrap-icons-and-webpack-5-you-may-need-an-appropriate-loader-to-handle-thi
+import "bootstrap-icons/font/bootstrap-icons.css"
 
 const rootElement = document.getElementById("root")
 if (!rootElement) {
