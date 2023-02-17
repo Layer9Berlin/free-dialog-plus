@@ -1,0 +1,13 @@
+.btn-accordion.collapsed .bi-chevron-up
+  transform: rotate(180deg)
+
+.btn-accordion .bi-chevron-up
+  transform: none
+  transition: transform .3s
+  display: block
+
+.btn-accordion::after
+  display: none
+
+.accordion-content
+  transition: max-height .3s
