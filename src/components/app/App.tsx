@@ -10,6 +10,7 @@ import {WelcomePage} from "../pages/welcome/WelcomePage"
 import {LoginComponent} from "./LoginComponent"
 import {RoutesComponent} from "./RoutesComponent"
 import {TranslationComponent} from "./TranslationComponent"
+import "./App.sass"
 
 const App = () => {
   const dataStore = new InMemoryDataStore([{id: "test1", first: "Testor", middle: "T", last: "Testington"}])

@@ -4,7 +4,7 @@ import {Button, Card, Modal} from "react-bootstrap"
 import {LoginStateContext} from "../../../contexts/LoginStateContext"
 import {filterEnterKey} from "../../../helpers/KeyboardEvents"
 import {useRerouter} from "../../../hooks/Rerouter"
-import {LanguageSwitch} from "../../../../../dialog-plus/dialog_plus/components/menu/LanguageSwitch"
+import {LanguageSwitch} from "../../menu/LanguageSwitch"
 
 export const RegisterPage = () => {
   const emailRef = useRef<HTMLInputElement>(null)

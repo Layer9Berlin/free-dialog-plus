@@ -1,10 +1,6 @@
-import React, {useContext} from "react"
-import {LoginStateContext} from "../../../../contexts/LoginStateContext"
 import {ExportButton} from "../../../buttons/ExportButton"
 import {ImportButton} from "../../../buttons/ImportButton"
-import {SettingsButton} from "../../../buttons/SettingsButton"
 import {Footer} from "../../../layouts/Footer"
-import {SyncStateText} from "../../../text/SyncStateText"
 
 export const ClientsFooter = ({
   exportDisabled = false,
@@ -25,12 +21,7 @@ export const ClientsFooter = ({
           <ExportButton active={exportSelectionModeActive} disabled={exportDisabled} onExport={onExport} />
         </div>
       }
-      right={
-        <div className="d-flex">
-          <SyncStateText />
-          <SettingsButton />
-        </div>
-      }
+      right={<div className="d-flex"></div>}
     />
   )
 }

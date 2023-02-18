@@ -1,5 +1,5 @@
 import {t, Trans} from "@lingui/macro"
-import React, {useEffect, useMemo, useState} from "react"
+import {useEffect, useMemo, useState} from "react"
 import {NavLink, useLocation} from "react-router-dom"
 import {useRerouter} from "../../hooks/Rerouter"
 import {Assessment} from "../../types/Assessment"

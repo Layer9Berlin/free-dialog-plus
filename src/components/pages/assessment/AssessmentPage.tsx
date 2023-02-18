@@ -1,5 +1,5 @@
 import {Trans} from "@lingui/macro"
-import React, {useCallback, useContext, useEffect, useState} from "react"
+import {useCallback, useContext, useEffect, useState} from "react"
 import {useLocation} from "react-router-dom"
 import {DataStoreContext} from "../../../contexts/DataStoreContext"
 import {Assessment} from "../../../types/Assessment"

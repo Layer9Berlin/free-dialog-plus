@@ -421,11 +421,6 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
-#: src/components/buttons/SettingsButton.tsx:7
-#: src/components/pages/settings/partials/SettingsHeader.tsx:10
-msgid "Settings"
-msgstr ""
-
 #: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:109
 msgid "Smallest improvement?"
 msgstr ""
