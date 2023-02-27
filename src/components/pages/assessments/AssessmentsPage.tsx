@@ -1,9 +1,10 @@
-import React, {useContext, useEffect, useState} from "react"
+import {useContext, useEffect, useState} from "react"
 import {useLocation} from "react-router-dom"
 import {blankAssessment} from "../../../constants"
 import {DataStoreContext} from "../../../contexts/DataStoreContext"
 import {useAssessments} from "../../../hooks/Assessments"
 import {useDeleteModal} from "../../../hooks/DeleteModal"
+import {useQuestionTexts} from "../../../hooks/QuestionTexts"
 import {useRerouter} from "../../../hooks/Rerouter"
 import {Assessment} from "../../../types/Assessment"
 import {PageLayout} from "../../layouts/PageLayout"
@@ -29,6 +30,8 @@ export const AssessmentsPage = () => {
   const deleteAssessmentsModal = useDeleteModal<Assessment>({dataStoreSlice: dataStore.assessments, refresh})
   const exportPasswordModal = useExportPasswordModal()
 
+  const questionTexts = useQuestionTexts()
+
   return (
     <>
       <DeleteAssessmentsModal {...deleteAssessmentsModal.props} />
@@ -39,8 +42,9 @@ export const AssessmentsPage = () => {
           <AssessmentsHeader
             onCreateAssessment={async () => {
               if (clientId) {
-                const newAssessment = blankAssessment(clientId)
+                const newAssessment = blankAssessment(clientId, questionTexts)
                 await dataStore.assessments.add(newAssessment)
+                await refresh()
                 reroute.to({page: "/assessment", params: {id: newAssessment.id, stage: "assess"}})
               }
             }}

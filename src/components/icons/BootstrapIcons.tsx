@@ -1,5 +1,3 @@
-import React from "react"
-
 export const BootstrapIcons =
   (name: string) =>
   ({className}: {className?: string}) => {
@@ -18,6 +16,7 @@ export const DoneIcon = BootstrapIcons("check-circle")
 export const CreateAccountIcon = BootstrapIcons("cloud-plus")
 export const WarningIcon = BootstrapIcons("exclamation-diamond")
 export const ChevronUpIcon = BootstrapIcons("chevron-up")
+export const ChevronDownIcon = BootstrapIcons("chevron-down")
 export const AssessmentIcon = BootstrapIcons("clipboard")
 export const SelectedCheckboxIcon = BootstrapIcons("check-circle-fill")
 export const DeselectedCheckboxIcon = BootstrapIcons("circle")

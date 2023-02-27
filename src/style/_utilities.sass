@@ -3,6 +3,7 @@ $util-height: (responsive: true, property: height, class: h, values: (0: 0, 100:
 $util-min-height: (responsive: true, property: min-height, class: minh, values: (0: 0, 200: 200px, 400: 400px))
 $util-min-width: (responsive: true, property: min-width, class: minw, values: (0: 0, 200: 200px, 300: 300px, 400: 400px))
 $util-max-height: (responsive: true, property: max-height, class: max-h, values: (0: 0, 160: 160px, 400: 400px, 500: 500px))
+$utilities: () !default
 $utilities: map-merge($utilities, ("min-width": $util-min-width, "width": $util-width, "min-height": $util-min-height, "max-height": $util-max-height, "height": $util-height))
 
 $enable-shadows: false

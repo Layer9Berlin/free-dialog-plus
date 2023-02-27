@@ -1,5 +1,6 @@
 import {Trans} from "@lingui/macro"
-import React, {MouseEventHandler} from "react"
+import {useLingui} from "@lingui/react"
+import {MouseEventHandler} from "react"
 import {NavLink} from "react-router-dom"
 import {formatDate, formatRelativeDatetime} from "../../../../helpers/DateFormatter"
 import {useQuestionTexts} from "../../../../hooks/QuestionTexts"
@@ -35,6 +36,7 @@ export const AssessmentRow = ({
   onDeleteClicked?: MouseEventHandler
 }) => {
   const questionTexts = useQuestionTexts()
+  const {i18n} = useLingui()
   return (
     <div className="d-flex border-bottom">
       <NavLink
@@ -48,13 +50,13 @@ export const AssessmentRow = ({
               <AssessmentRowIcon />
             </span>
             <span className="text-nowrap text-truncate">
-              {assessment.meta.title ?? formatDate(assessment.meta.date)}
+              {assessment.meta.title ?? formatDate(assessment.meta.date, i18n.locale)}
             </span>
           </div>
           <span className="ms-auto text-muted text-nowrap">
             <i className="bi bi-clock-history" />
             &nbsp;<Trans>last updated</Trans>&nbsp;
-            {formatRelativeDatetime(assessment.meta.lastUpdated, assessment.meta.date)}
+            {formatRelativeDatetime(assessment.meta.lastUpdated, assessment.meta.date, i18n.locale)}
           </span>
         </div>
         {assessment.questions.map((question, questionIndex) => {

@@ -67,13 +67,13 @@ export const AssessmentPage = () => {
 
   return (
     <div className="d-flex flex-column position-relative" style={{minHeight: "100vh"}}>
-      <StageNavigationButtons
-        {...stageNavigationProps}
-        className="position-absolute start-0 top-0 end-0"
-        titleBar={true}
-      />
-      <div className="d-flex-center border-bottom border-muted h-64">
+      <div className="d-flex-center border-muted h-64 border-bottom">
         <TitleText>{stage.title}</TitleText>
+        <StageNavigationButtons
+          {...stageNavigationProps}
+          // className="position-absolute start-0 top-0 end-0"
+          titleBar={true}
+        />
       </div>
       {!assessment && (
         <div className="d-flex-center flex-grow-1">

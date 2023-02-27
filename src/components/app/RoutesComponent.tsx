@@ -1,4 +1,3 @@
-import React from "react"
 import {Route, Routes} from "react-router-dom"
 import {AssessmentPage} from "../pages/assessment/AssessmentPage"
 import {AssessmentsPage} from "../pages/assessments/AssessmentsPage"
@@ -12,8 +11,8 @@ export const RoutesComponent = () => {
     <LocalDataStoreComponent>
       <Routes>
         <Route path="/" element={<ClientsPage />} />
-        <Route path="assessments" element={<AssessmentsPage />} />
-        <Route path="assessment" element={<AssessmentPage />} />
+        <Route path="/assessments/*" element={<AssessmentsPage />} />
+        <Route path="/assessment/*" element={<AssessmentPage />} />
         <Route path="welcome" element={<WelcomePage />} />
         <Route path="login" element={<LoginPage />} />
       </Routes>

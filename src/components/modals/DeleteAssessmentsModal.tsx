@@ -1,5 +1,4 @@
 import {Trans} from "@lingui/macro"
-import React from "react"
 import {Button, Modal} from "react-bootstrap"
 
 export const DeleteAssessmentsModal = ({
@@ -13,9 +12,13 @@ export const DeleteAssessmentsModal = ({
 }) => (
   <Modal show={show} onHide={close}>
     <Modal.Header closeButton>
-      <Modal.Title>Delete assessment?</Modal.Title>
+      <Modal.Title>
+        <Trans>Delete assessment?</Trans>
+      </Modal.Title>
     </Modal.Header>
-    <Modal.Body>Do you really want to delete this assessment? This cannot be undone.</Modal.Body>
+    <Modal.Body>
+      <Trans>Do you really want to delete this assessment? This cannot be undone.</Trans>
+    </Modal.Body>
     <Modal.Footer>
       <Button variant="outline-primary" onClick={close}>
         <Trans>Cancel</Trans>

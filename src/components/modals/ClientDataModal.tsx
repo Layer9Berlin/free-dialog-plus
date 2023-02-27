@@ -1,5 +1,5 @@
-import {Trans} from "@lingui/macro"
-import React, {useEffect, useMemo, useRef} from "react"
+import {t, Trans} from "@lingui/macro"
+import {useEffect, useMemo, useRef} from "react"
 import {Modal} from "react-bootstrap"
 import {v4 as uuid} from "uuid"
 import {Client} from "../../types/Client"
@@ -74,14 +74,19 @@ export const ClientDataModal = ({
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="p-0 m-0">
-        <TextInput id="firstNameInput" label={`First name`} onEnter={middleNameRef.current?.focus} ref={firstNameRef} />
+        <TextInput
+          id="firstNameInput"
+          label={t`First name`}
+          onEnter={middleNameRef.current?.focus}
+          ref={firstNameRef}
+        />
         <TextInput
           id="middleNameInput"
-          label={`Middle name`}
+          label={t`Middle name`}
           onEnter={lastNameRef.current?.focus}
           ref={middleNameRef}
         />
-        <TextInput id="lastNameInput" label={`Last name`} onEnter={onConfirm} ref={lastNameRef} />
+        <TextInput id="lastNameInput" label={t`Last name`} onEnter={onConfirm} ref={lastNameRef} />
       </Modal.Body>
       <Modal.Footer>
         <button className="btn btn-primary" onClick={onConfirm}>

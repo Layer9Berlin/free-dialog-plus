@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useState} from "react"
+import {useCallback, useContext, useState} from "react"
 import {DataStoreContext} from "../../../contexts/DataStoreContext"
 import {useClients} from "../../../hooks/Clients"
 import {useDeleteModal} from "../../../hooks/DeleteModal"

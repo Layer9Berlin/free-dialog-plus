@@ -1,9 +1,6 @@
-import {Trans} from "@lingui/macro"
-import React, {useContext} from "react"
-import {LoginStateContext} from "../../../../contexts/LoginStateContext"
+import {t, Trans} from "@lingui/macro"
 import {CloseButton} from "../../../buttons/CloseButton"
 import {ResponsiveButton} from "../../../buttons/ResponsiveButton"
-import {ResponsiveLink} from "../../../buttons/ResponsiveLink"
 import {Header} from "../../../layouts/Header"
 
 export const ClientsHeader = ({
@@ -15,20 +12,16 @@ export const ClientsHeader = ({
   stopSelectingRows: () => void
   onCreateClient: () => void
 }) => {
-  const {logOut} = useContext(LoginStateContext)
+  function reloadPage() {
+    window.location.reload()
+  }
   return (
     <Header
-      title={`Clients`}
+      title={t`Clients`}
       left={
-        logOut ? (
-          <ResponsiveButton onClick={logOut} icon="box-arrow-left" variant="danger" outline={true}>
-            <Trans>Log out</Trans>
-          </ResponsiveButton>
-        ) : (
-          <ResponsiveLink link="/register" icon="cloud-plus">
-            <Trans>Create account</Trans>
-          </ResponsiveLink>
-        )
+        <ResponsiveButton onClick={reloadPage} icon="box-arrow-left" variant="danger" outline={true}>
+          <Trans>Log out</Trans>
+        </ResponsiveButton>
       }
       right={
         isSelectingRows ? (

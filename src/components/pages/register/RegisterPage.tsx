@@ -1,5 +1,5 @@
 import {Trans} from "@lingui/macro"
-import React, {useContext, useRef, useState} from "react"
+import {useContext, useRef, useState} from "react"
 import {Button, Card, Modal} from "react-bootstrap"
 import {LoginStateContext} from "../../../contexts/LoginStateContext"
 import {filterEnterKey} from "../../../helpers/KeyboardEvents"

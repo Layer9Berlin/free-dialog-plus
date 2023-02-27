@@ -1,5 +1,5 @@
 import {useCallback, useMemo} from "react"
-import {redirect, useLocation} from "react-router-dom"
+import {useLocation, useNavigate} from "react-router-dom"
 
 export type RerouterArgsType = {page?: string; params?: Record<string, any>; add?: Record<string, any>}
 
@@ -25,14 +25,16 @@ export const useRerouter = () => {
     [location.pathname, location.search],
   )
 
+  const navigate = useNavigate()
+
   return useMemo(
     () => ({
       link,
       to: (args: {page?: string; params?: Record<string, any>; replace?: boolean}) => {
-        redirect(link(args))
+        navigate(link(args), {replace: !!args.replace})
       },
     }),
-    [link],
+    [link, navigate],
   )
 }
 // https://stackoverflow.com/questions/62861269/attempted-import-error-usehistory-is-not-exported-from-react-router-dom

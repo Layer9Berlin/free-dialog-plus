@@ -1,7 +1,7 @@
 import {format, isSameDay, isSameYear} from "date-fns"
 
-export const formatDatetime = (date?: Date) =>
-  date?.toLocaleString(undefined, {
+export const formatDatetime = (date?: Date, locale?: string) =>
+  date?.toLocaleString(locale, {
     weekday: "short",
     year: "numeric",
     month: "short",
@@ -11,19 +11,19 @@ export const formatDatetime = (date?: Date) =>
     second: "2-digit",
   }) ?? "-"
 
-export const formatDate = (date?: Date) =>
-  date?.toLocaleString(undefined, {
+export const formatDate = (date?: Date, locale?: string) =>
+  date?.toLocaleString(locale, {
     weekday: "short",
     year: "numeric",
     month: "short",
     day: "numeric",
   })
 
-export const formatRelativeDatetime = (date?: Date, referenceDate?: Date) => {
+export const formatRelativeDatetime = (date?: Date, referenceDate?: Date, locale?: string) => {
   if (!referenceDate) {
-    return formatDatetime(date)
+    return formatDatetime(date, locale)
   }
-  return date?.toLocaleString(undefined, {
+  return date?.toLocaleString(locale, {
     weekday: undefined,
     year: isSameYear(referenceDate, date) ? undefined : "2-digit",
     month: isSameDay(referenceDate, date) ? undefined : "short",

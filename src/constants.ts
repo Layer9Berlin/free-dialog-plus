@@ -1,7 +1,7 @@
 import {t} from "@lingui/macro"
+import {v4 as uuid} from "uuid"
 import {Assessment} from "./types/Assessment"
 import {Question} from "./types/Questions"
-import {v4 as uuid} from "uuid"
 
 export const localStorageDatabaseName = "dialog_plus_database_v1.0"
 export const localStorageRemoteUsernameKey = "dialog_plus_username_v1.0"
@@ -45,7 +45,14 @@ export const initialQuestionsData = [
   defaultQuestionProps,
 ]
 
-export const blankAssessment = (clientId: string): Assessment => {
+export const blankAssessment = (
+  clientId: string,
+  questionTexts: {
+    short: string
+    long: string
+    export: string
+  }[],
+): Assessment => {
   return {
     id: uuid(),
     meta: {
@@ -53,6 +60,17 @@ export const blankAssessment = (clientId: string): Assessment => {
       lastUpdated: new Date(),
       clientId,
     },
-    questions: initialQuestionsData,
+    questions: questionTexts.map((questionText, index) => ({
+      text: questionText,
+      state: {
+        collapsed: index > 0,
+        selected: false,
+      },
+      value: {
+        selectedOption: undefined,
+        furtherHelp: undefined,
+        actionItems: [],
+      },
+    })),
   }
 }

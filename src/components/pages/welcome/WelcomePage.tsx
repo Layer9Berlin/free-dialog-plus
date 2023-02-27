@@ -1,4 +1,3 @@
-import React from "react"
 import {LanguageSwitch} from "../../menu/LanguageSwitch"
 import {UseAnonymouslyOption} from "./partials/UseAnonymouslyOption"
 import {WelcomeInfoPanel} from "./partials/WelcomeInfoPanel"
