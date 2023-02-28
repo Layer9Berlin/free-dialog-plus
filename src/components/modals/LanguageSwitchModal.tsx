@@ -24,6 +24,39 @@ export const LanguageSwitchModal = ({
   const getLocale = () => localeForCountryCodedLanguage(detectLocale() ?? "en")
   const [locale, setLocale] = useState(getLocale())
 
+  const localeParams = [
+    {
+      localeCode: "da",
+      language: "Dansk",
+      flag: <DanishFlag />,
+    },
+    {
+      localeCode: "de",
+      language: "Deutsch",
+      flag: <GermanFlag />,
+    },
+    {
+      localeCode: "en",
+      language: "English",
+      flag: <BritishFlag />,
+    },
+    {
+      localeCode: "es",
+      language: "Español",
+      flag: <SpanishFlag />,
+    },
+    {
+      localeCode: "fr",
+      language: "Français",
+      flag: <FrenchFlag />,
+    },
+    {
+      localeCode: "it",
+      language: "Italiano",
+      flag: <ItalianFlag />,
+    },
+  ]
+
   return (
     <Modal show={show} onHide={close}>
       <Modal.Header closeButton>
@@ -33,96 +66,25 @@ export const LanguageSwitchModal = ({
       </Modal.Header>
       <Modal.Body className="overflow-hidden p-0">
         <ListGroup className="rounded-0" style={{margin: -1}}>
-          <ListGroup.Item
-            action
-            variant="light"
-            className="d-flex align-items-center h-48"
-            onClick={() => {
-              dynamicActivate("da")
-              reroute.to({params: {lang: "da"}, replace: true})
-              setLocale("da")
-            }}
-          >
-            <div className="me-3" style={{width: "60px", height: "30px"}}>
-              <DanishFlag />
-            </div>
-            <div>Dansk</div>
-          </ListGroup.Item>
-          <ListGroup.Item
-            action
-            variant="light"
-            className="d-flex align-items-center h-48"
-            onClick={() => {
-              dynamicActivate("de")
-              reroute.to({params: {lang: "de"}, replace: true})
-              setLocale("de")
-            }}
-          >
-            <div className="me-3" style={{width: "60px", height: "30px"}}>
-              <GermanFlag />
-            </div>
-            <div style={{width: "75px"}}>Deutsch</div>
-          </ListGroup.Item>
-          <ListGroup.Item
-            action
-            variant="light"
-            className="d-flex align-items-center h-48"
-            onClick={() => {
-              dynamicActivate("en")
-              reroute.to({params: {lang: "en"}, replace: true})
-              setLocale("en")
-            }}
-          >
-            <div className="me-3" style={{width: "60px", height: "30px"}}>
-              <BritishFlag />
-            </div>
-            <div style={{width: "75px"}}>English</div>
-          </ListGroup.Item>
-          <ListGroup.Item
-            action
-            variant="light"
-            className="d-flex align-items-center h-48"
-            onClick={() => {
-              dynamicActivate("es")
-              reroute.to({params: {lang: "es"}, replace: true})
-              setLocale("es")
-            }}
-          >
-            <div className="me-3" style={{width: "60px", height: "30px"}}>
-              <SpanishFlag />
-            </div>
-            <div style={{width: "75px"}}>Español</div>
-          </ListGroup.Item>
-          <ListGroup.Item
-            action
-            variant="light"
-            className="d-flex align-items-center h-48"
-            onClick={() => {
-              dynamicActivate("fr")
-              reroute.to({params: {lang: "fr"}, replace: true})
-              setLocale("fr")
-            }}
-          >
-            <div className="me-3" style={{width: "60px", height: "30px"}}>
-              <FrenchFlag />
-            </div>
-            <div style={{width: "75px"}}>Français</div>
-          </ListGroup.Item>
-          <ListGroup.Item
-            action
-            variant="light"
-            className="d-flex align-items-center h-48"
-            onClick={() => {
-              dynamicActivate("it")
-              reroute.to({params: {lang: "it"}, replace: true})
-              setLocale("it")
-            }}
-          >
-            <div className="me-3" style={{width: "60px", height: "30px"}}>
-              <ItalianFlag />
-            </div>
-            <div style={{width: "75px"}}>Italiano</div>
-          </ListGroup.Item>
+          {localeParams.map((locale) => {
+            return (
+              <ListGroup.Item
+                action
+                variant="light"
+                className="d-flex align-items-center h-48"
+                onClick={() => {
+                  dynamicActivate(locale.localeCode)
+                  reroute.to({params: {lang: locale.localeCode}, replace: true})
+                  setLocale(locale.localeCode)
+                }}
+              >
+                <div className="me-3" style={{width: "60px", height: "30px"}}>
+                  {locale.flag}
+                </div>
+                <div>{locale.language}</div>
+              </ListGroup.Item>
+            )
+          })}
         </ListGroup>
       </Modal.Body>
       <Modal.Footer>

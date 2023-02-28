@@ -23,6 +23,8 @@ $pagination-active-bg: $info
 
 // 4. Include any default map overrides here
 
+@import utilities
+
 // 5. Include remainder of required parts
 @import ~bootstrap/scss/maps
 @import ~bootstrap/scss/mixins
@@ -49,8 +51,6 @@ $pagination-active-bg: $info
 @import ~bootstrap/scss/progress
 @import ~bootstrap/scss/pagination
 
-@import utilities
-
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import ~bootstrap/scss/utilities/api
 
@@ -59,3 +59,4 @@ $pagination-active-bg: $info
   display: flex
   align-items: center
   justify-content: center
+

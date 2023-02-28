@@ -1,5 +1,5 @@
 import {t, Trans} from "@lingui/macro"
-import React, {useMemo, useState} from "react"
+import {useMemo, useState} from "react"
 import {addActionItem, removeActionItem, setActionItem} from "../../../../../hooks/Assessments"
 import {Assessment} from "../../../../../types/Assessment"
 import {DialogPlusIcon} from "../../../../icons/DialogPlusIcon"
@@ -161,7 +161,10 @@ export const DiscussStage = ({
                 </button>
               </div>
               {questionProps?.value?.actionItems?.map((actionItem, index) => (
-                <div className="d-flex align-items-center justify-content-between" key={index + " " + questionIndex}>
+                <div
+                  className="d-flex align-items-center justify-content-between"
+                  key={index + " " + questionIndex + " " + questionProps.value.actionItems.length}
+                >
                   <span className="p-1 me-2">
                     <i className="bi bi-dot fs-3" />
                   </span>

@@ -1,7 +1,7 @@
 import {t, Trans} from "@lingui/macro"
 import {CloseButton} from "../../../buttons/CloseButton"
 import {ResponsiveButton} from "../../../buttons/ResponsiveButton"
-import {Header} from "../../../layouts/Header"
+import {NavigationBar} from "../../../layouts/NavigationBar"
 
 export const ClientsHeader = ({
   isSelectingRows,
@@ -16,7 +16,7 @@ export const ClientsHeader = ({
     window.location.reload()
   }
   return (
-    <Header
+    <NavigationBar
       title={t`Clients`}
       left={
         <ResponsiveButton onClick={reloadPage} icon="box-arrow-left" variant="danger" outline={true}>

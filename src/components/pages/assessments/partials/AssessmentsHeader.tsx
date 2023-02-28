@@ -2,12 +2,12 @@ import {t, Trans} from "@lingui/macro"
 import {useRerouter} from "../../../../hooks/Rerouter"
 import {ResponsiveButton} from "../../../buttons/ResponsiveButton"
 import {ResponsiveLink} from "../../../buttons/ResponsiveLink"
-import {Header} from "../../../layouts/Header"
+import {NavigationBar} from "../../../layouts/NavigationBar"
 
 export const AssessmentsHeader = ({onCreateAssessment}: {onCreateAssessment: () => void}) => {
   const reroute = useRerouter()
   return (
-    <Header
+    <NavigationBar
       title={t`Assessments`}
       left={
         <ResponsiveLink link={reroute.link({page: "/", params: {client_id: undefined}})} icon="chevron-left">

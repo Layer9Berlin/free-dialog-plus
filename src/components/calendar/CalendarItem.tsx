@@ -1,12 +1,13 @@
+import {useLingui} from "@lingui/react"
 import {formatDate} from "../../helpers/DateFormatter"
 import {Assessment} from "../../types/Assessment"
 import {DialogPlusIcon} from "../icons/DialogPlusIcon"
-import React from "react"
 
 export const CalendarItem = ({assessment, cssClass}: {assessment: Assessment; cssClass?: string}) => {
+  const {i18n} = useLingui()
   return (
     <div className="d-flex flex-column justify-content-end h-100">
-      <span className="mb-auto">{assessment.meta.title ?? formatDate(assessment.meta.date)}</span>
+      <span className="mb-auto">{assessment.meta.title ?? formatDate(assessment.meta.date, i18n.locale)}</span>
       {assessment.questions.map((question, index) => (
         <div className="d-flex align-items-center" key={index}>
           <div className="progress flex-grow-1" style={{height: 6}}>

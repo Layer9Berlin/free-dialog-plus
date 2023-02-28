@@ -3,13 +3,14 @@ import {useEffect, useMemo, useState} from "react"
 import {NavLink, useLocation} from "react-router-dom"
 import {useRerouter} from "../../hooks/Rerouter"
 import {Assessment} from "../../types/Assessment"
+import {NavigationBar} from "../layouts/NavigationBar"
 
 export type StageIdentifier = "assess" | "review" | "select" | "discuss" | "action-items"
 export type Stage = {id: StageIdentifier; title: string}
 export type StageNavigationButtonProps = {
   clientId?: string
   className?: string
-  titleBar?: boolean
+  title?: string
   nextEnabled?: boolean
   stageIndex: number
   setStageIndex: (index: number) => void
@@ -106,10 +107,10 @@ export const useStageNavigation = ({
   }
 }
 
-export const StageNavigationButtons = ({
+export const StageNavigationRow = ({
   clientId,
   className,
-  titleBar,
+  title,
   stageIndex,
   setStageIndex,
   nextEnabled,
@@ -135,16 +136,23 @@ export const StageNavigationButtons = ({
   }
 
   return (
-    <div className={"d-flex justify-content-start align-items-center h-64" + (className ? " " + className : "")}>
-      {!titleBar && <ExitButton clientId={clientId} />}
-      {stageIndex > 0 && <BackButton onBack={onBack} stageIndex={stageIndex} withText={!titleBar} />}
-      <NextButton
-        hideTextOnMobile={!!titleBar}
-        onNext={onNext}
-        stageIndex={stageIndex}
-        disabled={nextEnabled === false}
-      />
-    </div>
+    <NavigationBar
+      left={
+        <>
+          {!title && <ExitButton clientId={clientId} />}
+          {stageIndex > 0 && <BackButton onBack={onBack} stageIndex={stageIndex} withText={!title} />}
+        </>
+      }
+      title={title}
+      right={
+        <NextButton
+          hideTextOnMobile={!!title}
+          onNext={onNext}
+          stageIndex={stageIndex}
+          disabled={nextEnabled === false}
+        />
+      }
+    />
   )
 }
 

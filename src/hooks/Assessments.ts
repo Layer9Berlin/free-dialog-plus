@@ -140,7 +140,7 @@ export const setActionItem =
   })
 
 export const removeActionItem =
-  (index: number, itemIndex: number) =>
+  (index: number, indexOfItemToBeDeleted: number) =>
   (assessment: Assessment): Assessment => ({
     ...assessment,
     questions: assessment.questions.map((question, questionIndex) =>
@@ -149,7 +149,9 @@ export const removeActionItem =
             ...question,
             value: {
               ...question.value,
-              actionItems: question.value.actionItems.filter((_, oldItemIndex) => oldItemIndex === itemIndex),
+              actionItems: question.value.actionItems.filter(
+                (_, oldItemIndex) => oldItemIndex !== indexOfItemToBeDeleted,
+              ),
             },
           }
         : question,

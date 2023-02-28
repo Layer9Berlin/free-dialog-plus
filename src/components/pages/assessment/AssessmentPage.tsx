@@ -3,8 +3,7 @@ import {useCallback, useContext, useEffect, useState} from "react"
 import {useLocation} from "react-router-dom"
 import {DataStoreContext} from "../../../contexts/DataStoreContext"
 import {Assessment} from "../../../types/Assessment"
-import {StageIdentifier, StageNavigationButtons, useStageNavigation} from "../../menu/StageNavigation"
-import {TitleText} from "../../text/TitleText"
+import {StageIdentifier, StageNavigationRow, useStageNavigation} from "../../menu/StageNavigation"
 import {ActionItemsStage} from "./stages/action-items/ActionItemsStage"
 import {AssessStage} from "./stages/assess/AssessStage"
 import {DiscussStage} from "./stages/discuss/DiscussStage"
@@ -67,14 +66,7 @@ export const AssessmentPage = () => {
 
   return (
     <div className="d-flex flex-column position-relative" style={{minHeight: "100vh"}}>
-      <div className="d-flex-center border-muted h-64 border-bottom">
-        <TitleText>{stage.title}</TitleText>
-        <StageNavigationButtons
-          {...stageNavigationProps}
-          // className="position-absolute start-0 top-0 end-0"
-          titleBar={true}
-        />
-      </div>
+      <StageNavigationRow {...stageNavigationProps} title={stage.title} />
       {!assessment && (
         <div className="d-flex-center flex-grow-1">
           <span className="text-muted fst-italics mt-4">
@@ -87,7 +79,7 @@ export const AssessmentPage = () => {
           <Stage id={stage.id} assessment={assessment} changeAssessment={changeAssessment} />
         </div>
       )}
-      <StageNavigationButtons {...stageNavigationProps} className="border-top" />
+      <StageNavigationRow {...stageNavigationProps} className="border-top" />
     </div>
   )
 }

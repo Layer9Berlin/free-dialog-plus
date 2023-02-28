@@ -10,7 +10,7 @@ export const LanguageSwitch = () => {
     <>
       <LanguageSwitchModal {...languageSwitchModalProps} />
       <div className="d-flex m-3 p-2 align-self-center">
-        <button onClick={showLanguageSwitchModal} className={`btn btn-outline-info d-flex align-items-center h-48`}>
+        <button onClick={showLanguageSwitchModal} className={`btn btn-outline-default d-flex align-items-center h-48`}>
           <CurrentLanguageFlag />
           <ChevronDownIcon className="ps-3 fs-4" />
         </button>
