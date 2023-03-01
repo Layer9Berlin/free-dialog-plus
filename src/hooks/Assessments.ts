@@ -1,6 +1,7 @@
 import {useCallback, useEffect, useState} from "react"
 import {Assessment} from "../types/Assessment"
 import {DataStoreSlice} from "../types/DataStore"
+import {Question} from "../types/Questions"
 
 export const useAssessments = ({
   clientId,
@@ -140,11 +141,11 @@ export const setActionItem =
   })
 
 export const removeActionItem =
-  (index: number, indexOfItemToBeDeleted: number) =>
+  (pageIndex: number, indexOfItemToBeDeleted: number, selectedQuestions: Question[]) =>
   (assessment: Assessment): Assessment => ({
     ...assessment,
     questions: assessment.questions.map((question, questionIndex) =>
-      index === questionIndex
+      pageIndex === questionIndex
         ? {
             ...question,
             value: {

@@ -16,7 +16,7 @@ import {ClientsFooter} from "./partials/ClientsFooter"
 import {ClientsHeader} from "./partials/ClientsHeader"
 
 export const ClientsPage = () => {
-  const {dataStore} = useContext(DataStoreContext)
+  const dataStore = useContext(DataStoreContext)
   const {clients, refresh} = useClients({dataStore})
 
   const exporter = useAssessmentExporter()

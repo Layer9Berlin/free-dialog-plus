@@ -70,7 +70,7 @@ msgstr "Abbrechen"
 
 #: src/components/modals/LanguageSwitchModal.tsx:31
 msgid "Choose a language"
-msgstr ""
+msgstr "Wählen Sie eine Sprache"
 
 #: src/components/modals/ExportPasswordModal.tsx:60
 msgid "Choose a password"
@@ -100,7 +100,7 @@ msgstr "Erstellen"
 #: src/components/modals/DataLossWarningModal.tsx:32
 #: src/components/pages/register/RegisterPage.tsx:57
 msgid "Create account"
-msgstr ""
+msgstr "Konto erstellen"
 
 #: src/components/calendar/Calendar.tsx:57
 msgid "Current assessment"
@@ -117,7 +117,7 @@ msgstr "Löschen"
 
 #: src/components/modals/DeleteAssessmentsModal.tsx:16
 msgid "Delete assessment?"
-msgstr ""
+msgstr "Bewertung löschen?"
 
 #: src/components/menu/Footer.tsx:110
 #~ msgid "Delete selected"
@@ -125,7 +125,7 @@ msgstr ""
 
 #: src/components/modals/DeleteClientsModal.tsx:9
 msgid "Delete this client?"
-msgstr ""
+msgstr "Diesen Klienten löschen?"
 
 #: src/components/menu/StageNavigation.tsx:34
 msgid "Discuss"
@@ -137,23 +137,23 @@ msgstr "Wünschen Sie mehr Hilfe in diesem Bereich?"
 
 #: src/components/modals/DeleteClientsModal.tsx:13
 msgid "Do you really want to delete the selected client and all associated assessments? This cannot be undone."
-msgstr ""
+msgstr "Möchten Sie den ausgewählten Klienten und alle zugehörigen Bewertungen wirklich löschen? Dieser Vorgang kann nicht rückgängig gemacht werden."
 
 #: src/components/modals/DeleteAssessmentsModal.tsx:20
 msgid "Do you really want to delete this assessment? This cannot be undone."
-msgstr ""
+msgstr "Wollen Sie diese Bewertung wirklich löschen? Dieser Vorgang kann nicht rückgängig gemacht werden."
 
 #: src/components/pages/register/RegisterPage.tsx:75
 msgid "E-Mail-Adresse"
-msgstr ""
+msgstr "E-Mail-Adresse"
 
 #: src/components/modals/ClientDataModal.tsx:94
 msgid "Edit"
-msgstr ""
+msgstr "Bearbeiten"
 
 #: src/components/modals/ClientDataModal.tsx:16
 msgid "Edit client"
-msgstr ""
+msgstr "Klient bearbeiten"
 
 #: src/components/modals/ExportPasswordModal.tsx:38
 msgid "Enter a password to protect the exported file"
@@ -182,7 +182,7 @@ msgstr "Möglichkeiten explorieren"
 
 #: src/components/buttons/ExportButton.tsx:22
 msgid "Export"
-msgstr ""
+msgstr "Exportieren"
 
 #: src/components/buttons/ExportButton.tsx:23
 msgid "Export selected"
@@ -218,11 +218,11 @@ msgstr "iOS-Nutzer: Tippen Sie auf <0><1/></0>im unteren Menü, dann auf \"Zum S
 
 #: src/components/pages/login/LoginPage.tsx:86
 #~ msgid "Forgot password?"
-#~ msgstr ""
+#~ msgstr "Passwort vergessen?"
 
 #: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:9
 msgid "Free DIALOG+"
-msgstr ""
+msgstr "Free DIALOG+"
 
 #: src/hooks/QuestionTexts.ts:21
 msgid "Friendships"
@@ -287,11 +287,11 @@ msgstr "Was sind Stärken?"
 
 #: src/components/buttons/ImportButton.tsx:31
 msgid "Import"
-msgstr ""
+msgstr "Importieren"
 
 #: src/components/modals/DataLossWarningModal.tsx:20
 msgid "Important information"
-msgstr ""
+msgstr "Wichtige Hinweise"
 
 #: src/components/modals/StepInformationModal.tsx:238
 msgid "In step 3, three kinds of questions can be asked:"
@@ -419,7 +419,7 @@ msgstr "Passwort"
 
 #: src/components/pages/register/RegisterPage.tsx:105
 msgid "Password confirmation"
-msgstr ""
+msgstr "Bestätigung des Passworts"
 
 #: src/components/pages/register/RegisterPage.tsx:42
 msgid "Password mismatch"
@@ -447,7 +447,7 @@ msgstr "Praktische Hilfe"
 
 #: src/components/modals/DataLossWarningModal.tsx:36
 msgid "Proceed"
-msgstr ""
+msgstr "Fortfahren"
 
 #: src/hooks/QuestionTexts.ts:17
 msgid "Relationship with partner/family"
@@ -467,7 +467,7 @@ msgstr "Auswählen"
 
 #: src/components/pages/settings/partials/SettingsHeader.tsx:10
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:109
 msgid "Smallest improvement?"
@@ -577,7 +577,7 @@ msgstr "Letzte Änderung"
 
 #: src/components/pages/register/RegisterPage.tsx:130
 msgid "other options"
-msgstr ""
+msgstr "weitere Optionen"
 
 #: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:10
 msgid "totally dissatisfied"

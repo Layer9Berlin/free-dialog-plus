@@ -1,4 +1,5 @@
-import React from "react"
+import {useContext} from "react"
+import {DataStoreContext} from "../../../../../contexts/DataStoreContext"
 import {toggleSelected} from "../../../../../hooks/Assessments"
 import {useQuestionTexts} from "../../../../../hooks/QuestionTexts"
 import {Assessment} from "../../../../../types/Assessment"
@@ -42,14 +43,9 @@ export const SelectStageRow = ({
   )
 }
 
-export const SelectStage = ({
-  assessment,
-  changeAssessment,
-}: {
-  assessment: Assessment
-  changeAssessment: (newAssessment: Assessment) => void
-}) => {
+export const SelectStage = ({assessment}: {assessment: Assessment}) => {
   const questionTexts = useQuestionTexts()
+  const {assessments} = useContext(DataStoreContext)
   return (
     <>
       <AssessmentNumbers />
@@ -58,7 +54,7 @@ export const SelectStage = ({
           key={questionIndex}
           {...questionText}
           {...assessment.questions[questionIndex]}
-          onToggleSelected={() => changeAssessment(toggleSelected(questionIndex)(assessment))}
+          onToggleSelected={() => assessments.change(toggleSelected(questionIndex)(assessment))}
         />
       ))}
     </>

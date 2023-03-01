@@ -1,8 +1,8 @@
-import React, {useContext, useState} from "react"
+import {useContext, useState} from "react"
 import {DataStoreContext} from "../../../../../contexts/DataStoreContext"
 import {useQuestionTexts} from "../../../../../hooks/QuestionTexts"
 import {Assessment} from "../../../../../types/Assessment"
-import {Question, QuestionText, AnswerValue} from "../../../../../types/Questions"
+import {AnswerValue, Question, QuestionText} from "../../../../../types/Questions"
 import {Calendar} from "../../../../calendar/Calendar"
 import {IconSpacer} from "../../../../icons/BootstrapIcons"
 import {DialogPlusIcon} from "../../../../icons/DialogPlusIcon"
@@ -45,7 +45,7 @@ export const ReviewStageRow = ({
 export const ReviewStage = ({assessment}: {assessment: Assessment}) => {
   const [comparison, setComparison] = useState<Assessment | undefined>(undefined)
   const questionTexts = useQuestionTexts()
-  const {dataStore} = useContext(DataStoreContext)
+  const dataStore = useContext(DataStoreContext)
 
   return (
     <>

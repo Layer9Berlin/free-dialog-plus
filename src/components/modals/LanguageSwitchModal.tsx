@@ -70,6 +70,7 @@ export const LanguageSwitchModal = ({
             return (
               <ListGroup.Item
                 action
+                key={locale.localeCode}
                 variant="light"
                 className="d-flex align-items-center h-48"
                 onClick={() => {

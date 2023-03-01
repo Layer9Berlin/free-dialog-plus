@@ -1,7 +1,13 @@
 {
   "name": "dialog_plus",
-  "version": "0.4",
+  "version": "0.5",
   "private": true,
+  "author": {
+    "name": "Roman Priebe, Jen Shivel"
+  },
+  "engines": {
+    "node": "19.3.0"
+  },
   "dependencies": {
     "@lingui/detect-locale": "^3.17.1",
     "@lingui/react": "^3.17.1",

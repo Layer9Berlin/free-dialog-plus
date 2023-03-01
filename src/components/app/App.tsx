@@ -1,20 +1,20 @@
 import {BrowserRouter} from "react-router-dom"
-import {DataStoreContext, defaultSyncState} from "../../contexts/DataStoreContext"
-import {InMemoryDataStore} from "../api/InMemoryDataStore"
+import {DataStoreContext} from "../../contexts/DataStoreContext"
+import {LocalDataStore} from "../api/LocalDataStore"
 import "./App.sass"
 import {LoginComponent} from "./LoginComponent"
 import {RoutesComponent} from "./RoutesComponent"
 import {TranslationComponent} from "./TranslationComponent"
 
 const App = () => {
-  const dataStore = new InMemoryDataStore([{id: "test1", first: "Testor", middle: "T", last: "Testington"}])
+  const dataStore = new LocalDataStore("dialog_plus_test")
   return (
     <TranslationComponent>
       <div className="App">
         <header />
         <main>
           <BrowserRouter>
-            <DataStoreContext.Provider value={{dataStore, syncState: defaultSyncState}}>
+            <DataStoreContext.Provider value={dataStore}>
               <LoginComponent>
                 <RoutesComponent />
               </LoginComponent>

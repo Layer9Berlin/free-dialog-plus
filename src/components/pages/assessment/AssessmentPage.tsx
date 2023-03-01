@@ -21,13 +21,13 @@ const Stage = ({
 }) => {
   switch (id) {
     case "assess":
-      return <AssessStage assessment={assessment} changeAssessment={changeAssessment} />
+      return <AssessStage assessment={assessment} />
     case "review":
       return <ReviewStage assessment={assessment} />
     case "select":
-      return <SelectStage assessment={assessment} changeAssessment={changeAssessment} />
+      return <SelectStage assessment={assessment} />
     case "discuss":
-      return <DiscussStage assessment={assessment} changeAssessment={changeAssessment} />
+      return <DiscussStage assessment={assessment} />
     case "action-items":
       return <ActionItemsStage assessment={assessment} />
     default:
@@ -37,7 +37,7 @@ const Stage = ({
 
 export const AssessmentPage = () => {
   const location = useLocation()
-  const {dataStore} = useContext(DataStoreContext)
+  const dataStore = useContext(DataStoreContext)
   const [assessment, setAssessment] = useState<Assessment | undefined>(undefined)
 
   const changeAssessment = useCallback(

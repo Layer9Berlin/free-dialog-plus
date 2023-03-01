@@ -1,4 +1,5 @@
-import React from "react"
+import {useContext} from "react"
+import {DataStoreContext} from "../../../../../contexts/DataStoreContext"
 import {
   collapseAll,
   expand,
@@ -10,13 +11,8 @@ import {Assessment} from "../../../../../types/Assessment"
 import {AssessmentNumbers} from "../common/AssessmentNumbers"
 import {AssessStageRow} from "./partials/AssessStageRow"
 
-export const AssessStage = ({
-  assessment,
-  changeAssessment,
-}: {
-  assessment: Assessment
-  changeAssessment: (newAssessment: Assessment) => void
-}) => {
+export const AssessStage = ({assessment}: {assessment: Assessment}) => {
+  const {assessments} = useContext(DataStoreContext)
   return (
     <>
       <AssessmentNumbers />
@@ -28,14 +24,14 @@ export const AssessStage = ({
             question={text}
             {...assessment.questions[questionIndex]}
             onSelectOption={(optionIndex: number) => {
-              changeAssessment(setSelectedOption(assessment, questionIndex, optionIndex))
+              assessments.change(setSelectedOption(assessment, questionIndex, optionIndex))
             }}
             onSetFurtherHelp={(needed: boolean) => {
               let newAssessment = setFurtherHelp(assessment, questionIndex, needed)
               if (assessment.questions[questionIndex]?.value?.selectedOption !== undefined) {
                 newAssessment = expand(questionIndex + 1)(newAssessment)
               }
-              changeAssessment(newAssessment)
+              assessments.change(newAssessment)
             }}
             onToggleCollapsed={() => {
               const expandedQuestionIndex = assessment.questions.findIndex((question) => !question.state.collapsed)
@@ -47,13 +43,13 @@ export const AssessStage = ({
                   expandedQuestion?.value?.selectedOption !== undefined &&
                   expandedQuestion?.value?.furtherHelp === undefined
                 ) {
-                  changeAssessment(setHighlightedOption(assessment, questionIndex))
+                  assessments.change(setHighlightedOption(assessment, questionIndex))
                   return
                 }
                 const newAssessment = assessment.questions[questionIndex]?.state?.collapsed
                   ? expand(questionIndex)(assessment)
                   : collapseAll(assessment)
-                changeAssessment(newAssessment)
+                assessments.change(newAssessment)
               }
             }}
           />

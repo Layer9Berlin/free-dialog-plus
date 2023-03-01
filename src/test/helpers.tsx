@@ -4,7 +4,7 @@ import {render} from "@testing-library/react"
 import {ReactNode} from "react"
 import {MemoryRouter} from "react-router-dom"
 import {InMemoryDataStore} from "../components/api/InMemoryDataStore"
-import {DataStoreContext, defaultSyncState} from "../contexts/DataStoreContext"
+import {DataStoreContext} from "../contexts/DataStoreContext"
 import {DataStoreType} from "../types/DataStore"
 
 export const renderForTest =
@@ -13,9 +13,7 @@ export const renderForTest =
     i18n.activate("en")
     render(
       <I18nProvider i18n={i18n}>
-        <DataStoreContext.Provider
-          value={{dataStore: dataStore ?? new InMemoryDataStore(), syncState: defaultSyncState}}
-        >
+        <DataStoreContext.Provider value={new InMemoryDataStore()}>
           <MemoryRouter initialEntries={[url ?? "/"]}>{node}</MemoryRouter>
         </DataStoreContext.Provider>
       </I18nProvider>,

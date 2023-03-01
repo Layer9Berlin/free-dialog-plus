@@ -1,5 +1,6 @@
 import {t, Trans} from "@lingui/macro"
-import {useMemo, useState} from "react"
+import {useContext, useMemo, useState} from "react"
+import {DataStoreContext} from "../../../../../contexts/DataStoreContext"
 import {addActionItem, removeActionItem, setActionItem} from "../../../../../hooks/Assessments"
 import {Assessment} from "../../../../../types/Assessment"
 import {DialogPlusIcon} from "../../../../icons/DialogPlusIcon"
@@ -22,19 +23,16 @@ export const StepNumber = ({step}: {step: number}) => {
   )
 }
 
-export const DiscussStage = ({
-  assessment,
-  changeAssessment,
-}: {
-  assessment: Assessment
-  changeAssessment: (newAssessment: Assessment) => void
-}) => {
-  const [questionIndex, setQuestionIndex] = useState<number>(0)
+export const DiscussStage = ({assessment}: {assessment: Assessment}) => {
+  // Index of the current page within the set of selected questions.
+  const [pageIndex, setPageIndex] = useState<number>(0)
   const selectedQuestions = useMemo(
     () => assessment.questions.filter((question) => question.state.selected),
     [assessment],
   )
-  const questionProps = useMemo(() => selectedQuestions?.[questionIndex], [questionIndex, selectedQuestions])
+  const {assessments} = useContext(DataStoreContext)
+
+  const questionProps = useMemo(() => selectedQuestions?.[pageIndex], [pageIndex, selectedQuestions])
 
   const [informationModalIndex, setInformationModalIndex] = useState<number | undefined>(undefined)
 
@@ -163,7 +161,7 @@ export const DiscussStage = ({
               {questionProps?.value?.actionItems?.map((actionItem, index) => (
                 <div
                   className="d-flex align-items-center justify-content-between"
-                  key={index + " " + questionIndex + " " + questionProps.value.actionItems.length}
+                  key={index + " " + pageIndex + " " + questionProps.value.actionItems.length}
                 >
                   <span className="p-1 me-2">
                     <i className="bi bi-dot fs-3" />
@@ -174,12 +172,14 @@ export const DiscussStage = ({
                       defaultValue={actionItem}
                       placeholder={t`Action item`}
                       onChange={(event) =>
-                        changeAssessment(setActionItem(questionIndex, index, event.target.value)(assessment))
+                        assessments.change(setActionItem(pageIndex, index, event.target.value)(assessment))
                       }
                     />
                     <button
                       className="btn btn-outline-default"
-                      onClick={() => changeAssessment(removeActionItem(questionIndex, index)(assessment))}
+                      onClick={() =>
+                        assessments.change(removeActionItem(pageIndex, index, selectedQuestions)(assessment))
+                      }
                     >
                       <span>
                         <i className="bi bi-x" />
@@ -191,7 +191,7 @@ export const DiscussStage = ({
               <div className="d-flex align-items-center justify-content-between">
                 <button
                   className="btn link-primary border-0 p-0 d-flex align-items-center"
-                  onClick={() => changeAssessment(addActionItem(questionIndex, "")(assessment))}
+                  onClick={() => assessments.change(addActionItem(pageIndex, "")(assessment))}
                 >
                   <span className="p-1 me-2">
                     <i className="bi bi-plus-square fs-3" />
@@ -209,17 +209,17 @@ export const DiscussStage = ({
         <nav className="mt-5" aria-label="Discuss question navigation">
           <ul className="pagination justify-content-center">
             {selectedQuestions.map((question, index) => (
-              <li key={index} className={"page-item link-info" + (index === questionIndex ? " active" : "")}>
-                <button className="page-link w-48 h-48" onClick={() => setQuestionIndex(index)}>
+              <li key={index} className={"page-item link-info" + (index === pageIndex ? " active" : "")}>
+                <button className="page-link w-48 h-48" onClick={() => setPageIndex(index)}>
                   {index + 1}
                 </button>
               </li>
             ))}
-            <li className={"page-item link-info" + (questionIndex === selectedQuestions.length - 1 ? " disabled" : "")}>
+            <li className={"page-item link-info" + (pageIndex === selectedQuestions.length - 1 ? " disabled" : "")}>
               <button
                 className="page-link w-48 h-48"
-                onClick={() => setQuestionIndex(questionIndex + 1)}
-                aria-disabled={questionIndex === selectedQuestions.length - 1 ? "true" : "false"}
+                onClick={() => setPageIndex(pageIndex + 1)}
+                aria-disabled={pageIndex === selectedQuestions.length - 1 ? "true" : "false"}
               >
                 <span>
                   <i className="bi bi-chevron-right" />

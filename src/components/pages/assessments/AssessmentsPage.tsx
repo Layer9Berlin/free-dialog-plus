@@ -17,7 +17,7 @@ import {AssessmentsHeader} from "./partials/AssessmentsHeader"
 export const AssessmentsPage = () => {
   const reroute = useRerouter()
   const location = useLocation()
-  const {dataStore} = useContext(DataStoreContext)
+  const dataStore = useContext(DataStoreContext)
 
   const [clientId, setClientId] = useState<string | undefined>(undefined)
   useEffect(() => {
