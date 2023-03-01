@@ -1,4 +1,4 @@
-import React, {ReactNode} from "react"
+import {ReactNode} from "react"
 
 export const Footer = ({center, left, right}: {center?: ReactNode; left?: ReactNode; right?: ReactNode}) => {
   return (

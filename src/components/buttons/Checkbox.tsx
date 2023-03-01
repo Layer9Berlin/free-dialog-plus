@@ -1,5 +1,3 @@
-import React from "react"
-
 export const Checkbox = ({selected}: {selected: boolean}) => {
   return (
     <span className="me-2">

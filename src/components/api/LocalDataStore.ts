@@ -41,7 +41,11 @@ export class LocalDataStore {
     if (!database) {
       return uninitializedOperations<Assessment>()
     }
-    return databaseOperations<Assessment>(database)
+    return databaseOperations<Assessment>(database, (a: Assessment, b: Assessment) => {
+      if ((a.meta.date ?? "") < (b.meta.date ?? "")) return -1
+      if ((a.meta.date ?? "") > (b.meta.date ?? "")) return 1
+      return 0
+    })
   }
 
   get clients(): DataStoreSlice<Client> {
@@ -49,11 +53,18 @@ export class LocalDataStore {
     if (!database) {
       return uninitializedOperations<Client>()
     }
-    return databaseOperations<Client>(database)
+    return databaseOperations<Client>(database, (a: Client, b: Client) => {
+      if ((a.last ?? "") < (b.last ?? "")) return -1
+      if ((a.last ?? "") > (b.last ?? "")) return 1
+      return 0
+    })
   }
 }
 
-const databaseOperations = <EntityType extends Assessment | Client>(database: LocalForage) => ({
+const databaseOperations = <EntityType extends Assessment | Client>(
+  database: LocalForage,
+  compareFunction: (a: EntityType, b: EntityType) => number,
+) => ({
   add: async (item: EntityType): Promise<void> => {
     await database.setItem(item.id, item)
   },
@@ -69,6 +80,7 @@ const databaseOperations = <EntityType extends Assessment | Client>(database: Lo
     await database.iterate<EntityType, void>((item, key) => {
       result.push(item)
     })
+    result.sort(compareFunction)
     return result
   },
   remove: async (...items: EntityType[]): Promise<void> => {

@@ -21,28 +21,28 @@ msgstr "« Y a-t-il un voisin ou un ami qui pourrait vous aider à apporter vos
 msgid "Accommodation"
 msgstr "Hébergement"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:172
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:173
 msgid "Action item"
 msgstr "Élément d'action"
 
-#: src/components/menu/StageNavigation.tsx:38
+#: src/components/menu/StageNavigation.tsx:39
 msgid "Action items"
 msgstr "Éléments d'action"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:197
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:200
 msgid "Add action item"
 msgstr "Ajouter un élément d'action"
 
 #: src/components/modals/StepInformationModal.tsx:498
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:150
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:148
 msgid "Agreeing on actions"
 msgstr "S'accorder sur des actions"
 
-#: src/components/menu/StageNavigation.tsx:22
+#: src/components/menu/StageNavigation.tsx:23
 msgid "Assess"
 msgstr "Évaluer"
 
-#: src/components/pages/assessment/AssessmentPage.tsx:81
+#: src/components/pages/assessment/AssessmentPage.tsx:73
 msgid "Assessment not found"
 msgstr "Évaluation introuvable"
 
@@ -54,21 +54,21 @@ msgstr "Évaluations"
 msgid "Back to Clients"
 msgstr "Retour aux Clients"
 
-#: src/components/menu/StageNavigation.tsx:177
+#: src/components/menu/StageNavigation.tsx:185
 msgid "Back to {0}"
 msgstr "Retour à {0}"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:106
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:104
 msgid "Best case scenario?"
 msgstr "Le meilleur cas de scenario?"
 
 #: src/components/modals/DeleteAssessmentsModal.tsx:24
 #: src/components/modals/DeleteClientsModal.tsx:19
-#: src/components/modals/LanguageSwitchModal.tsx:130
+#: src/components/modals/LanguageSwitchModal.tsx:93
 msgid "Cancel"
 msgstr "Annuler"
 
-#: src/components/modals/LanguageSwitchModal.tsx:31
+#: src/components/modals/LanguageSwitchModal.tsx:64
 msgid "Choose a language"
 msgstr "Choisissez une langue"
 
@@ -84,7 +84,7 @@ msgstr "Clients"
 msgid "Close"
 msgstr "Fermer"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:119
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:117
 msgid "Considering options"
 msgstr "Considérer les options"
 
@@ -119,7 +119,7 @@ msgstr "Supprimer l'évaluation ?"
 msgid "Delete this client?"
 msgstr "Supprimer ce client ?"
 
-#: src/components/menu/StageNavigation.tsx:34
+#: src/components/menu/StageNavigation.tsx:35
 msgid "Discuss"
 msgstr "Discuter"
 
@@ -184,7 +184,7 @@ msgstr "Exporter sélectionné"
 msgid "Finally, the clinician should ask what other people can do to help the patient improve their situation. This might be a friend, family member, relative, neighbour, colleague, befriender, support worker, fellow patient or another supporter."
 msgstr "Enfin, le clinicien doit demander ce que d'autres personnes peuvent faire pour aider le patient à améliorer sa situation. Il peut s'agir d'un ami, d'un membre de la famille, d'un parent, d'un voisin, d'un collègue, d'un ami, d'un travailleur de soutien, d'un autre patient ou d'un autre aidant."
 
-#: src/components/menu/StageNavigation.tsx:196
+#: src/components/menu/StageNavigation.tsx:204
 msgid "Finish"
 msgstr "Finir"
 
@@ -323,7 +323,7 @@ msgid "Login"
 msgstr "Connexion"
 
 #: src/components/modals/StepInformationModal.tsx:488
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:91
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:89
 msgid "Looking forward"
 msgstr "Avoir hâte de"
 
@@ -437,19 +437,19 @@ msgstr "Procéder"
 msgid "Relationship with partner/family"
 msgstr "Relation avec le partenaire/la famille"
 
-#: src/components/menu/StageNavigation.tsx:26
+#: src/components/menu/StageNavigation.tsx:27
 msgid "Review"
 msgstr "Examen"
 
-#: src/components/menu/StageNavigation.tsx:30
+#: src/components/menu/StageNavigation.tsx:31
 msgid "Select"
 msgstr "Sélectionner"
 
-#: src/components/pages/settings/partials/SettingsHeader.tsx:10
+#: src/components/pages/settings/partials/SettingsHeader.tsx:9
 msgid "Settings"
 msgstr "Paramètres"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:109
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:107
 msgid "Smallest improvement?"
 msgstr "La moindre amélioration ?"
 
@@ -483,7 +483,7 @@ msgid "Tip"
 msgstr "Conseil"
 
 #: src/components/modals/StepInformationModal.tsx:483
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:63
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:61
 msgid "Understanding"
 msgstr "Compréhension"
 
@@ -491,15 +491,15 @@ msgstr "Compréhension"
 msgid "Welcome to Free DIALOG+"
 msgstr "Bienvenue dans DIALOG+ gratuit"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:140
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:138
 msgid "What can others do?"
 msgstr "Que peuvent faire les autres ?"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:137
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:135
 msgid "What can the clinician do?"
 msgstr "Que peut faire le clinicien ?"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:134
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:132
 msgid "What can the patient do?"
 msgstr "Que peut faire le patient ?"
 
@@ -507,7 +507,7 @@ msgstr "Que peut faire le patient ?"
 msgid "What is the patient’s ‘best-case scenario’?"
 msgstr "Quel est le « meilleur scénario » du patient ?"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:81
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:79
 msgid "What is working?"
 msgstr "Qu'est-ce qui fonctionne ?"
 
@@ -515,7 +515,7 @@ msgstr "Qu'est-ce qui fonctionne ?"
 msgid "What small changes would make a difference?"
 msgstr "Quels petits changements feraient une différence?"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:78
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:76
 msgid "Why is this rating not a lower one?"
 msgstr "Pourquoi cette note n'est-elle pas inférieure ?"
 

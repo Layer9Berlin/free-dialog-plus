@@ -1,5 +1,4 @@
 import {t, Trans} from "@lingui/macro"
-import React from "react"
 import {Question, QuestionText} from "../../../../../../types/Questions"
 import {ChevronUpIcon} from "../../../../../icons/BootstrapIcons"
 import {DialogPlusIcon} from "../../../../../icons/DialogPlusIcon"

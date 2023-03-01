@@ -1,5 +1,5 @@
 import {Trans} from "@lingui/macro"
-import React, {useMemo} from "react"
+import {useMemo} from "react"
 import {useQuestionTexts} from "../../../../../hooks/QuestionTexts"
 import {Assessment} from "../../../../../types/Assessment"
 

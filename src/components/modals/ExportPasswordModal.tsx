@@ -1,5 +1,5 @@
 import {t, Trans} from "@lingui/macro"
-import React, {useRef, useState} from "react"
+import {useRef, useState} from "react"
 import {Modal} from "react-bootstrap"
 
 export type ExportPasswordModalProps = {

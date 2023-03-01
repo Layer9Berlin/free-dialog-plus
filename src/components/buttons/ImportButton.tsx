@@ -1,5 +1,5 @@
 import {Trans} from "@lingui/macro"
-import React, {useRef} from "react"
+import {useRef} from "react"
 import {ResponsiveButton} from "./ResponsiveButton"
 
 export const ImportButton = ({onImport}: {onImport: (file: File) => Promise<void>}) => {

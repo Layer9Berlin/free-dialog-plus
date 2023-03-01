@@ -1,4 +1,4 @@
-import React, {MouseEventHandler} from "react"
+import {MouseEventHandler} from "react"
 import {NavLink} from "react-router-dom"
 import {Client} from "../../../../types/Client"
 import {DeleteRowButton} from "../../../buttons/DeleteRowButton"

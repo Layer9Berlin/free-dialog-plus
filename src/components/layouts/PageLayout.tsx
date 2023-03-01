@@ -1,4 +1,4 @@
-import React, {ReactNode} from "react"
+import {ReactNode} from "react"
 
 export const PageLayout = ({header, body, footer}: {header?: ReactNode; body?: ReactNode; footer?: ReactNode}) => {
   return (

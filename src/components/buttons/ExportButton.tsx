@@ -1,5 +1,4 @@
 import {Trans} from "@lingui/macro"
-import React from "react"
 import {ResponsiveButton} from "./ResponsiveButton"
 
 export const ExportButton = ({
