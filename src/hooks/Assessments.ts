@@ -1,29 +1,32 @@
-import {useCallback, useEffect, useState} from "react"
+import {useCallback, useContext, useEffect, useState} from "react"
+import {DataStoreContext} from "../contexts/DataStoreContext"
 import {Assessment} from "../types/Assessment"
-import {DataStoreSlice} from "../types/DataStore"
-import {Question} from "../types/Questions"
 
 export const useAssessments = ({
   clientId,
-  dataStoreSlice,
 }: {
   clientId: string | undefined
-  dataStoreSlice: DataStoreSlice<Assessment>
 }): {assessments: Assessment[]; refresh: () => Promise<void>} => {
   const [assessments, setAssessments] = useState<Assessment[]>([])
-  const refresh = useCallback(() => {
+  const dataStore = useContext(DataStoreContext)
+  const refresh = useCallback(async () => {
+    console.log("clientId", clientId)
     if (!clientId) {
       setAssessments([])
       return Promise.resolve()
     }
-    return dataStoreSlice
-      .list()
-      .then((assessments) => {
-        setAssessments(assessments.filter((assessment) => assessment.meta.clientId === clientId))
-      })
-      .catch(() => setAssessments([]))
-  }, [clientId, dataStoreSlice])
-  useEffect(() => void refresh(), [refresh])
+    try {
+      const assessments = await dataStore.assessments.list()
+      setAssessments(assessments.filter((assessment) => assessment.meta?.clientId === clientId))
+    } catch (e) {
+      return setAssessments([])
+    }
+  }, [clientId, dataStore])
+
+  useEffect(() => {
+    void refresh()
+  }, [refresh])
+
   return {assessments, refresh}
 }
 
@@ -118,17 +121,17 @@ export const collapseAll = (assessment: Assessment): Assessment => ({
 })
 
 export const setActionItem =
-  (index: number, itemIndex: number, actionItem: string) =>
+  (questionId: string | undefined, actionItemIndex: number, actionItemText: string) =>
   (assessment: Assessment): Assessment => ({
     ...assessment,
     questions: assessment.questions.map((question, questionIndex) =>
-      index === questionIndex
+      questionId === question.id
         ? {
             ...question,
             value: {
               ...question.value,
               actionItems: question.value.actionItems.map((oldItem, oldItemIndex) =>
-                oldItemIndex === itemIndex ? actionItem : oldItem,
+                oldItemIndex === actionItemIndex ? actionItemText : oldItem,
               ),
             },
           }
@@ -141,11 +144,11 @@ export const setActionItem =
   })
 
 export const removeActionItem =
-  (pageIndex: number, indexOfItemToBeDeleted: number, selectedQuestions: Question[]) =>
+  (questionId: string | undefined, indexOfItemToBeDeleted: number) =>
   (assessment: Assessment): Assessment => ({
     ...assessment,
     questions: assessment.questions.map((question, questionIndex) =>
-      pageIndex === questionIndex
+      questionId === question.id
         ? {
             ...question,
             value: {
@@ -164,16 +167,16 @@ export const removeActionItem =
   })
 
 export const addActionItem =
-  (index: number, newItem: string) =>
+  (questionId: string | undefined, newActionItemIndex: string) =>
   (assessment: Assessment): Assessment => ({
     ...assessment,
     questions: assessment.questions.map((question, questionIndex) =>
-      index === questionIndex
+      questionId === question.id
         ? {
             ...question,
             value: {
               ...question.value,
-              actionItems: [...question.value.actionItems, newItem],
+              actionItems: [...question.value.actionItems, newActionItemIndex],
             },
           }
         : question,

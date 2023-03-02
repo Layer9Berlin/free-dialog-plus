@@ -42,8 +42,8 @@ export class LocalDataStore {
       return uninitializedOperations<Assessment>()
     }
     return databaseOperations<Assessment>(database, (a: Assessment, b: Assessment) => {
-      if ((a.meta.date ?? "") < (b.meta.date ?? "")) return -1
-      if ((a.meta.date ?? "") > (b.meta.date ?? "")) return 1
+      if ((a.meta?.date ?? "") < (b.meta?.date ?? "")) return -1
+      if ((a.meta?.date ?? "") > (b.meta?.date ?? "")) return 1
       return 0
     })
   }

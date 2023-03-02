@@ -1,5 +1,5 @@
-import {Assessment} from "../../types/Assessment"
 import {v4 as uuid} from "uuid"
+import {Assessment} from "../../types/Assessment"
 
 export const dummyAssessment = (
   data: Partial<Omit<Assessment, "id" | "meta"> & {meta?: Partial<Assessment["meta"]>}> & {id?: string},
@@ -29,6 +29,7 @@ export const dummyAssessment = (
           furtherHelp: undefined,
           actionItems: [],
         },
+        id: uuid(),
       },
     ],
   }

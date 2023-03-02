@@ -14,6 +14,7 @@ export type Question = {
   text: QuestionText
   state: QuestionState
   value: AnswerValue
+  id: string
 }
 
 export type QuestionText = {

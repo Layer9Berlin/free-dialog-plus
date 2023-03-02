@@ -1,8 +1,6 @@
-import {useContext} from "react"
-import {DataStoreContext} from "../../../../../contexts/DataStoreContext"
+import {useAssessment} from "../../../../../hooks/Assessment"
 import {toggleSelected} from "../../../../../hooks/Assessments"
 import {useQuestionTexts} from "../../../../../hooks/QuestionTexts"
-import {Assessment} from "../../../../../types/Assessment"
 import {Question, QuestionText} from "../../../../../types/Questions"
 import {Checkbox} from "../../../../buttons/Checkbox"
 import {DialogPlusIcon} from "../../../../icons/DialogPlusIcon"
@@ -43,20 +41,26 @@ export const SelectStageRow = ({
   )
 }
 
-export const SelectStage = ({assessment}: {assessment: Assessment}) => {
+export const SelectStage = ({assessmentId, refresh}: {assessmentId: string; refresh: () => void}) => {
   const questionTexts = useQuestionTexts()
-  const {assessments} = useContext(DataStoreContext)
+  const {assessment, change: changeAssessment} = useAssessment(assessmentId)
   return (
     <>
       <AssessmentNumbers />
-      {questionTexts.map((questionText, questionIndex) => (
-        <SelectStageRow
-          key={questionIndex}
-          {...questionText}
-          {...assessment.questions[questionIndex]}
-          onToggleSelected={() => assessments.change(toggleSelected(questionIndex)(assessment))}
-        />
-      ))}
+      {questionTexts.map(
+        (questionText, questionIndex) =>
+          !!assessment && (
+            <SelectStageRow
+              key={questionIndex}
+              {...questionText}
+              {...assessment?.questions?.[questionIndex]}
+              onToggleSelected={async () => {
+                await changeAssessment(toggleSelected(questionIndex)(assessment))
+                refresh()
+              }}
+            />
+          ),
+      )}
     </>
   )
 }

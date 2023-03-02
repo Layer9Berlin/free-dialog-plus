@@ -1,5 +1,5 @@
-import {useContext, useState} from "react"
-import {DataStoreContext} from "../../../../../contexts/DataStoreContext"
+import {useState} from "react"
+import {useAssessment} from "../../../../../hooks/Assessment"
 import {useQuestionTexts} from "../../../../../hooks/QuestionTexts"
 import {Assessment} from "../../../../../types/Assessment"
 import {AnswerValue, Question, QuestionText} from "../../../../../types/Questions"
@@ -42,23 +42,26 @@ export const ReviewStageRow = ({
   )
 }
 
-export const ReviewStage = ({assessment}: {assessment: Assessment}) => {
+export const ReviewStage = ({assessmentId}: {assessmentId: string}) => {
   const [comparison, setComparison] = useState<Assessment | undefined>(undefined)
   const questionTexts = useQuestionTexts()
-  const dataStore = useContext(DataStoreContext)
+  const {assessment} = useAssessment(assessmentId)
 
   return (
     <>
-      <Calendar assessment={assessment} onSelectComparison={setComparison} dataStore={dataStore} />
+      <Calendar assessment={assessment} onSelectComparison={setComparison} />
       <AssessmentNumbers />
-      {questionTexts.map((questionText, questionIndex) => (
-        <ReviewStageRow
-          key={questionIndex}
-          {...questionText}
-          {...assessment.questions[questionIndex]}
-          comparisonValue={comparison?.questions?.[questionIndex]?.value}
-        />
-      ))}
+      {questionTexts.map(
+        (questionText, questionIndex) =>
+          !!assessment && (
+            <ReviewStageRow
+              key={questionIndex}
+              {...questionText}
+              {...assessment.questions[questionIndex]}
+              comparisonValue={comparison?.questions?.[questionIndex]?.value}
+            />
+          ),
+      )}
     </>
   )
 }

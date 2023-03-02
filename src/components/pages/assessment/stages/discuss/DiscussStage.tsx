@@ -1,8 +1,7 @@
 import {t, Trans} from "@lingui/macro"
-import {useContext, useMemo, useState} from "react"
-import {DataStoreContext} from "../../../../../contexts/DataStoreContext"
+import {useMemo, useState} from "react"
+import {useAssessment} from "../../../../../hooks/Assessment"
 import {addActionItem, removeActionItem, setActionItem} from "../../../../../hooks/Assessments"
-import {Assessment} from "../../../../../types/Assessment"
 import {DialogPlusIcon} from "../../../../icons/DialogPlusIcon"
 import {StepInformationModal} from "../../../../modals/StepInformationModal"
 import {ResultOverview} from "../common/ResultOverview"
@@ -23,14 +22,14 @@ export const StepNumber = ({step}: {step: number}) => {
   )
 }
 
-export const DiscussStage = ({assessment}: {assessment: Assessment}) => {
+export const DiscussStage = ({assessmentId}: {assessmentId: string}) => {
   // Index of the current page within the set of selected questions.
   const [pageIndex, setPageIndex] = useState<number>(0)
+  const {assessment, change: changeAssessment} = useAssessment(assessmentId)
   const selectedQuestions = useMemo(
-    () => assessment.questions.filter((question) => question.state.selected),
+    () => assessment?.questions?.filter((question) => question.state.selected),
     [assessment],
   )
-  const {assessments} = useContext(DataStoreContext)
 
   const questionProps = useMemo(() => selectedQuestions?.[pageIndex], [pageIndex, selectedQuestions])
 
@@ -142,73 +141,83 @@ export const DiscussStage = ({assessment}: {assessment: Assessment}) => {
           </div>
           <div className="d-flex align-items-start">
             <StepNumber step={4} />
-            <div className="flex-grow-1 d-flex flex-column">
-              <div className="d-flex align-items-center">
-                <h4 className="m-0">
-                  <Trans>Agreeing on actions</Trans>
-                </h4>
-                <button
-                  className="btn btn-link"
-                  onClick={() => {
-                    setInformationModalIndex(4)
-                  }}
-                >
-                  <span>
-                    <i className="bi bi-info-circle fs-5" />
-                  </span>
-                </button>
-              </div>
-              {questionProps?.value?.actionItems?.map((actionItem, index) => (
-                <div
-                  className="d-flex align-items-center justify-content-between"
-                  key={index + " " + pageIndex + " " + questionProps.value.actionItems.length}
-                >
-                  <span className="p-1 me-2">
-                    <i className="bi bi-dot fs-3" />
-                  </span>
-                  <div className="input-group">
-                    <input
-                      className="form-control"
-                      defaultValue={actionItem}
-                      placeholder={t`Action item`}
-                      onChange={(event) =>
-                        assessments.change(setActionItem(pageIndex, index, event.target.value)(assessment))
-                      }
-                    />
-                    <button
-                      className="btn btn-outline-default"
-                      onClick={() =>
-                        assessments.change(removeActionItem(pageIndex, index, selectedQuestions)(assessment))
-                      }
-                    >
-                      <span>
-                        <i className="bi bi-x" />
-                      </span>
-                    </button>
-                  </div>
+            {!!assessment && (
+              <div className="flex-grow-1 d-flex flex-column">
+                <div className="d-flex align-items-center">
+                  <h4 className="m-0">
+                    <Trans>Agreeing on actions</Trans>
+                  </h4>
+                  <button
+                    className="btn btn-link"
+                    onClick={() => {
+                      setInformationModalIndex(4)
+                    }}
+                  >
+                    <span>
+                      <i className="bi bi-info-circle fs-5" />
+                    </span>
+                  </button>
                 </div>
-              ))}
-              <div className="d-flex align-items-center justify-content-between">
-                <button
-                  className="btn link-primary border-0 p-0 d-flex align-items-center"
-                  onClick={() => assessments.change(addActionItem(pageIndex, "")(assessment))}
-                >
-                  <span className="p-1 me-2">
-                    <i className="bi bi-plus-square fs-3" />
-                  </span>
-                  <span>
-                    <Trans>Add action item</Trans>
-                  </span>
-                </button>
+                {questionProps?.value?.actionItems?.map((actionItem, actionItemIndex) => (
+                  <div
+                    className="d-flex align-items-center justify-content-between"
+                    key={actionItemIndex + " " + pageIndex + " " + questionProps.value.actionItems.length}
+                  >
+                    <span className="p-1 me-2">
+                      <i className="bi bi-dot fs-3" />
+                    </span>
+                    <div className="input-group">
+                      <input
+                        className="form-control"
+                        defaultValue={actionItem}
+                        placeholder={t`Action item`}
+                        onChange={(event) =>
+                          changeAssessment(
+                            setActionItem(
+                              selectedQuestions?.[pageIndex]?.id,
+                              actionItemIndex,
+                              event.target.value,
+                            )(assessment),
+                          )
+                        }
+                      />
+                      <button
+                        className="btn btn-outline-default"
+                        onClick={() =>
+                          changeAssessment(
+                            removeActionItem(selectedQuestions?.[pageIndex]?.id, actionItemIndex)(assessment),
+                          )
+                        }
+                      >
+                        <span>
+                          <i className="bi bi-x" />
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                ))}
+                <div className="d-flex align-items-center justify-content-between">
+                  <button
+                    className="btn link-primary border-0 p-0 d-flex align-items-center"
+                    onClick={() => changeAssessment(addActionItem(selectedQuestions?.[pageIndex]?.id, "")(assessment))}
+                  >
+                    <span className="p-1 me-2">
+                      <i className="bi bi-plus-square fs-3" />
+                    </span>
+                    <span>
+                      <Trans>Add action item</Trans>
+                    </span>
+                  </button>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
-      {!!selectedQuestions.length && (
+      {!!selectedQuestions?.length && (
         <nav className="mt-5" aria-label="Discuss question navigation">
           <ul className="pagination justify-content-center">
-            {selectedQuestions.map((question, index) => (
+            {selectedQuestions?.map((question, index) => (
               <li key={index} className={"page-item link-info" + (index === pageIndex ? " active" : "")}>
                 <button className="page-link w-48 h-48" onClick={() => setPageIndex(index)}>
                   {index + 1}

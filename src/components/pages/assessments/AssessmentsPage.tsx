@@ -23,9 +23,9 @@ export const AssessmentsPage = () => {
   useEffect(() => {
     const clientId = new URLSearchParams(location.search).get("client_id") ?? undefined
     setClientId(clientId)
-  }, [dataStore.clients, location.search])
+  }, [location.search])
 
-  const {assessments, refresh} = useAssessments({clientId, dataStoreSlice: dataStore.assessments})
+  const {assessments, refresh} = useAssessments({clientId})
 
   const deleteAssessmentsModal = useDeleteModal<Assessment>({dataStoreSlice: dataStore.assessments, refresh})
   const exportPasswordModal = useExportPasswordModal()

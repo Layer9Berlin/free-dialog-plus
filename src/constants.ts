@@ -25,6 +25,7 @@ const defaultQuestionProps: Question = {
     furtherHelp: undefined,
     actionItems: [],
   },
+  id: uuid(),
 }
 
 export const initialQuestionsData = [
@@ -71,6 +72,7 @@ export const blankAssessment = (
         furtherHelp: undefined,
         actionItems: [],
       },
+      id: uuid(),
     })),
   }
 }

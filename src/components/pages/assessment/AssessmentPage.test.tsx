@@ -1,13 +1,13 @@
 import {i18n} from "@lingui/core"
 import {screen} from "@testing-library/react"
+import {de, en} from "make-plural/plurals"
 import {act} from "react-dom/test-utils"
-import {messages as enMessages} from "../../../locales/en/messages"
 import {messages as deMessages} from "../../../locales/de/messages"
+import {messages as enMessages} from "../../../locales/en/messages"
 import {dummyAssessment} from "../../../test/data/dummyAssessment"
 import {renderForTest} from "../../../test/helpers"
 import {InMemoryDataStore} from "../../api/InMemoryDataStore"
 import {AssessmentPage} from "./AssessmentPage"
-import {en, de} from "make-plural/plurals"
 
 // @ts-ignore
 global.IS_REACT_ACT_ENVIRONMENT = true
@@ -80,6 +80,7 @@ const dataStoreWithAssessment = () =>
             furtherHelp: true,
             actionItems: ["Test 1", "Test 2"],
           },
+          id: "testId",
         },
       ],
     }),

@@ -107,6 +107,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Mental Health Additional Help"],
             actionItems: row["Mental Health Action Items"],
           },
+          id: uuid(),
         },
         {
           text: {
@@ -123,6 +124,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Physical Health Additional Help"],
             actionItems: row["Physical Health Action Items"],
           },
+          id: uuid(),
         },
         {
           text: {
@@ -139,6 +141,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Job Situation Additional Help"],
             actionItems: row["Job Situation Action Items"],
           },
+          id: uuid(),
         },
         {
           text: {
@@ -155,6 +158,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Accommodation Additional Help"],
             actionItems: row["Accommodation Action Items"],
           },
+          id: uuid(),
         },
         {
           text: {
@@ -172,6 +176,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Leisure Activities Additional Help"],
             actionItems: row["Leisure Activities Action Items"],
           },
+          id: uuid(),
         },
         {
           text: {
@@ -188,6 +193,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Partner / Family Additional Help"],
             actionItems: row["Partner / Family Action Items"],
           },
+          id: uuid(),
         },
         {
           text: {
@@ -204,6 +210,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Friendships Additional Help"],
             actionItems: row["Friendships Action Items"],
           },
+          id: uuid(),
         },
         {
           text: {
@@ -220,6 +227,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Personal Safety Additional Help"],
             actionItems: row["Personal Safety Action Items"],
           },
+          id: uuid(),
         },
         {
           text: {
@@ -236,6 +244,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Medication Additional Help"],
             actionItems: row["Medication Action Items"],
           },
+          id: uuid(),
         },
         {
           text: {
@@ -252,6 +261,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Practical Help Additional Help"],
             actionItems: row["Practical Help Action Items"],
           },
+          id: uuid(),
         },
         {
           text: {
@@ -268,6 +278,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Meetings Additional Help"],
             actionItems: row["Meetings Action Items"],
           },
+          id: uuid(),
         },
       ],
     }

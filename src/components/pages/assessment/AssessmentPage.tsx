@@ -10,26 +10,18 @@ import {DiscussStage} from "./stages/discuss/DiscussStage"
 import {ReviewStage} from "./stages/review/ReviewStage"
 import {SelectStage} from "./stages/select/SelectStage"
 
-const Stage = ({
-  id,
-  assessment,
-  changeAssessment,
-}: {
-  id: StageIdentifier
-  assessment: Assessment
-  changeAssessment: (newAssessment: Assessment) => void
-}) => {
+const Stage = ({id, assessment, refresh}: {id: StageIdentifier; assessment: Assessment; refresh: () => void}) => {
   switch (id) {
     case "assess":
-      return <AssessStage assessment={assessment} />
+      return <AssessStage assessmentId={assessment.id} />
     case "review":
-      return <ReviewStage assessment={assessment} />
+      return <ReviewStage assessmentId={assessment.id} />
     case "select":
-      return <SelectStage assessment={assessment} />
+      return <SelectStage assessmentId={assessment.id} refresh={refresh} />
     case "discuss":
-      return <DiscussStage assessment={assessment} />
+      return <DiscussStage assessmentId={assessment.id} />
     case "action-items":
-      return <ActionItemsStage assessment={assessment} />
+      return <ActionItemsStage assessmentId={assessment.id} />
     default:
       return <></>
   }
@@ -40,15 +32,7 @@ export const AssessmentPage = () => {
   const dataStore = useContext(DataStoreContext)
   const [assessment, setAssessment] = useState<Assessment | undefined>(undefined)
 
-  const changeAssessment = useCallback(
-    (newAssessment: Assessment) => {
-      void dataStore.assessments.change(newAssessment)
-      setAssessment(newAssessment)
-    },
-    [dataStore.assessments, setAssessment],
-  )
-
-  useEffect(() => {
+  const refresh = useCallback(() => {
     const searchParams = new URLSearchParams(location.search)
     const idFromLocation = searchParams.get("id")
     if (idFromLocation) {
@@ -59,8 +43,11 @@ export const AssessmentPage = () => {
         })
         .catch(() => setAssessment(undefined))
     }
-    return undefined
-  }, [dataStore, location.search])
+  }, [dataStore.assessments, location.search])
+
+  useEffect(() => {
+    refresh()
+  }, [refresh])
 
   const {stage, props: stageNavigationProps} = useStageNavigation({assessment})
 
@@ -76,7 +63,7 @@ export const AssessmentPage = () => {
       )}
       {assessment && (
         <div className="flex-grow-1">
-          <Stage id={stage.id} assessment={assessment} changeAssessment={changeAssessment} />
+          <Stage id={stage.id} assessment={assessment} refresh={refresh} />
         </div>
       )}
       <StageNavigationRow {...stageNavigationProps} className="border-top" />
