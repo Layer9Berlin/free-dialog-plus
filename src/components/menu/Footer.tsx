@@ -1,5 +1,4 @@
-import {Trans} from "@lingui/macro"
-import React, {useRef, useState} from "react"
+import {useState} from "react"
 import {SelectionType} from "../../hooks/ListSelection"
 import {DeleteRowButton} from "../buttons/DeleteRowButton"
 import {ExportButton} from "../buttons/ExportButton"
@@ -23,8 +22,6 @@ export const Footer = ({
   selectMode?: SelectionType
   setSelectMode?: (selectMode: SelectionType) => void
 }) => {
-  const inputRef = useRef<HTMLInputElement>(null)
-
   const [importFeedbackModalState, setImportFeedbackModalState] = useState<{
     show: boolean
     title: string

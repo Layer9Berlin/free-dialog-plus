@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import {useEffect} from "react"
 import {Client} from "../../../../types/Client"
 import {DataStoreType} from "../../../../types/DataStore"
 

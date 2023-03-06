@@ -22,7 +22,7 @@ export const LanguageSwitchModal = ({
 }) => {
   const reroute = useRerouter()
   const getLocale = () => localeForCountryCodedLanguage(detectLocale() ?? "en")
-  const [locale, setLocale] = useState(getLocale())
+  const [currentLocaleCode, setCurrentLocaleCode] = useState(getLocale())
 
   const localeParams = [
     {
@@ -71,13 +71,13 @@ export const LanguageSwitchModal = ({
               <ListGroup.Item
                 action
                 key={locale.localeCode}
-                variant="light"
                 className="d-flex align-items-center h-48"
                 onClick={() => {
                   dynamicActivate(locale.localeCode)
                   reroute.to({params: {lang: locale.localeCode}, replace: true})
-                  setLocale(locale.localeCode)
+                  setCurrentLocaleCode(locale.localeCode)
                 }}
+                active={locale.localeCode === currentLocaleCode}
               >
                 <div className="me-3" style={{width: "60px", height: "30px"}}>
                   {locale.flag}

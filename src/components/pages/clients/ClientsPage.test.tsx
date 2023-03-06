@@ -1,5 +1,5 @@
 import {i18n} from "@lingui/core"
-import {fireEvent, getByLabelText, getByText, screen} from "@testing-library/react"
+import {fireEvent, screen, within} from "@testing-library/react"
 import {en} from "make-plural/plurals"
 import {act} from "react-dom/test-utils"
 import {Route, Routes} from "react-router-dom"
@@ -47,19 +47,19 @@ describe("Clients page", () => {
     const modal = await screen.findByRole("dialog")
     expect(modal).toBeInTheDocument()
 
-    const firstNameInput: HTMLInputElement = getByLabelText(modal, "First name")
+    const firstNameInput: HTMLInputElement = within(modal).getByLabelText("First name")
     expect(firstNameInput).toBeInTheDocument()
     firstNameInput.value = "Testina"
 
-    const middleNameInput: HTMLInputElement = getByLabelText(modal, "Middle name")
+    const middleNameInput: HTMLInputElement = within(modal).getByLabelText("Middle name")
     expect(middleNameInput).toBeInTheDocument()
     middleNameInput.value = "A"
 
-    const lastNameInput: HTMLInputElement = getByLabelText(modal, "Last name")
+    const lastNameInput: HTMLInputElement = within(modal).getByLabelText("Last name")
     expect(lastNameInput).toBeInTheDocument()
     lastNameInput.value = "Testington"
 
-    const confirmCreateButton = getByText(modal, "Create")
+    const confirmCreateButton = within(modal).getByText("Create")
     expect(confirmCreateButton).toBeInTheDocument()
     await act(() => void fireEvent.click(confirmCreateButton))
 
@@ -80,19 +80,19 @@ describe("Clients page", () => {
     const modal = await screen.findByRole("dialog")
     expect(modal).toBeInTheDocument()
 
-    const firstNameInput: HTMLInputElement = getByLabelText(modal, "First name")
+    const firstNameInput: HTMLInputElement = within(modal).getByLabelText("First name")
     expect(firstNameInput).toBeInTheDocument()
     firstNameInput.value = "Testina"
 
-    const middleNameInput: HTMLInputElement = getByLabelText(modal, "Middle name")
+    const middleNameInput: HTMLInputElement = within(modal).getByLabelText("Middle name")
     expect(middleNameInput).toBeInTheDocument()
     middleNameInput.value = "A"
 
-    const lastNameInput: HTMLInputElement = getByLabelText(modal, "Last name")
+    const lastNameInput: HTMLInputElement = within(modal).getByLabelText("Last name")
     expect(lastNameInput).toBeInTheDocument()
     lastNameInput.value = "Testington"
 
-    const confirmEditButton = getByText(modal, "Edit")
+    const confirmEditButton = within(modal).getByText("Edit")
     expect(confirmEditButton).toBeInTheDocument()
     await act(() => void fireEvent.click(confirmEditButton))
 
@@ -116,7 +116,7 @@ describe("Clients page", () => {
     const modal = await screen.findByRole("dialog")
     expect(modal).toBeInTheDocument()
 
-    const confirmDeleteButton = getByText(modal, "Delete")
+    const confirmDeleteButton = within(modal).getByText("Delete")
     expect(confirmDeleteButton).toBeInTheDocument()
     await act(() => void fireEvent.click(confirmDeleteButton))
 
@@ -141,7 +141,7 @@ describe("Clients page", () => {
     const modal = await screen.findByRole("dialog")
     expect(modal).toBeInTheDocument()
 
-    const cancelDeleteButton = getByText(modal, "Cancel")
+    const cancelDeleteButton = within(modal).getByText("Cancel")
     expect(cancelDeleteButton).toBeInTheDocument()
     await act(() => void fireEvent.click(cancelDeleteButton))
 
@@ -166,7 +166,7 @@ describe("Clients page", () => {
     const modal = await screen.findByRole("dialog")
     expect(modal).toBeInTheDocument()
 
-    const closeModalButton = getByLabelText(modal, "Close")
+    const closeModalButton = within(modal).getByLabelText("Close")
     expect(closeModalButton).toBeInTheDocument()
     await act(() => void fireEvent.click(closeModalButton))
 
