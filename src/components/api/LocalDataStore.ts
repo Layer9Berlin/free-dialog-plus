@@ -85,7 +85,7 @@ const databaseOperations = <EntityType extends Assessment | Client>(
   },
   remove: async (...items: EntityType[]): Promise<void> => {
     for (const item of items) {
-      await database.setItem(item.id, {id: item.id, deletedAt: new Date()})
+      await database.removeItem(item.id)
     }
   },
   set: async (...items: EntityType[]): Promise<void> => {

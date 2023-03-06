@@ -1,7 +1,7 @@
 import {useCallback, useContext, useState} from "react"
 import {DataStoreContext} from "../../../contexts/DataStoreContext"
 import {useClients} from "../../../hooks/Clients"
-import {useDeleteModal} from "../../../hooks/DeleteModal"
+import {useDeleteClientModal} from "../../../hooks/DeleteClientModal"
 import {useEditModal} from "../../../hooks/EditModal"
 import {useAssessmentExporter} from "../../../hooks/Exporter"
 import {useListSelection} from "../../../hooks/ListSelection"
@@ -40,7 +40,7 @@ export const ClientsPage = () => {
     refresh,
   })
 
-  const deleteClientsModal = useDeleteModal({dataStoreSlice: dataStore.clients, refresh})
+  const deleteClientsModal = useDeleteClientModal({refresh})
   const exportPasswordModal = useExportPasswordModal()
 
   return (

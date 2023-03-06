@@ -10,7 +10,6 @@ export const useAssessments = ({
   const [assessments, setAssessments] = useState<Assessment[]>([])
   const dataStore = useContext(DataStoreContext)
   const refresh = useCallback(async () => {
-    console.log("clientId", clientId)
     if (!clientId) {
       setAssessments([])
       return Promise.resolve()
