@@ -12,14 +12,14 @@ export const ClientsHeader = ({
   stopSelectingRows: () => void
   onCreateClient: () => void
 }) => {
-  function reloadPage() {
-    window.location.reload()
-  }
+  // function reloadPage() {
+  //   window.location.reload()
+  // }
   return (
     <NavigationBar
       title={t`Clients`}
       left={
-        <ResponsiveButton onClick={reloadPage} icon="box-arrow-left" variant="danger" outline={true}>
+        <ResponsiveButton icon="box-arrow-left" variant="danger" outline={true}>
           <Trans>Log out</Trans>
         </ResponsiveButton>
       }

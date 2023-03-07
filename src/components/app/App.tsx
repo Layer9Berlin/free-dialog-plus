@@ -3,13 +3,13 @@ import {BrowserRouter} from "react-router-dom"
 import {DataStoreContext} from "../../contexts/DataStoreContext"
 import {LocalDataStore} from "../api/LocalDataStore"
 import "./App.sass"
-import {LoginComponent} from "./LoginComponent"
+import {CheckForWelcomeComponent} from "./CheckForWelcomeComponent"
 import {RoutesComponent} from "./RoutesComponent"
 import {TranslationComponent} from "./TranslationComponent"
 
 const App = () => {
   const dataStore = new LocalDataStore("dialog_plus_test")
-  const [mayNeedToWelcomeUser, setMayNeedToWelcomeUser] = useState(true)
+  const [welcomeUser, setWelcomeUser] = useState(true)
   return (
     <TranslationComponent>
       <div className="App">
@@ -17,12 +17,9 @@ const App = () => {
         <main>
           <BrowserRouter>
             <DataStoreContext.Provider value={dataStore}>
-              <LoginComponent
-                mayNeedToWelcomeUser={mayNeedToWelcomeUser}
-                setMayNeedToWelcomeUser={setMayNeedToWelcomeUser}
-              >
+              <CheckForWelcomeComponent welcomeUser={welcomeUser} setWelcomeUser={setWelcomeUser}>
                 <RoutesComponent />
-              </LoginComponent>
+              </CheckForWelcomeComponent>
             </DataStoreContext.Provider>
           </BrowserRouter>
         </main>

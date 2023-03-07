@@ -7,11 +7,11 @@ export const WelcomeInfoPanel = () => {
   return (
     <Card>
       <Card.Header className="bg-light">
-        <h3 className="text-primary fw-bold text-center">
+        <h3 className="text-primary fw-bold text-center m-0">
           <Trans>Welcome to Free DIALOG+</Trans>
         </h3>
       </Card.Header>
-      <Card.Body className="d-flex align-items-center">
+      <Card.Body className="d-flex align-items-center p-4">
         <DataInfoPanel />
       </Card.Body>
       <Card.Footer className="bg-white">
