@@ -1,3 +1,4 @@
+import {useState} from "react"
 import {BrowserRouter} from "react-router-dom"
 import {DataStoreContext} from "../../contexts/DataStoreContext"
 import {LocalDataStore} from "../api/LocalDataStore"
@@ -8,6 +9,7 @@ import {TranslationComponent} from "./TranslationComponent"
 
 const App = () => {
   const dataStore = new LocalDataStore("dialog_plus_test")
+  const [mayNeedToWelcomeUser, setMayNeedToWelcomeUser] = useState(true)
   return (
     <TranslationComponent>
       <div className="App">
@@ -15,7 +17,10 @@ const App = () => {
         <main>
           <BrowserRouter>
             <DataStoreContext.Provider value={dataStore}>
-              <LoginComponent>
+              <LoginComponent
+                mayNeedToWelcomeUser={mayNeedToWelcomeUser}
+                setMayNeedToWelcomeUser={setMayNeedToWelcomeUser}
+              >
                 <RoutesComponent />
               </LoginComponent>
             </DataStoreContext.Provider>

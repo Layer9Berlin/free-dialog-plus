@@ -37,4 +37,3 @@ export const useRerouter = () => {
     [link, navigate],
   )
 }
-// https://stackoverflow.com/questions/62861269/attempted-import-error-usehistory-is-not-exported-from-react-router-dom
