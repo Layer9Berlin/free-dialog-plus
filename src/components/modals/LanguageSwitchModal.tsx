@@ -76,6 +76,7 @@ export const LanguageSwitchModal = ({
                   dynamicActivate(locale.localeCode)
                   reroute.to({params: {lang: locale.localeCode}, replace: true})
                   setCurrentLocaleCode(locale.localeCode)
+                  localStorage.setItem("lang", locale.localeCode)
                 }}
                 active={locale.localeCode === currentLocaleCode}
               >

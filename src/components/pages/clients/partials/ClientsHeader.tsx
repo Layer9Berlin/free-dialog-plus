@@ -2,6 +2,7 @@ import {t, Trans} from "@lingui/macro"
 import {CloseButton} from "../../../buttons/CloseButton"
 import {ResponsiveButton} from "../../../buttons/ResponsiveButton"
 import {NavigationBar} from "../../../layouts/NavigationBar"
+import {LanguageSwitch} from "../../../menu/LanguageSwitch"
 
 export const ClientsHeader = ({
   isSelectingRows,
@@ -12,17 +13,10 @@ export const ClientsHeader = ({
   stopSelectingRows: () => void
   onCreateClient: () => void
 }) => {
-  // function reloadPage() {
-  //   window.location.reload()
-  // }
   return (
     <NavigationBar
       title={t`Clients`}
-      left={
-        <ResponsiveButton icon="box-arrow-left" variant="danger" outline={true}>
-          <Trans>Log out</Trans>
-        </ResponsiveButton>
-      }
+      left={<LanguageSwitch dropdownStyle={false} />}
       right={
         isSelectingRows ? (
           <CloseButton onClick={stopSelectingRows} />
