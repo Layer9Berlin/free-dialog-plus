@@ -14,11 +14,11 @@ export const LanguageSwitch = ({dropdownStyle}: LanguageSwitchProps) => {
   return (
     <div>
       <LanguageSwitchModal {...languageSwitchModalProps} />
-      <div className="d-flex m-3 p-2 align-self-center">
+      <div className="d-flex justify-content-center m-3 p-2 align-self-center">
         {dropdownStyle ? (
           <button
             onClick={showLanguageSwitchModal}
-            className={`btn d-flex align-items-center h-48 "btn-outline-default`}
+            className={`btn btn-outline-default d-flex align-items-center h-48`}
           >
             <CurrentLanguageFlag />
             <ChevronDownIcon className="ps-3 fs-4" />

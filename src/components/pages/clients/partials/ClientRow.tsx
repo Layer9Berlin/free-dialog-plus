@@ -45,7 +45,7 @@ export const ClientRow = ({
       <NavLink
         aria-label="Client row"
         className={`flex-grow-1 p-3 text-decoration-none overflow-hidden d-flex align-items-center ${linkColor} ${
-          isSelected ? "fw-bold" : ""
+          selectModeActive && isSelected ? "fw-bold" : ""
         }`}
         to={link}
         onClick={

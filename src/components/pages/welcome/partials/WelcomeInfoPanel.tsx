@@ -17,11 +17,11 @@ export const WelcomeInfoPanel = () => {
       <Card.Footer className="bg-white">
         <div className="d-flex w-100 justify-content-center align-items-center">
           <a className="btn btn-outline-primary flex-grow-1 flex-basis-0" href="/login">
-            Install App on iOS
+            <Trans>Install App on iOS</Trans>
           </a>
           <span className="mx-3">or</span>
           <Link className="btn btn-primary flex-grow-1 flex-basis-0" to="/">
-            Use in browser
+            <Trans>Use in browser</Trans>
           </Link>
         </div>
       </Card.Footer>

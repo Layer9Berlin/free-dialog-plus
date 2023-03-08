@@ -54,7 +54,10 @@ export const ClientsPage = () => {
           <ClientsHeader
             isSelectingRows={selectModeActive}
             onCreateClient={() => clientDataModal.show(undefined)}
-            stopSelectingRows={() => setSelectModeActive(false)}
+            stopSelectingRows={() => {
+              selectNone()
+              setSelectModeActive(false)
+            }}
           />
         }
         body={clients?.map((client) => (

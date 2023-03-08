@@ -29,7 +29,7 @@ msgstr "Aktion"
 msgid "Action items"
 msgstr "Aktionen"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:200
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:208
 msgid "Add action item"
 msgstr "Aktion hinzufügen"
 
@@ -42,7 +42,7 @@ msgstr "Aktionen vereinbaren"
 msgid "Assess"
 msgstr "Bewerten"
 
-#: src/components/pages/assessment/AssessmentPage.tsx:73
+#: src/components/pages/assessment/AssessmentPage.tsx:60
 msgid "Assessment not found"
 msgstr "Bewertung nicht gefunden"
 
@@ -58,13 +58,13 @@ msgstr "Zurück zu Patienten"
 msgid "Back to {0}"
 msgstr "Zurück zu {0}"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:104
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:103
 msgid "Best case scenario?"
 msgstr "Idealvorstellung?"
 
 #: src/components/modals/DeleteAssessmentsModal.tsx:24
 #: src/components/modals/DeleteClientsModal.tsx:19
-#: src/components/modals/LanguageSwitchModal.tsx:93
+#: src/components/modals/LanguageSwitchModal.tsx:94
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -76,39 +76,38 @@ msgstr "Wählen Sie eine Sprache"
 msgid "Choose a password"
 msgstr "Export-Passwort"
 
-#: src/components/pages/clients/partials/ClientsHeader.tsx:20
+#: src/components/pages/clients/partials/ClientsHeader.tsx:18
 msgid "Clients"
 msgstr "Patienten"
 
 #: src/components/pages/register/RegisterPage.tsx:50
-msgid "Close"
-msgstr "Schließen"
+#~ msgid "Close"
+#~ msgstr "Schließen"
 
 #: src/components/pages/welcome/WelcomePage.tsx:76
 #~ msgid "Confirm password"
 #~ msgstr "Passwort bestätigen"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:117
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:116
 msgid "Considering options"
 msgstr "Möglichkeiten explorieren"
 
 #: src/components/modals/ClientDataModal.tsx:94
-#: src/components/pages/register/RegisterPage.tsx:122
 msgid "Create"
 msgstr "Erstellen"
 
 #: src/components/modals/DataLossWarningModal.tsx:32
 #: src/components/pages/register/RegisterPage.tsx:57
-msgid "Create account"
-msgstr "Konto erstellen"
+#~ msgid "Create account"
+#~ msgstr "Konto erstellen"
 
-#: src/components/calendar/Calendar.tsx:57
+#: src/components/calendar/Calendar.tsx:58
 msgid "Current assessment"
 msgstr "Aktuelle Bewertung"
 
 #: src/components/menu/DataInfoPanel.tsx:21
-msgid "Data protection"
-msgstr "Datenschutz"
+#~ msgid "Data protection"
+#~ msgstr "Datenschutz"
 
 #: src/components/modals/DeleteAssessmentsModal.tsx:27
 #: src/components/modals/DeleteClientsModal.tsx:22
@@ -127,11 +126,15 @@ msgstr "Bewertung löschen?"
 msgid "Delete this client?"
 msgstr "Diesen Klienten löschen?"
 
+#: src/components/menu/DataInfoPanel.tsx:21
+msgid "Demo Version"
+msgstr "Demo-Version"
+
 #: src/components/menu/StageNavigation.tsx:35
 msgid "Discuss"
 msgstr "Besprechen"
 
-#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:73
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:72
 msgid "Do you need more help in this area?"
 msgstr "Wünschen Sie mehr Hilfe in diesem Bereich?"
 
@@ -144,8 +147,8 @@ msgid "Do you really want to delete this assessment? This cannot be undone."
 msgstr "Wollen Sie diese Bewertung wirklich löschen? Dieser Vorgang kann nicht rückgängig gemacht werden."
 
 #: src/components/pages/register/RegisterPage.tsx:75
-msgid "E-Mail-Adresse"
-msgstr "E-Mail-Adresse"
+#~ msgid "E-Mail-Adresse"
+#~ msgstr "E-Mail-Adresse"
 
 #: src/components/modals/ClientDataModal.tsx:94
 msgid "Edit"
@@ -180,11 +183,11 @@ msgstr "Warum unzufrieden oder Wunsch nach mehr Hilfe?"
 msgid "Exploring options"
 msgstr "Möglichkeiten explorieren"
 
-#: src/components/buttons/ExportButton.tsx:22
+#: src/components/buttons/ExportButton.tsx:21
 msgid "Export"
 msgstr "Exportieren"
 
-#: src/components/buttons/ExportButton.tsx:23
+#: src/components/buttons/ExportButton.tsx:22
 msgid "Export selected"
 msgstr "Auswahl exportieren"
 
@@ -221,8 +224,8 @@ msgstr "iOS-Nutzer: Tippen Sie auf <0><1/></0>im unteren Menü, dann auf \"Zum S
 #~ msgstr "Passwort vergessen?"
 
 #: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:9
-msgid "Free DIALOG+"
-msgstr "Free DIALOG+"
+#~ msgid "Free DIALOG+"
+#~ msgstr "Free DIALOG+"
 
 #: src/hooks/QuestionTexts.ts:21
 msgid "Friendships"
@@ -264,7 +267,7 @@ msgstr "Wie zufrieden sind Sie mit Ihrer Medikation?"
 msgid "How satisfied are you with your meetings with mental health professionals?"
 msgstr "Wie zufrieden sind Sie mit den Gesprächen mit Ihren Behandlern?"
 
-#: src/constants.ts:34
+#: src/constants.ts:35
 #: src/hooks/QuestionTexts.ts:7
 msgid "How satisfied are you with your mental health?"
 msgstr "Wie zufrieden sind Sie mit Ihrer psychischen Gesundheit?"
@@ -285,17 +288,25 @@ msgstr "Wie zufrieden sind Sie mit Ihrer Beziehung zu Partner/Familie?"
 msgid "Identifying what works"
 msgstr "Was sind Stärken?"
 
+#: src/components/menu/DataInfoPanel.tsx:29
+msgid "If used in the browser, deleting your browser cache will <0>permanently erase all client and session data</0>."
+msgstr "Bei der Verwendung im Browser werden durch das Löschen des Browser-Caches <0>alle Patient- und Bewertungsdaten unwiderruflich gelöscht</0>."
+
 #: src/components/buttons/ImportButton.tsx:31
 msgid "Import"
 msgstr "Importieren"
 
 #: src/components/modals/DataLossWarningModal.tsx:20
-msgid "Important information"
-msgstr "Wichtige Hinweise"
+#~ msgid "Important information"
+#~ msgstr "Wichtige Hinweise"
 
 #: src/components/modals/StepInformationModal.tsx:238
 msgid "In step 3, three kinds of questions can be asked:"
 msgstr "Schritt 3 beinhaltet drei Arten von Fragen:"
+
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:20
+msgid "Install App on iOS"
+msgstr "App auf iOS installieren"
 
 #: src/components/menu/AddToHomescreenInfoPanel.tsx:42
 msgid "Install this app on your <0>Home Screen</0> for a better experience."
@@ -307,8 +318,8 @@ msgstr "Installiert"
 
 #: src/components/pages/login/LoginPage.tsx:63
 #: src/components/pages/register/RegisterPage.tsx:110
-msgid "Invalid password"
-msgstr "Ungültiges Passwort"
+#~ msgid "Invalid password"
+#~ msgstr "Ungültiges Passwort"
 
 #: src/hooks/QuestionTexts.ts:9
 msgid "Job situation"
@@ -323,25 +334,25 @@ msgid "Leisure activities"
 msgstr "Freizeitaktivitäten"
 
 #: src/components/pages/login/LoginPage.tsx:77
-msgid "Log in"
-msgstr "Einloggen"
+#~ msgid "Log in"
+#~ msgstr "Einloggen"
 
 #: src/components/pages/clients/partials/ClientsHeader.tsx:23
-msgid "Log out"
-msgstr "Ausloggen"
+#~ msgid "Log out"
+#~ msgstr "Ausloggen"
 
 #: src/components/pages/login/LoginPage.tsx:41
-msgid "Login"
-msgstr "Login"
+#~ msgid "Login"
+#~ msgstr "Login"
 
 #: src/components/modals/StepInformationModal.tsx:488
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:89
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:88
 msgid "Looking forward"
 msgstr "Sich freuen auf"
 
 #: src/components/pages/register/RegisterPage.tsx:46
-msgid "Looks like the passwords you entered do not match. Please try again!"
-msgstr "Die eingegeben Passwörter sind unterschiedlich."
+#~ msgid "Looks like the passwords you entered do not match. Please try again!"
+#~ msgstr "Die eingegeben Passwörter sind unterschiedlich."
 
 #: src/hooks/QuestionTexts.ts:23
 msgid "Medication"
@@ -351,7 +362,7 @@ msgstr "Medikation"
 msgid "Meetings"
 msgstr "Gespräche"
 
-#: src/constants.ts:34
+#: src/constants.ts:35
 #: src/hooks/QuestionTexts.ts:7
 msgid "Mental health"
 msgstr "Psychische Gesundheit"
@@ -361,7 +372,7 @@ msgid "Middle name"
 msgstr "Zweitname"
 
 #: src/components/modals/ClientDataModal.tsx:25
-#: src/components/pages/clients/partials/ClientsHeader.tsx:31
+#: src/components/pages/clients/partials/ClientsHeader.tsx:25
 msgid "New client"
 msgstr "Patient hinzufügen"
 
@@ -381,30 +392,30 @@ msgstr "Danach sollte der Behandler mit dem Patienten besprechen, was er als Beh
 msgid "Next, the clinician should now ask the patient to identify what is working well within the current situation. The assumption is that, no matter how bad things may be, the patient somehow manages to cope. Building an awareness of the strengths within the situation is intended to help promote the patient’s confidence and motivation for change."
 msgstr "Als nächstes sollte der Behandler den Patienten bitten zu erklären, warum die Zufriedenheit im besprochenen Bereich nicht noch niedriger ist (falls sie 2 oder höher ist), was trotz möglicher Unzufriedenheit relativ gut funktioniert, und welche Lösungen und Bewältigungsstrategien der Patient erfolgreich genutzt hat. Dies soll den Patienten veranlassen, seine Stärken zu betrachten und Vertrauen in eigene Handlungsmöglichkeiten zu gewinnen."
 
-#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:109
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:108
 msgid "No"
 msgstr "Nein"
 
-#: src/components/pages/assessment/stages/action-items/ActionItemsStage.tsx:32
+#: src/components/pages/assessment/stages/action-items/ActionItemsStage.tsx:31
 #: src/components/pages/assessments/partials/AssessmentRow.tsx:81
 msgid "No action items defined"
 msgstr "Keine Aktionen vereinbart"
 
-#: src/components/calendar/Calendar.tsx:46
+#: src/components/calendar/Calendar.tsx:44
 msgid "No past assessments yet"
 msgstr "Keine vergangenen Bewertungen"
 
-#: src/components/modals/NoSelectionModal.tsx:18
+#: src/components/modals/NoSelectionModal.tsx:17
 msgid "No selection made"
 msgstr "Keine Auswahl"
 
 #: src/components/menu/DataInfoPanel.tsx:24
-msgid "Note that all data is stored <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality or install the app (see below) to prevent accidental loss of data."
-msgstr "Bitte beachten Sie, dass alle Daten <0>nur auf diesem Gerät</0> gespeichert werden. Damit es beim Leeren des Browser-Caches nicht zu Datenverlust kommt, nutzen Sie bitte regelmäßig die Import/Export-Funktion oder installieren Sie die App (siehe unten)."
+#~ msgid "Note that all data is stored <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality or install the app (see below) to prevent accidental loss of data."
+#~ msgstr "Bitte beachten Sie, dass alle Daten <0>nur auf diesem Gerät</0> gespeichert werden. Damit es beim Leeren des Browser-Caches nicht zu Datenverlust kommt, nutzen Sie bitte regelmäßig die Import/Export-Funktion oder installieren Sie die App (siehe unten)."
 
 #: src/components/modals/ExportPasswordModal.tsx:73
-#: src/components/modals/ImportErrorModal.tsx:29
-#: src/components/modals/NoSelectionModal.tsx:29
+#: src/components/modals/ImportErrorModal.tsx:28
+#: src/components/modals/NoSelectionModal.tsx:28
 msgid "OK"
 msgstr "OK"
 
@@ -414,16 +425,16 @@ msgstr "Sobald eine Aktion vereinbart wurde, sollte der Behandler dies in dem vo
 
 #: src/components/pages/login/LoginPage.tsx:48
 #: src/components/pages/register/RegisterPage.tsx:90
-msgid "Password"
-msgstr "Passwort"
+#~ msgid "Password"
+#~ msgstr "Passwort"
 
 #: src/components/pages/register/RegisterPage.tsx:105
-msgid "Password confirmation"
-msgstr "Bestätigung des Passworts"
+#~ msgid "Password confirmation"
+#~ msgstr "Bestätigung des Passworts"
 
 #: src/components/pages/register/RegisterPage.tsx:42
-msgid "Password mismatch"
-msgstr "Passwörter nicht gleich"
+#~ msgid "Password mismatch"
+#~ msgstr "Passwörter nicht gleich"
 
 #: src/hooks/QuestionTexts.ts:22
 msgid "Personal safety"
@@ -445,7 +456,7 @@ msgstr "Bitte geben Sie das Entschlüsselungspasswort ein"
 msgid "Practical help"
 msgstr "Praktische Hilfe"
 
-#: src/components/modals/DataLossWarningModal.tsx:36
+#: src/components/modals/DataLossWarningModal.tsx:35
 msgid "Proceed"
 msgstr "Fortfahren"
 
@@ -466,10 +477,10 @@ msgid "Select"
 msgstr "Auswählen"
 
 #: src/components/pages/settings/partials/SettingsHeader.tsx:9
-msgid "Settings"
-msgstr "Einstellungen"
+#~ msgid "Settings"
+#~ msgstr "Einstellungen"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:107
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:106
 msgid "Smallest improvement?"
 msgstr "Minimale Verbesserung?"
 
@@ -489,8 +500,11 @@ msgstr "Es ist möglich, dass sich Patient und Behandler nicht auf unmittelbare 
 msgid "The aim of step 1 is for both the patient and the clinician to gain a shared understanding of the patient’s current situation. There are two parts to understanding:"
 msgstr "Schritt 1 soll zu einem gemeinsamen Verständnis der aktuellen Situation im jeweiligen Bereich führen. Es gibt zwei Teile des „Verstehens“:"
 
+#: src/components/menu/DataInfoPanel.tsx:24
+msgid "This app is meant for demo purposes only. All data generated in the app is stored <0>directly on this device</0>."
+msgstr "Diese App ist lediglich für Demonstrationszwecke vorgesehen. Alle in der App generierten Daten werden <0>direkt auf diesem Gerät gespeichert</0>."
+
 #: src/components/menu/DataInfoPanel.tsx:10
-#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:14
 msgid "This is a free, web-based implementation of the <0>DIALOG+ therapeutic intervention</0>."
 msgstr "Dies ist eine kostenlose, web-basierte Implementierung der <0>therapeutischen Intervention DIALOG+</0>."
 
@@ -502,24 +516,36 @@ msgstr "Durch die Schritte 1 - 3 haben sowohl der Patient als auch der Behandler
 msgid "Tip"
 msgstr "Tipp"
 
+#: src/components/menu/DataInfoPanel.tsx:33
+msgid "To prevent accidental data loss, use the import/export functionality in the browser version, or install the app on iOS."
+msgstr "Um versehentlichen Datenverlusten vorzubeugen, verwenden Sie die Import-/Exportfunktion in der Browser-Version oder installieren Sie die App auf iOS."
+
 #: src/components/modals/StepInformationModal.tsx:483
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:61
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:60
 msgid "Understanding"
 msgstr "Verstehen"
 
-#: src/components/menu/DataInfoPanel.tsx:7
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:24
+msgid "Use in browser"
+msgstr "Im Browser verwenden"
+
+#: src/components/modals/DataLossWarningModal.tsx:18
+msgid "Warning: Data Loss Possible"
+msgstr "Warnung: Datenverlust möglich"
+
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:11
 msgid "Welcome to Free DIALOG+"
 msgstr "Willkommen bei Free DIALOG+"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:138
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:137
 msgid "What can others do?"
 msgstr "Was können andere tun?"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:135
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:134
 msgid "What can the clinician do?"
 msgstr "Was kann der Behandler tun?"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:132
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:131
 msgid "What can the patient do?"
 msgstr "Was kann der Patient tun?"
 
@@ -527,7 +553,7 @@ msgstr "Was kann der Patient tun?"
 msgid "What is the patient’s ‘best-case scenario’?"
 msgstr "Was wäre die „Idealsituation“?"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:79
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:78
 msgid "What is working?"
 msgstr "Was funktioniert?"
 
@@ -535,13 +561,17 @@ msgstr "Was funktioniert?"
 msgid "What small changes would make a difference?"
 msgstr "Welche kleinen Veränderungen würden eine Verbesserung bedeuten?"
 
-#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:76
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:75
 msgid "Why is this rating not a lower one?"
 msgstr "Warum is die Bewertung nicht niedriger?"
 
-#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:90
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:89
 msgid "Yes"
 msgstr "Ja"
+
+#: src/components/modals/DataLossWarningModal.tsx:22
+msgid "You are using the demo version of DIALOG+. Your data will be saved to this device and <0>will be deleted</0> if you clear your browser cache. Use the export functionality in the bottom left portion of the Clients page to back up your data."
+msgstr "Sie benutzen die Demoversion von DIALOG+. Ihre Daten werden auf diesem Gerät gespeichert und <0>werden gelöscht</0>, wenn Sie Ihren Browser-Cache leeren. Verwenden Sie die Exportfunktion unten links auf der Seite \"Kunden\", um Ihre Daten zu sichern."
 
 #: src/components/menu/AddToHomescreenInfoPanel.tsx:25
 msgid "You have successfully installed the app."
@@ -559,15 +589,15 @@ msgstr "und sich über die Anwesenheit anstatt der Abwesenheit von etwas definie
 msgid "detailed"
 msgstr "detailliert ist,"
 
-#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:12
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:11
 msgid "fairly dissatisfied"
 msgstr "ziemlich unzufrieden"
 
-#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:14
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:13
 msgid "fairly satisfied"
 msgstr "ziemlich zufrieden"
 
-#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:13
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:12
 msgid "in the middle"
 msgstr "in der Mitte"
 
@@ -576,22 +606,22 @@ msgid "last updated"
 msgstr "Letzte Änderung"
 
 #: src/components/pages/register/RegisterPage.tsx:130
-msgid "other options"
-msgstr "weitere Optionen"
+#~ msgid "other options"
+#~ msgstr "weitere Optionen"
 
-#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:10
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:9
 msgid "totally dissatisfied"
 msgstr "vollständig unzufrieden"
 
-#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:16
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:15
 msgid "totally satisfied"
 msgstr "vollständig zufrieden"
 
-#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:11
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:10
 msgid "very dissatisfied"
 msgstr "sehr unzufrieden"
 
-#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:15
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:14
 msgid "very satisfied"
 msgstr "sehr zufrieden"
 

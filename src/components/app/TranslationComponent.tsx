@@ -1,6 +1,7 @@
 import {i18n} from "@lingui/core"
 import {I18nProvider} from "@lingui/react"
-import {ReactNode, useEffect} from "react"
+import {ReactNode, useContext, useEffect} from "react"
+import {AppContext} from "../../contexts/AppContext"
 import {messages as daMessages} from "../../locales/da/messages"
 import {messages as deMessages} from "../../locales/de/messages"
 import {messages as enMessages} from "../../locales/en/messages"
@@ -20,8 +21,9 @@ i18n.load({
 i18n.activate("en")
 
 export const TranslationComponent = ({children}: {children?: ReactNode}) => {
+  const {setLanguageLoaded} = useContext(AppContext)
   useEffect(() => {
-    void dynamicActivate(detectedLocale)
-  }, [])
+    dynamicActivate(detectedLocale).then(() => setLanguageLoaded(true))
+  }, [setLanguageLoaded])
   return <I18nProvider i18n={i18n}>{children}</I18nProvider>
 }
