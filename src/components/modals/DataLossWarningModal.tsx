@@ -26,10 +26,6 @@ export const DataLossWarningModal = ({
         </Trans>
       </Modal.Body>
       <Modal.Footer className="p-0 justify-content-end">
-        {/* <Link to="/register" className="btn btn-outline-primary m-2 me-0">
-          <CreateAccountIcon className="me-2" />
-          <Trans>Create account</Trans>
-        </Link> */}
         <Button className="m-2" variant="danger" onClick={confirm}>
           <WarningIcon className="me-2" />
           <Trans>Proceed</Trans>
