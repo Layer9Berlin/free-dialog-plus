@@ -9,7 +9,7 @@ import {RoutesComponent} from "./RoutesComponent"
 import {TranslationComponent} from "./TranslationComponent"
 
 const App = () => {
-  const dataStore = new LocalDataStore("dialog_plus_test")
+  const dataStore = new LocalDataStore("dialog_plus_data")
   const appContext = useAppContext()
   return (
     <AppContext.Provider value={appContext}>
