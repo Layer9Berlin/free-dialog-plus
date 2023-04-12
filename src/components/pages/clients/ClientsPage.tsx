@@ -85,7 +85,12 @@ export const ClientsPage = () => {
                 setSelectModeActive(true)
               }
             }}
-            onImport={async () => {}}
+            onImport={async (file) => {
+              const {clients, assessments} = await exporter.import(file)
+              await dataStore.clients.add(...clients)
+              await dataStore.assessments.add(...assessments)
+              await refresh()
+            }}
             exportSelectionModeActive={selectModeActive}
           />
         }

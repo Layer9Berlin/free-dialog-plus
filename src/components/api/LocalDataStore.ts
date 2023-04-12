@@ -65,8 +65,10 @@ const databaseOperations = <EntityType extends Assessment | Client>(
   database: LocalForage,
   compareFunction: (a: EntityType, b: EntityType) => number,
 ) => ({
-  add: async (item: EntityType): Promise<void> => {
-    await database.setItem(item.id, item)
+  add: async (...items: EntityType[]): Promise<void> => {
+    for (const item of items) {
+      await database.setItem(item.id, item)
+    }
   },
   find: async (id: string): Promise<EntityType> => {
     const result = await database.getItem<EntityType>(id)
@@ -77,7 +79,7 @@ const databaseOperations = <EntityType extends Assessment | Client>(
   },
   list: async (): Promise<EntityType[]> => {
     const result: EntityType[] = []
-    await database.iterate<EntityType, void>((item, key) => {
+    await database.iterate<EntityType, void>((item) => {
       result.push(item)
     })
     result.sort(compareFunction)

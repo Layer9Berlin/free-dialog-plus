@@ -15,9 +15,10 @@ const ClientNameSchema = z
 
 const DateSchema = z
   .string()
-  .regex(/\d{1,2}\/\d{1,2}\/\d{4} \d{2}:\d{2}/)
   .transform((dateString) => {
-    return new Date(dateString.replace(/(\d{1,2})\/(\d{1,2})\/(\d{4}) (\d{2}):(\d{2})/, "$3-$2-$1T$4:$5"))
+    // Convert from DD/MM/YYYY to MM/DD/YYYY
+    const newDateString = dateString.replace(/(\d{1,2})\/(\d{1,2})\/(.*)/, "$2/$1/$3")
+    return new Date(newDateString)
   })
   .optional()
 
