@@ -5,6 +5,9 @@ export type Client = {
   last?: string
 }
 
-export type MutableClient = Client & {
-  setName: (first?: string, middle?: string, last?: string) => void
+export type LocalStorageClient = {
+  id: string
+  first?: string
+  middle?: string
+  last?: string
 }

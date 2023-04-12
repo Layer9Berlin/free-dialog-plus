@@ -1,7 +1,8 @@
-import {Trans} from "@lingui/macro"
-import React, {useRef, useState} from "react"
-import {ExportOrDeleteSelectionType} from "../../hooks/ListSelection"
-import {Button} from "../buttons/Button"
+import {useState} from "react"
+import {SelectionType} from "../../hooks/ListSelection"
+import {DeleteRowButton} from "../buttons/DeleteRowButton"
+import {ExportButton} from "../buttons/ExportButton"
+import {ImportButton} from "../buttons/ImportButton"
 import {ImportFeedbackModal} from "../modals/ImportErrorModal"
 
 export const Footer = ({
@@ -18,11 +19,9 @@ export const Footer = ({
   onDelete?: () => void
   onImport?: (file: File) => Promise<boolean>
   onExport?: () => void
-  selectMode?: ExportOrDeleteSelectionType
-  setSelectMode?: (selectMode: ExportOrDeleteSelectionType) => void
+  selectMode?: SelectionType
+  setSelectMode?: (selectMode: SelectionType) => void
 }) => {
-  const inputRef = useRef<HTMLInputElement>(null)
-
   const [importFeedbackModalState, setImportFeedbackModalState] = useState<{
     show: boolean
     title: string
@@ -40,75 +39,28 @@ export const Footer = ({
       <ImportFeedbackModal {...importFeedbackModalState} close={closeImportFeedbackModal} />
       <div className="d-flex">
         {onImport && (
-          <>
-            <input
-              accept=".csv"
-              id="import-file-input"
-              type="file"
-              ref={inputRef}
-              style={{display: "none"}}
-              onInput={async (inputElement) => {
-                const file = (inputElement.target as HTMLInputElement)?.files?.[0]
-                if (file) {
-                  const importSuccessful = await onImport(file)
-                  if (importSuccessful) {
-                    setImportFeedbackModalState({
-                      show: true,
-                      title: "Import successful",
-                      message: "The file has been imported.",
-                    })
-                  } else {
-                    setImportFeedbackModalState({
-                      show: true,
-                      title: "Import error",
-                      message: "Sorry, the file could not be imported.",
-                    })
-                  }
-                }
-              }}
-              className="pe-none opacity-0 position-fixed"
-            />
-            <Button
-              onClick={() => {
-                inputRef.current?.click()
-              }}
-              icon="box-arrow-in-down"
-              outline={true}
-              className="m-3 me-0"
-            />
-          </>
+          <ImportButton
+            onImport={async (file) => {
+              const importSuccessful = await onImport(file)
+              if (importSuccessful) {
+                setImportFeedbackModalState({
+                  show: true,
+                  title: "Import successful",
+                  message: "The file has been imported.",
+                })
+              } else {
+                setImportFeedbackModalState({
+                  show: true,
+                  title: "Import error",
+                  message: "Sorry, the file could not be imported.",
+                })
+              }
+            }}
+          />
         )}
-        <Button
-          onClick={() => {
-            if (selectMode === "export") {
-              onExport?.()
-            } else {
-              setSelectMode?.("export")
-            }
-          }}
-          disabled={disabled}
-          icon="box-arrow-up"
-          outline={selectMode !== "export"}
-        >
-          {selectMode === "export" && <Trans>Export selected</Trans>}
-        </Button>
+        {onExport && <ExportButton onExport={async () => onExport()} disabled={disabled} />}
       </div>
-      <Button
-        className={selectMode === "delete" ? "active" : ""}
-        variant="danger"
-        icon="trash"
-        onClick={() => {
-          if (selectMode === "delete") {
-            onDelete?.()
-          } else {
-            setSelectMode?.("delete")
-          }
-        }}
-        disabled={disabled}
-        outline={selectMode !== "delete"}
-      >
-        {selectMode === "delete" && <Trans>Delete selected</Trans>}
-      </Button>
+      <DeleteRowButton onClick={onDelete} />
     </div>
   )
 }

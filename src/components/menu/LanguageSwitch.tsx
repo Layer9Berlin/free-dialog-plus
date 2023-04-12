@@ -1,40 +1,37 @@
-import {useState} from "react"
-import {Card} from "react-bootstrap"
-import {useRerouter} from "../../hooks/Rerouter"
-import {detectLocale, dynamicActivate, localeForCountryCodedLanguage} from "../../locales/i18n"
-import {BritishFlag} from "../icons/flags/BritishFlag"
-import {GermanFlag} from "../icons/flags/GermanFlag"
+import {useModal} from "../../hooks/Modal"
+import {ResponsiveButton} from "../buttons/ResponsiveButton"
+import {ChevronDownIcon} from "../icons/BootstrapIcons"
+import {LanguageSwitchModal} from "../modals/LanguageSwitchModal"
+import {CurrentLanguageFlag} from "./CurrentLanguageFlag"
 
-export const LanguageSwitch = () => {
-  const reroute = useRerouter()
-  const getLocale = () => localeForCountryCodedLanguage(detectLocale() ?? "en")
-  const [locale, setLocale] = useState(getLocale())
+export type LanguageSwitchProps = {
+  dropdownStyle?: boolean
+}
+
+export const LanguageSwitch = ({dropdownStyle}: LanguageSwitchProps) => {
+  const {show: showLanguageSwitchModal, props: languageSwitchModalProps} = useModal({})
+
   return (
-    <Card className="m-3 align-self-center">
-      <Card.Body className="p-2">
-        <div className="d-flex">
+    <div>
+      <LanguageSwitchModal {...languageSwitchModalProps} />
+      <div className="d-flex justify-content-center m-3 p-2 align-self-center">
+        {dropdownStyle ? (
           <button
-            className={`btn h-48 p-1${locale === "en" ? "" : " opacity-25"}`}
-            onClick={() => {
-              dynamicActivate("en")
-              reroute.to({params: {lang: "en"}, replace: true})
-              setLocale("en")
-            }}
+            onClick={showLanguageSwitchModal}
+            className={`btn btn-outline-default d-flex align-items-center h-48`}
           >
-            <BritishFlag />
+            <CurrentLanguageFlag />
+            <ChevronDownIcon className="ps-3 fs-4" />
           </button>
-          <button
-            className={`btn h-48 p-1${locale === "de" ? "" : " opacity-25"}`}
-            onClick={() => {
-              dynamicActivate("de")
-              reroute.to({params: {lang: "de"}, replace: true})
-              setLocale("de")
-            }}
-          >
-            <GermanFlag />
-          </button>
-        </div>
-      </Card.Body>
-    </Card>
+        ) : (
+          <ResponsiveButton
+            variant="outline-primary"
+            onClick={showLanguageSwitchModal}
+            className={`d-flex align-items-center h-48`}
+            icon="bi bi-translate"
+          />
+        )}
+      </div>
+    </div>
   )
 }

@@ -1,16 +1,15 @@
 import {Trans} from "@lingui/macro"
-import React, {useMemo} from "react"
+import {useAssessment} from "../../../../../hooks/Assessment"
 import {useQuestionTexts} from "../../../../../hooks/QuestionTexts"
-import {MutableAssessment} from "../../../../../types/Assessment"
 
-export const ActionItemsStage = ({assessment}: {assessment: MutableAssessment}) => {
-  const questions = useMemo(() => assessment.questions, [assessment.questions])
+export const ActionItemsStage = ({assessmentId}: {assessmentId: string}) => {
+  const {assessment} = useAssessment(assessmentId)
   const questionTexts = useQuestionTexts()
 
   return (
     <div className="m-4">
       <div className="d-flex minh-200 flex-column">
-        {questions.map((question, questionIndex) => {
+        {assessment?.questions?.map((question, questionIndex) => {
           if (question.value.actionItems.every((item) => !item.length)) {
             return <div key={questionIndex} />
           }
@@ -27,7 +26,7 @@ export const ActionItemsStage = ({assessment}: {assessment: MutableAssessment}) 
             </div>
           )
         })}
-        {questions.every((question) => question.value.actionItems.every((item) => !item.length)) && (
+        {assessment?.questions?.every((question) => question.value.actionItems.every((item) => !item.length)) && (
           <span className="text-muted fst-italic flex-grow-1 d-flex-center">
             <Trans>No action items defined</Trans>
           </span>

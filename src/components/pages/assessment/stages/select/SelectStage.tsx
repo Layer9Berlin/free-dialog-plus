@@ -1,19 +1,24 @@
-import React from "react"
+import {useAssessment} from "../../../../../hooks/Assessment"
+import {toggleSelected} from "../../../../../hooks/Assessments"
 import {useQuestionTexts} from "../../../../../hooks/QuestionTexts"
-import {MutableAssessment} from "../../../../../types/Assessment"
-import {MutableQuestionProps, QuestionText} from "../../../../../types/Questions"
+import {Question, QuestionText} from "../../../../../types/Questions"
 import {Checkbox} from "../../../../buttons/Checkbox"
 import {DialogPlusIcon} from "../../../../icons/DialogPlusIcon"
 import {AssessmentNumbers} from "../common/AssessmentNumbers"
 import {ResultOverview} from "../common/ResultOverview"
 
-export const SelectStageRow = ({short, value, state}: MutableQuestionProps & QuestionText) => {
+export const SelectStageRow = ({
+  short,
+  value,
+  state,
+  onToggleSelected,
+}: Question & QuestionText & {onToggleSelected?: () => void}) => {
   return (
     <div className="d-flex flex-column border-bottom">
       <button
         className={`btn btn-accordion d-flex align-items-center${state.selected ? " link-info fw-bold selected" : ""}`}
         type="button"
-        onClick={() => state.setSelected(!state.selected)}
+        onClick={onToggleSelected}
       >
         <span className="fs-4 me-1">
           <Checkbox selected={state.selected} />
@@ -36,14 +41,26 @@ export const SelectStageRow = ({short, value, state}: MutableQuestionProps & Que
   )
 }
 
-export const SelectStage = ({assessment}: {assessment: MutableAssessment}) => {
+export const SelectStage = ({assessmentId, refresh}: {assessmentId: string; refresh: () => void}) => {
   const questionTexts = useQuestionTexts()
+  const {assessment, change: changeAssessment} = useAssessment(assessmentId)
   return (
     <>
       <AssessmentNumbers />
-      {questionTexts.map((questionText, questionIndex) => (
-        <SelectStageRow key={questionIndex} {...questionText} {...assessment.questions[questionIndex]} />
-      ))}
+      {questionTexts.map(
+        (questionText, questionIndex) =>
+          !!assessment && (
+            <SelectStageRow
+              key={questionIndex}
+              {...questionText}
+              {...assessment?.questions?.[questionIndex]}
+              onToggleSelected={async () => {
+                await changeAssessment(toggleSelected(questionIndex)(assessment))
+                refresh()
+              }}
+            />
+          ),
+      )}
     </>
   )
 }

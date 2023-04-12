@@ -1,15 +1,23 @@
 import {saveAs} from "file-saver"
 import * as PapaParse from "papaparse"
-import {useCallback} from "react"
+import {useCallback, useMemo} from "react"
 import {v4 as uuid} from "uuid"
 import {formatExportDate} from "../helpers/DateFormatter"
 import {Assessment} from "../types/Assessment"
 import {Client} from "../types/Client"
 import {CSVImport, CSVImportSchema} from "../types/CSVImport"
-import {useQuestionTexts} from "./QuestionTexts"
 
 export const useAssessmentExporter = () => {
-  const questionTexts = useQuestionTexts()
+  const questionTexts = useMemo(
+    () => [
+      {
+        long: "test",
+        short: "t",
+        export: "ex",
+      },
+    ],
+    [],
+  ) //useQuestionTexts()
   const data = useCallback(
     (assessments: Assessment[], allClients: Client[]): string =>
       [
@@ -70,7 +78,7 @@ export const useAssessmentExporter = () => {
 const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assessment[]} => {
   const clients = csvData.map((row) => ({id: uuid(), ...row["Client Name"]}))
   const assessments = csvData.map((row, index) => {
-    // need to dedupe clients so as to not import the same clients over and over again
+    // need to dedupe clients in order not to import the same clients over and over again
     // TODO: also take into account already imported data
     const client = clients[index]
     const firstInstanceOfClient = clients.find(
@@ -85,6 +93,11 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
       },
       questions: [
         {
+          text: {
+            long: "",
+            short: "",
+            export: "",
+          },
           state: {
             collapsed: true,
             selected: row["Mental Health Discussed"] ?? false,
@@ -94,8 +107,14 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Mental Health Additional Help"],
             actionItems: row["Mental Health Action Items"],
           },
+          id: uuid(),
         },
         {
+          text: {
+            long: "",
+            short: "",
+            export: "",
+          },
           state: {
             collapsed: true,
             selected: row["Physical Health Discussed"] ?? false,
@@ -105,8 +124,14 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Physical Health Additional Help"],
             actionItems: row["Physical Health Action Items"],
           },
+          id: uuid(),
         },
         {
+          text: {
+            long: "",
+            short: "",
+            export: "",
+          },
           state: {
             collapsed: true,
             selected: row["Job Situation Discussed"] ?? false,
@@ -116,8 +141,14 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Job Situation Additional Help"],
             actionItems: row["Job Situation Action Items"],
           },
+          id: uuid(),
         },
         {
+          text: {
+            long: "",
+            short: "",
+            export: "",
+          },
           state: {
             collapsed: true,
             selected: row["Accommodation Discussed"] ?? false,
@@ -127,8 +158,14 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Accommodation Additional Help"],
             actionItems: row["Accommodation Action Items"],
           },
+          id: uuid(),
         },
         {
+          text: {
+            long: "",
+            short: "",
+            export: "",
+          },
           state: {
             collapsed: true,
             // note the special case to fix typo in native app export
@@ -139,8 +176,14 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Leisure Activities Additional Help"],
             actionItems: row["Leisure Activities Action Items"],
           },
+          id: uuid(),
         },
         {
+          text: {
+            long: "",
+            short: "",
+            export: "",
+          },
           state: {
             collapsed: true,
             selected: row["Partner / Family Discussed"] ?? false,
@@ -150,8 +193,14 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Partner / Family Additional Help"],
             actionItems: row["Partner / Family Action Items"],
           },
+          id: uuid(),
         },
         {
+          text: {
+            long: "",
+            short: "",
+            export: "",
+          },
           state: {
             collapsed: true,
             selected: row["Friendships Discussed"] ?? false,
@@ -161,8 +210,14 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Friendships Additional Help"],
             actionItems: row["Friendships Action Items"],
           },
+          id: uuid(),
         },
         {
+          text: {
+            long: "",
+            short: "",
+            export: "",
+          },
           state: {
             collapsed: true,
             selected: row["Personal Safety Discussed"] ?? false,
@@ -172,8 +227,14 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Personal Safety Additional Help"],
             actionItems: row["Personal Safety Action Items"],
           },
+          id: uuid(),
         },
         {
+          text: {
+            long: "",
+            short: "",
+            export: "",
+          },
           state: {
             collapsed: true,
             selected: row["Medication Discussed"] ?? false,
@@ -183,8 +244,14 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Medication Additional Help"],
             actionItems: row["Medication Action Items"],
           },
+          id: uuid(),
         },
         {
+          text: {
+            long: "",
+            short: "",
+            export: "",
+          },
           state: {
             collapsed: true,
             selected: row["Practical Help Discussed"] ?? false,
@@ -194,8 +261,14 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Practical Help Additional Help"],
             actionItems: row["Practical Help Action Items"],
           },
+          id: uuid(),
         },
         {
+          text: {
+            long: "",
+            short: "",
+            export: "",
+          },
           state: {
             collapsed: true,
             selected: row["Meetings Discussed"] ?? false,
@@ -205,6 +278,7 @@ const importData = (csvData: CSVImport): {clients: Client[]; assessments: Assess
             furtherHelp: row["Meetings Additional Help"],
             actionItems: row["Meetings Action Items"],
           },
+          id: uuid(),
         },
       ],
     }

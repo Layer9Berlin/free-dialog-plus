@@ -1,5 +1,3 @@
-import React from "react"
-
 export const AssessmentNumbers = () => {
   return (
     <div className="position-relative h-48 border-bottom text-muted d-flex flex-wrap">

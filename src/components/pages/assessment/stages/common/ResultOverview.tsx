@@ -1,5 +1,3 @@
-import React from "react"
-
 export const ResultOverview = ({
   selectedValue,
   colorCode,

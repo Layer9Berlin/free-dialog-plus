@@ -1,7 +1,7 @@
 import {useCallback, useMemo} from "react"
-import {useHistory, useLocation} from "react-router-dom"
+import {useLocation, useNavigate} from "react-router-dom"
 
-export type RerouterArgsType = {page?: string; add?: Record<string, any>}
+export type RerouterArgsType = {page?: string; params?: Record<string, any>; add?: Record<string, any>}
 
 export type RerouterType = {
   link: (args: RerouterArgsType) => string
@@ -9,7 +9,6 @@ export type RerouterType = {
 }
 
 export const useRerouter = () => {
-  const history = useHistory()
   const location = useLocation()
   const link = useCallback(
     ({page, params}: {page?: string; params?: Record<string, any>}) => {
@@ -26,17 +25,15 @@ export const useRerouter = () => {
     [location.pathname, location.search],
   )
 
+  const navigate = useNavigate()
+
   return useMemo(
     () => ({
       link,
       to: (args: {page?: string; params?: Record<string, any>; replace?: boolean}) => {
-        if (args?.replace) {
-          history.replace(link(args))
-        } else {
-          history.push(link(args))
-        }
+        navigate(link(args), {replace: !!args.replace})
       },
     }),
-    [history, link],
+    [link, navigate],
   )
 }

@@ -1,5 +1,3 @@
-import React from "react"
-
 export const Option = ({
   text,
   onSelect,
@@ -7,7 +5,7 @@ export const Option = ({
   optionIndex,
 }: {
   text: string
-  onSelect: () => void
+  onSelect?: () => void
   selected: boolean
   optionIndex: number
 }) => {

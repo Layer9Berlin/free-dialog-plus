@@ -2,10 +2,10 @@ import {Trans} from "@lingui/macro"
 
 export const DataInfoPanel = () => {
   return (
-    <div className="m-3 alert alert-primary align-self-stretch">
-      <h4>
+    <div>
+      {/* <h4>
         <Trans>Welcome to Free DIALOG+</Trans>
-      </h4>
+      </h4> */}
       <p>
         <Trans>
           This is a free, web-based implementation of the{" "}
@@ -18,12 +18,21 @@ export const DataInfoPanel = () => {
         </Trans>
       </p>
       <h4>
-        <Trans>Data protection</Trans>
+        <Trans>Demo Version</Trans>
       </h4>
       <p>
         <Trans>
-          Note that all data is stored <b>on this device</b> only. Take care when deleting your browser cache and use
-          the import/export functionality or install the app (see below) to prevent accidental loss of data.
+          This app is meant for demo purposes only. All data generated in the app is stored{" "}
+          <b>directly on this device</b>.
+        </Trans>
+        <br />
+        <Trans>
+          If used in the browser, deleting your browser cache will <b>permanently erase all client and session data</b>.
+        </Trans>
+        <br />
+        <Trans>
+          To prevent accidental data loss, use the import/export functionality in the browser version, or install the
+          app on iOS.
         </Trans>
       </p>
     </div>

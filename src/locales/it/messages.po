@@ -1,0 +1,754 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Yet another Italian one\n"
+"Language: it\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/components/modals/StepInformationModal.tsx:348
+msgid "\"Is there a neighbour or friend who could help you bring your shopping to the top floor with you?”"
+msgstr "\"C'è un vicino o un amico che potrebbe aiutarla a portare la spesa all'ultimo piano?\"."
+
+#: src/hooks/QuestionTexts.ts:10
+msgid "Accommodation"
+msgstr "Alloggio"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:173
+msgid "Action item"
+msgstr "Punto d'azione"
+
+#: src/components/menu/StageNavigation.tsx:39
+msgid "Action items"
+msgstr "Punti d'azione"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:208
+msgid "Add action item"
+msgstr "Aggiungere una voce d'azione"
+
+#: src/components/modals/StepInformationModal.tsx:498
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:148
+msgid "Agreeing on actions"
+msgstr "Concordare le azioni"
+
+#: src/components/menu/StageNavigation.tsx:23
+msgid "Assess"
+msgstr "Valutare"
+
+#: src/components/pages/assessment/AssessmentPage.tsx:60
+msgid "Assessment not found"
+msgstr "Valutazione non trovata"
+
+#: src/components/pages/assessments/partials/AssessmentsHeader.tsx:11
+msgid "Assessments"
+msgstr "Valutazioni"
+
+#: src/components/pages/assessments/partials/AssessmentsHeader.tsx:14
+msgid "Back to Clients"
+msgstr "Torna ai clienti"
+
+#: src/components/menu/StageNavigation.tsx:185
+msgid "Back to {0}"
+msgstr "Torna a {0}"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:103
+msgid "Best case scenario?"
+msgstr "Lo scenario migliore?"
+
+#: src/components/modals/DeleteAssessmentsModal.tsx:24
+#: src/components/modals/DeleteClientsModal.tsx:19
+#: src/components/modals/LanguageSwitchModal.tsx:94
+msgid "Cancel"
+msgstr "Annullamento"
+
+#: src/components/modals/LanguageSwitchModal.tsx:64
+msgid "Choose a language"
+msgstr "Scegliere una lingua"
+
+#: src/components/modals/ExportPasswordModal.tsx:60
+msgid "Choose a password"
+msgstr "Scegliere una password"
+
+#: src/components/pages/clients/partials/ClientsHeader.tsx:18
+msgid "Clients"
+msgstr "Clienti"
+
+#: src/components/pages/register/RegisterPage.tsx:50
+#~ msgid "Close"
+#~ msgstr "Chiudere"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:116
+msgid "Considering options"
+msgstr "Considerare le opzioni"
+
+#: src/components/modals/ClientDataModal.tsx:94
+msgid "Create"
+msgstr "Creare"
+
+#: src/components/modals/DataLossWarningModal.tsx:32
+#: src/components/pages/register/RegisterPage.tsx:57
+#~ msgid "Create account"
+#~ msgstr "Creare un account"
+
+#: src/components/calendar/Calendar.tsx:58
+msgid "Current assessment"
+msgstr "Valutazione attuale"
+
+#: src/components/menu/DataInfoPanel.tsx:21
+#~ msgid "Data protection"
+#~ msgstr "Protezione dei dati"
+
+#: src/components/modals/DeleteAssessmentsModal.tsx:27
+#: src/components/modals/DeleteClientsModal.tsx:22
+msgid "Delete"
+msgstr "Cancellare"
+
+#: src/components/modals/DeleteAssessmentsModal.tsx:16
+msgid "Delete assessment?"
+msgstr "Cancellare la valutazione?"
+
+#: src/components/modals/DeleteClientsModal.tsx:9
+msgid "Delete this client?"
+msgstr "Cancellare questo cliente?"
+
+#: src/components/menu/DataInfoPanel.tsx:21
+msgid "Demo Version"
+msgstr "Versione demo"
+
+#: src/components/menu/StageNavigation.tsx:35
+msgid "Discuss"
+msgstr "Discutere"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:72
+msgid "Do you need more help in this area?"
+msgstr "Ha bisogno di ulteriore aiuto in quest'area?"
+
+#: src/components/modals/DeleteClientsModal.tsx:13
+msgid "Do you really want to delete the selected client and all associated assessments? This cannot be undone."
+msgstr "Vuole davvero eliminare il cliente selezionato e tutte le valutazioni associate? Questa operazione non può essere annullata."
+
+#: src/components/modals/DeleteAssessmentsModal.tsx:20
+msgid "Do you really want to delete this assessment? This cannot be undone."
+msgstr "Vuole davvero cancellare questa valutazione? Non è possibile annullarla."
+
+#: src/components/pages/register/RegisterPage.tsx:75
+#~ msgid "E-Mail-Adresse"
+#~ msgstr "Indirizzo e-mail"
+
+#: src/components/modals/ClientDataModal.tsx:94
+msgid "Edit"
+msgstr "Modifica"
+
+#: src/components/modals/ClientDataModal.tsx:16
+msgid "Edit client"
+msgstr "Modifica del cliente"
+
+#: src/components/modals/ExportPasswordModal.tsx:38
+msgid "Enter a password to protect the exported file"
+msgstr "Inserisca una password per proteggere il file esportato"
+
+#: src/components/modals/StepInformationModal.tsx:29
+#: src/components/modals/StepInformationModal.tsx:65
+#: src/components/modals/StepInformationModal.tsx:142
+#: src/components/modals/StepInformationModal.tsx:185
+#: src/components/modals/StepInformationModal.tsx:250
+#: src/components/modals/StepInformationModal.tsx:290
+#: src/components/modals/StepInformationModal.tsx:333
+#: src/components/modals/StepInformationModal.tsx:380
+#: src/components/modals/StepInformationModal.tsx:410
+#: src/components/modals/StepInformationModal.tsx:437
+msgid "Examples:"
+msgstr "Esempi:"
+
+#: src/components/modals/StepInformationModal.tsx:19
+msgid "Exploring"
+msgstr "Esplorazione"
+
+#: src/components/modals/StepInformationModal.tsx:493
+msgid "Exploring options"
+msgstr "Esplorare le opzioni"
+
+#: src/components/buttons/ExportButton.tsx:21
+msgid "Export"
+msgstr "Esportazione"
+
+#: src/components/buttons/ExportButton.tsx:22
+msgid "Export selected"
+msgstr "Esportazione selezionata"
+
+#: src/components/modals/StepInformationModal.tsx:326
+msgid "Finally, the clinician should ask what other people can do to help the patient improve their situation. This might be a friend, family member, relative, neighbour, colleague, befriender, support worker, fellow patient or another supporter."
+msgstr "Infine, il medico dovrebbe chiedere cosa possono fare le altre persone per aiutare il paziente a migliorare la sua situazione. Potrebbe trattarsi di un amico, di un familiare, di un parente, di un vicino, di un collega, di un amico, di un assistente, di un collega paziente o di un altro sostenitore."
+
+#: src/components/menu/StageNavigation.tsx:204
+msgid "Finish"
+msgstr "Finitura"
+
+#: src/components/modals/ClientDataModal.tsx:79
+msgid "First name"
+msgstr "Nome"
+
+#: src/components/modals/StepInformationModal.tsx:135
+msgid "First, the clinician should ask the patient to describe the ideal outcome they would like to achieve; essentially, what would be different if the patient scored 7 out of 7 (totally satisfied). The best-case scenario is often, but not always, a long-term outcome."
+msgstr "In primo luogo, il medico dovrebbe chiedere al paziente di descrivere il risultato ideale che vorrebbe ottenere; in sostanza, cosa cambierebbe se il paziente ottenesse un punteggio di 7 su 7 (totalmente soddisfatto). Lo scenario migliore è spesso, ma non sempre, un risultato a lungo termine."
+
+#: src/components/modals/StepInformationModal.tsx:22
+msgid "First, the clinician should explore the patient’s evaluation of the domain, and the reasons why they have requested more help for that domain, or given it a low rating. In the case of special attention to mental health, the clinician should explore the patient’s expression of distress or concern."
+msgstr "In primo luogo, il medico deve esplorare la valutazione del dominio da parte del paziente e le ragioni per cui ha richiesto più aiuto per quel dominio o ha dato una valutazione bassa. Nel caso di un'attenzione particolare alla salute mentale, il medico deve esplorare l'espressione di disagio o preoccupazione del paziente."
+
+#: src/components/modals/StepInformationModal.tsx:244
+msgid "First, the clinician should invite the patient to think for themselves of all the possible things they might be able to do to help their own situation."
+msgstr "In primo luogo, il medico dovrebbe invitare il paziente a pensare da solo a tutte le possibili cose che potrebbe fare per aiutare la propria situazione."
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:45
+msgid "For example, on iOS, tap<0><1/></0>in the bottom menu, followed by \"Add to Home Screen<2><3/></2>\"."
+msgstr "Ad esempio, su iOS, tocchi<0><1/></0> nel menu inferiore, seguito da \"Aggiungi alla schermata iniziale<2><3/></2>\"."
+
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:9
+#~ msgid "Free DIALOG+"
+#~ msgstr "DIALOG+ gratuito"
+
+#: src/hooks/QuestionTexts.ts:21
+msgid "Friendships"
+msgstr "Amicizie"
+
+#: src/components/modals/StepInformationModal.tsx:106
+msgid "Having explored both negative and positive aspects of the situation in Step 1, the aim of step 2 is to now focus on the future and establish the patient’s desired changes to their situation. The intention is to encourage the patient to think about and describe what an improvement in their situation would look like, and what changes would be a sign of progress. The clinician should seek to elicit a clear picture of the future from the patient that is:"
+msgstr "Dopo aver esplorato gli aspetti negativi e positivi della situazione nella Fase 1, l'obiettivo della Fase 2 è quello di concentrarsi sul futuro e stabilire i cambiamenti desiderati dal paziente nella sua situazione. L'intenzione è quella di incoraggiare il paziente a pensare e descrivere come sarebbe un miglioramento della sua situazione e quali cambiamenti sarebbero un segno di progresso. Il medico deve cercare di ottenere dal paziente un'immagine chiara del futuro, che sia:"
+
+#: src/components/modals/StepInformationModal.tsx:226
+msgid "Having introduced a forward-looking perspective in Step 2, the aim of Step 3 is for the patient and the clinician to explore a number of options that may help to bring about the desired changes. These options involve things that patient can do by themselves, things the clinician can do with the help of the various services available to the patient, and things other people in the patient’s life can do.In Step 3 the clinician asks the patient what are all the options he/she can think of as potentially helpful. The clinician can also propose different options, and ask for the patient’s opinion about them. Step 3 is concerned with what is possible to do at the present time in order to achieve the patient’s desired changes."
+msgstr "Dopo aver introdotto una prospettiva lungimirante nella Fase 2, l'obiettivo della Fase 3 è che il paziente e il medico esplorino una serie di opzioni che possono aiutare a realizzare i cambiamenti desiderati. Queste opzioni comprendono cose che il paziente può fare da solo, cose che il medico può fare con l'aiuto dei vari servizi a disposizione del paziente e cose che possono fare altre persone nella vita del paziente. Il medico può anche proporre diverse opzioni e chiedere l'opinione del paziente al riguardo. La Fase 3 riguarda ciò che è possibile fare al momento attuale per ottenere i cambiamenti desiderati dal paziente."
+
+#: src/hooks/QuestionTexts.ts:26
+msgid "How satisfied are you with the practical help you receive?"
+msgstr "Quanto è soddisfatto dell'aiuto pratico che riceve?"
+
+#: src/hooks/QuestionTexts.ts:10
+msgid "How satisfied are you with your accommodation?"
+msgstr "Quanto è soddisfatto della sua sistemazione?"
+
+#: src/hooks/QuestionTexts.ts:21
+msgid "How satisfied are you with your friendships?"
+msgstr "Quanto è soddisfatto delle sue amicizie?"
+
+#: src/hooks/QuestionTexts.ts:9
+msgid "How satisfied are you with your job situation?"
+msgstr "Quanto è soddisfatto della sua situazione lavorativa?"
+
+#: src/hooks/QuestionTexts.ts:13
+msgid "How satisfied are you with your leisure activities?"
+msgstr "Quanto è soddisfatto delle sue attività di svago?"
+
+#: src/hooks/QuestionTexts.ts:23
+msgid "How satisfied are you with your medication?"
+msgstr "Quanto è soddisfatto dei suoi farmaci?"
+
+#: src/hooks/QuestionTexts.ts:31
+msgid "How satisfied are you with your meetings with mental health professionals?"
+msgstr "Quanto è soddisfatto dei suoi incontri con i professionisti della salute mentale?"
+
+#: src/constants.ts:35
+#: src/hooks/QuestionTexts.ts:7
+msgid "How satisfied are you with your mental health?"
+msgstr "Quanto è soddisfatto della sua salute mentale?"
+
+#: src/hooks/QuestionTexts.ts:22
+msgid "How satisfied are you with your personal safety?"
+msgstr "Quanto è soddisfatto della sua sicurezza personale?"
+
+#: src/hooks/QuestionTexts.ts:8
+msgid "How satisfied are you with your physical health?"
+msgstr "Quanto è soddisfatto della sua salute fisica?"
+
+#: src/hooks/QuestionTexts.ts:18
+msgid "How satisfied are you with your relationship with your partner/family?"
+msgstr "Quanto è soddisfatto del rapporto con il suo partner/famiglia?"
+
+#: src/components/modals/StepInformationModal.tsx:54
+msgid "Identifying what works"
+msgstr "Identificare ciò che funziona"
+
+#: src/components/menu/DataInfoPanel.tsx:29
+msgid "If used in the browser, deleting your browser cache will <0>permanently erase all client and session data</0>."
+msgstr "Se utilizzato nel browser, l'eliminazione della cache del browser cancellerà <0>permanentemente tutti i dati del client e della sessione</0>."
+
+#: src/components/buttons/ImportButton.tsx:31
+msgid "Import"
+msgstr "Importazione"
+
+#: src/components/modals/DataLossWarningModal.tsx:20
+#~ msgid "Important information"
+#~ msgstr "Informazioni importanti"
+
+#: src/components/modals/StepInformationModal.tsx:238
+msgid "In step 3, three kinds of questions can be asked:"
+msgstr "Nella fase 3, si possono porre tre tipi di domande:"
+
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:20
+msgid "Install App on iOS"
+msgstr "Installare l'app su iOS"
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:42
+msgid "Install this app on your <0>Home Screen</0> for a better experience."
+msgstr "Installi questa applicazione sulla sua <0>Schermo Home</0> per un'esperienza migliore."
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:21
+msgid "Installed"
+msgstr "Installato"
+
+#: src/components/pages/login/LoginPage.tsx:63
+#: src/components/pages/register/RegisterPage.tsx:110
+#~ msgid "Invalid password"
+#~ msgstr "Password non valida"
+
+#: src/hooks/QuestionTexts.ts:9
+msgid "Job situation"
+msgstr "Situazione lavorativa"
+
+#: src/components/modals/ClientDataModal.tsx:89
+msgid "Last name"
+msgstr "Cognome"
+
+#: src/hooks/QuestionTexts.ts:12
+msgid "Leisure activities"
+msgstr "Attività per il tempo libero"
+
+#: src/components/pages/login/LoginPage.tsx:77
+#~ msgid "Log in"
+#~ msgstr "Effettuare il login"
+
+#: src/components/pages/clients/partials/ClientsHeader.tsx:23
+#~ msgid "Log out"
+#~ msgstr "Esca dal sito"
+
+#: src/components/pages/login/LoginPage.tsx:41
+#~ msgid "Login"
+#~ msgstr "Accesso"
+
+#: src/components/modals/StepInformationModal.tsx:488
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:88
+msgid "Looking forward"
+msgstr "Guardare avanti"
+
+#: src/components/pages/register/RegisterPage.tsx:46
+#~ msgid "Looks like the passwords you entered do not match. Please try again!"
+#~ msgstr "Sembra che le password inserite non corrispondano. Provi di nuovo!"
+
+#: src/hooks/QuestionTexts.ts:23
+msgid "Medication"
+msgstr "Farmaci"
+
+#: src/hooks/QuestionTexts.ts:30
+msgid "Meetings"
+msgstr "Riunioni"
+
+#: src/constants.ts:35
+#: src/hooks/QuestionTexts.ts:7
+msgid "Mental health"
+msgstr "Salute mentale"
+
+#: src/components/modals/ClientDataModal.tsx:85
+msgid "Middle name"
+msgstr "Secondo nome"
+
+#: src/components/modals/ClientDataModal.tsx:25
+#: src/components/pages/clients/partials/ClientsHeader.tsx:25
+msgid "New client"
+msgstr "Nuovo cliente"
+
+#: src/components/pages/assessments/partials/AssessmentsHeader.tsx:19
+msgid "New session"
+msgstr "Nuova sessione"
+
+#: src/components/modals/StepInformationModal.tsx:176
+msgid "Next, the clinician should ask to patient to describe smaller changes that would make a meaningful difference to their life. It may be that the best-case scenario previously described cannot occur instantly, or at all. Here, the patient is asked to consider what small change would mean an improvement of just one point higher on the scale, and help in the long-term process of achieving the best-case scenario, where possible."
+msgstr "Successivamente, il medico dovrebbe chiedere al paziente di descrivere i cambiamenti più piccoli che farebbero una differenza significativa nella sua vita. Può darsi che lo scenario migliore descritto in precedenza non possa verificarsi immediatamente, o affatto. In questo caso, si chiede al paziente di considerare quale piccolo cambiamento significherebbe un miglioramento di un solo punto in più sulla scala, e di aiutare nel processo a lungo termine per raggiungere lo scenario migliore, ove possibile."
+
+#: src/components/modals/StepInformationModal.tsx:283
+msgid "Next, the clinician should ask what he/she can do to support the patient, and what resources or services he/she can provide. It may be appropriate to suggest specific resources that are available to the patient that might help in improving the situation."
+msgstr "Successivamente, il medico deve chiedere cosa può fare per sostenere il paziente e quali risorse o servizi può fornire. Può essere opportuno suggerire risorse specifiche a disposizione del paziente, che potrebbero aiutare a migliorare la situazione."
+
+#: src/components/modals/StepInformationModal.tsx:57
+msgid "Next, the clinician should now ask the patient to identify what is working well within the current situation. The assumption is that, no matter how bad things may be, the patient somehow manages to cope. Building an awareness of the strengths within the situation is intended to help promote the patient’s confidence and motivation for change."
+msgstr "Successivamente, il medico dovrebbe chiedere al paziente di identificare ciò che funziona bene nella situazione attuale. Il presupposto è che, a prescindere dalla gravità delle cose, il paziente riesca in qualche modo a farcela. Creare una consapevolezza dei punti di forza all'interno della situazione ha lo scopo di aiutare a promuovere la fiducia del paziente e la sua motivazione al cambiamento."
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:108
+msgid "No"
+msgstr "No"
+
+#: src/components/pages/assessment/stages/action-items/ActionItemsStage.tsx:31
+#: src/components/pages/assessments/partials/AssessmentRow.tsx:81
+msgid "No action items defined"
+msgstr "Non sono stati definiti punti d'azione"
+
+#: src/components/calendar/Calendar.tsx:44
+msgid "No past assessments yet"
+msgstr "Non ci sono ancora valutazioni passate"
+
+#: src/components/modals/NoSelectionModal.tsx:17
+msgid "No selection made"
+msgstr "Non è stata effettuata alcuna selezione"
+
+#: src/components/menu/DataInfoPanel.tsx:24
+#~ msgid "Note that all data is stored <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality or install the app (see below) to prevent accidental loss of data."
+#~ msgstr "Tenga presente che tutti i dati sono memorizzati <0>solo su questo dispositivo</0>. Faccia attenzione quando cancella la cache del browser e utilizzi la funzionalità di importazione/esportazione o installi l'app (vedere sotto) per evitare la perdita accidentale dei dati."
+
+#: src/components/modals/ExportPasswordModal.tsx:73
+#: src/components/modals/ImportErrorModal.tsx:28
+#: src/components/modals/NoSelectionModal.tsx:28
+msgid "OK"
+msgstr "OK"
+
+#: src/components/modals/StepInformationModal.tsx:457
+msgid "Once an action item has been decided, the clinician should document it in the text box provided. Documentation should be brief, but precise. A reminder of the agreed action(s) will appear at the start of the next session, so that patient and clinician can review the progress since the last session before initiating a new session."
+msgstr "Una volta deciso un punto d'azione, il medico deve documentarlo nella casella di testo fornita. La documentazione deve essere breve, ma precisa. Un promemoria dell'azione o delle azioni concordate apparirà all'inizio della sessione successiva, in modo che il paziente e il medico possano rivedere i progressi dall'ultima sessione prima di iniziare una nuova sessione."
+
+#: src/components/pages/login/LoginPage.tsx:48
+#: src/components/pages/register/RegisterPage.tsx:90
+#~ msgid "Password"
+#~ msgstr "Password"
+
+#: src/components/pages/register/RegisterPage.tsx:105
+#~ msgid "Password confirmation"
+#~ msgstr "Conferma della password"
+
+#: src/components/pages/register/RegisterPage.tsx:42
+#~ msgid "Password mismatch"
+#~ msgstr "Mancata corrispondenza della password"
+
+#: src/hooks/QuestionTexts.ts:22
+msgid "Personal safety"
+msgstr "Sicurezza personale"
+
+#: src/hooks/QuestionTexts.ts:8
+msgid "Physical health"
+msgstr "Salute fisica"
+
+#: src/components/modals/ExportPasswordModal.tsx:46
+msgid "Please enter the password used to protect the file"
+msgstr "Inserisca la password utilizzata per proteggere il file"
+
+#: src/hooks/QuestionTexts.ts:25
+msgid "Practical help"
+msgstr "Aiuto pratico"
+
+#: src/components/modals/DataLossWarningModal.tsx:35
+msgid "Proceed"
+msgstr "Procedere"
+
+#: src/hooks/QuestionTexts.ts:17
+msgid "Relationship with partner/family"
+msgstr "Rapporto con il partner/famiglia"
+
+#: src/components/menu/StageNavigation.tsx:27
+msgid "Review"
+msgstr "Recensione"
+
+#: src/components/menu/StageNavigation.tsx:31
+msgid "Select"
+msgstr "Seleziona"
+
+#: src/components/pages/settings/partials/SettingsHeader.tsx:9
+#~ msgid "Settings"
+#~ msgstr "Impostazioni"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:106
+msgid "Smallest improvement?"
+msgstr "Il miglioramento più piccolo?"
+
+#: src/components/modals/StepInformationModal.tsx:374
+msgid "Sometimes, having considered the various options in Step 3, the patient will have a clear idea of what action should be taken and it is appropriate to invite the patient to take the lead with any decision."
+msgstr "A volte, dopo aver considerato le varie opzioni nella Fase 3, il paziente avrà un'idea chiara dell'azione da intraprendere e sarà opportuno invitarlo a prendere l'iniziativa per qualsiasi decisione."
+
+#: src/components/modals/StepInformationModal.tsx:404
+msgid "Sometimes, the clinician may take the lead in suggesting one or more actions and explore whether the patient agrees."
+msgstr "A volte, il medico può prendere l'iniziativa di suggerire una o più azioni e valutare se il paziente è d'accordo."
+
+#: src/components/modals/StepInformationModal.tsx:431
+msgid "Sometimes, the patient and clinician may not agree on an immediate ‘action’; instead, the patient might decide to spend more time thinking aboutthe different options discussed between now and the next meeting."
+msgstr "A volte, il paziente e il medico potrebbero non essere d'accordo su una 'azione' immediata; invece, il paziente potrebbe decidere di dedicare più tempo a riflettere sulle diverse opzioni discusse tra ora e il prossimo incontro."
+
+#: src/components/modals/StepInformationModal.tsx:13
+msgid "The aim of step 1 is for both the patient and the clinician to gain a shared understanding of the patient’s current situation. There are two parts to understanding:"
+msgstr "L'obiettivo della fase 1 è che sia il paziente che il medico acquisiscano una comprensione condivisa della situazione attuale del paziente. La comprensione si divide in due parti:"
+
+#: src/components/menu/DataInfoPanel.tsx:24
+msgid "This app is meant for demo purposes only. All data generated in the app is stored <0>directly on this device</0>."
+msgstr "Questa applicazione è destinata esclusivamente a scopi dimostrativi. Tutti i dati generati nell'applicazione sono memorizzati <0>direttamente su questo dispositivo</0>."
+
+#: src/components/menu/DataInfoPanel.tsx:10
+msgid "This is a free, web-based implementation of the <0>DIALOG+ therapeutic intervention</0>."
+msgstr "Si tratta di un'implementazione gratuita e basata sul web dell'intervento terapeutico <0>DIALOG+</0>."
+
+#: src/components/modals/StepInformationModal.tsx:366
+msgid "Through Steps 1 – 3, both the patient and the clinician have developed a thorough understanding of the patient’s current situation, thought about desired changes for the future, and identified options for moving forward. The goal of Step 4 is to reach an agreement on what action(s) should be taken, and by whom."
+msgstr "Attraverso le Fasi 1 - 3, sia il paziente che il medico hanno sviluppato una comprensione approfondita della situazione attuale del paziente, hanno pensato ai cambiamenti desiderati per il futuro e hanno identificato le opzioni per andare avanti. L'obiettivo della Fase 4 è raggiungere un accordo sulle azioni da intraprendere e da chi."
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:38
+msgid "Tip"
+msgstr "Suggerimento"
+
+#: src/components/menu/DataInfoPanel.tsx:33
+msgid "To prevent accidental data loss, use the import/export functionality in the browser version, or install the app on iOS."
+msgstr "Per evitare la perdita accidentale dei dati, utilizzare la funzionalità di importazione/esportazione nella versione browser o installare l'app su iOS."
+
+#: src/components/modals/StepInformationModal.tsx:483
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:60
+msgid "Understanding"
+msgstr "Comprensione"
+
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:24
+msgid "Use in browser"
+msgstr "Utilizzo nel browser"
+
+#: src/components/modals/DataLossWarningModal.tsx:18
+msgid "Warning: Data Loss Possible"
+msgstr "Attenzione: Possibile perdita di dati"
+
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:11
+msgid "Welcome to Free DIALOG+"
+msgstr "Benvenuti a DIALOG+ gratuito"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:137
+msgid "What can others do?"
+msgstr "Cosa possono fare gli altri?"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:134
+msgid "What can the clinician do?"
+msgstr "Cosa può fare il medico?"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:131
+msgid "What can the patient do?"
+msgstr "Cosa può fare il paziente?"
+
+#: src/components/modals/StepInformationModal.tsx:132
+msgid "What is the patient’s ‘best-case scenario’?"
+msgstr "Qual è lo 'scenario migliore' del paziente?"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:78
+msgid "What is working?"
+msgstr "Cosa sta funzionando?"
+
+#: src/components/modals/StepInformationModal.tsx:173
+msgid "What small changes would make a difference?"
+msgstr "Quali piccoli cambiamenti farebbero la differenza?"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:75
+msgid "Why is this rating not a lower one?"
+msgstr "Perché questa valutazione non è inferiore?"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:89
+msgid "Yes"
+msgstr "Sì"
+
+#: src/components/modals/DataLossWarningModal.tsx:22
+msgid "You are using the demo version of DIALOG+. Your data will be saved to this device and <0>will be deleted</0> if you clear your browser cache. Use the export functionality in the bottom left portion of the Clients page to back up your data."
+msgstr "State utilizzando la versione demo di DIALOG+. I vostri dati saranno salvati su questo dispositivo e <0>saranno cancellati</0> se cancellate la cache del browser. Per eseguire il backup dei dati, utilizzare la funzione di esportazione nella parte inferiore sinistra della pagina Clienti."
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:25
+msgid "You have successfully installed the app."
+msgstr "Ha installato con successo l'applicazione."
+
+#: src/components/modals/StepInformationModal.tsx:119
+msgid "characterised by tangible behaviours rather than vague feelings (e.g. “I would talk more to my neighbours” rather than “I would feel more included in my community”)"
+msgstr "caratterizzato da comportamenti tangibili piuttosto che da sentimenti vaghi (ad esempio, \"parlerei di più con i miei vicini\" piuttosto che \"mi sentirei più incluso nella mia comunità\")."
+
+#: src/components/modals/StepInformationModal.tsx:125
+msgid "defined by the presence rather than the absence of something (e.g. “I would have the energy to get a part-time job” rather than “I would not feel as tired all the time”)."
+msgstr "definito dalla presenza piuttosto che dall'assenza di qualcosa (ad esempio, \"avrei l'energia per trovare un lavoro part-time\" piuttosto che \"non mi sentirei sempre stanco\")."
+
+#: src/components/modals/StepInformationModal.tsx:116
+msgid "detailed"
+msgstr "dettagliato"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:11
+msgid "fairly dissatisfied"
+msgstr "abbastanza insoddisfatto"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:13
+msgid "fairly satisfied"
+msgstr "abbastanza soddisfatto"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:12
+msgid "in the middle"
+msgstr "al centro"
+
+#: src/components/pages/assessments/partials/AssessmentRow.tsx:58
+msgid "last updated"
+msgstr "ultimo aggiornamento"
+
+#: src/components/pages/register/RegisterPage.tsx:130
+#~ msgid "other options"
+#~ msgstr "altre opzioni"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:9
+msgid "totally dissatisfied"
+msgstr "totalmente insoddisfatto"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:15
+msgid "totally satisfied"
+msgstr "totalmente soddisfatto"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:10
+msgid "very dissatisfied"
+msgstr "molto insoddisfatto"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:14
+msgid "very satisfied"
+msgstr "molto soddisfatto"
+
+#: src/components/modals/StepInformationModal.tsx:241
+msgid "‘What can the patient do?’"
+msgstr "Cosa può fare il paziente?"
+
+#: src/components/modals/StepInformationModal.tsx:323
+msgid "‘What other people can do’"
+msgstr "'Cosa possono fare le altre persone'"
+
+#: src/components/modals/StepInformationModal.tsx:280
+msgid "‘What the clinician can do’"
+msgstr "'Cosa può fare il medico'"
+
+#: src/components/modals/StepInformationModal.tsx:69
+msgid "“Although you are mainly dissatisfied with your physical health, at least you are not at the bottom end of the scale. What is helping to keep you from being totally dissatisfied?”"
+msgstr "\"Sebbene sia principalmente insoddisfatto della sua salute fisica, almeno non si trova all'estremità inferiore della scala. Che cosa la aiuta a non essere totalmente insoddisfatto?\"."
+
+#: src/components/modals/StepInformationModal.tsx:50
+msgid "“Can you tell me more about the distressing voices you’ve been hearing?”"
+msgstr "\"Può dirmi qualcosa di più sulle voci angoscianti che ha sentito?\"."
+
+#: src/components/modals/StepInformationModal.tsx:343
+msgid "“Can you think of anybody that could help you to get to your class on time?”"
+msgstr "\"Le viene in mente qualcuno che potrebbe aiutarla ad arrivare in orario a lezione?\"."
+
+#: src/components/modals/StepInformationModal.tsx:415
+msgid "“I think a visit to the Day Centre we talked about would be a good start to feeling less isolated. Can we agree that you will try that this month and we’ll see how you got on next time?”"
+msgstr "\"Penso che una visita al Centro diurno di cui abbiamo parlato sarebbe un buon inizio per sentirsi meno isolati. Possiamo concordare che lo provi questo mese e vedremo come si è trovato la prossima volta?\"."
+
+#: src/components/modals/StepInformationModal.tsx:308
+msgid "“I wonder whether a leaflet describing pros and cons of taking medication would be something you may find helpful?”"
+msgstr "\"Mi chiedo se un opuscolo che descrive i pro e i contro dell'assunzione di farmaci possa essere utile per lei\"."
+
+#: src/components/modals/StepInformationModal.tsx:161
+msgid "“If tomorrow morning you woke up and all your problems with your family had gone, how would the situation be?”"
+msgstr "\"Se domani mattina si svegliasse e tutti i problemi con la sua famiglia fossero spariti, come sarebbe la situazione?\"."
+
+#: src/components/modals/StepInformationModal.tsx:442
+msgid "“If you cannot decide today about whether you’re ready to come off medication. Do you want to think about it and let me know when you have come to a decision?”"
+msgstr "\"Se non può decidere oggi se è pronta a smettere di prendere i farmaci. Vuole pensarci e farmi sapere quando avrà preso una decisione?\"."
+
+#: src/components/modals/StepInformationModal.tsx:450
+msgid "“If you feel uncomfortable, there is no need to decide today whether you want to go back to regular employment. Can we agree that you think about it and we revisit the issue next time?”"
+msgstr "\"Se si sente a disagio, non c'è bisogno di decidere oggi se vuole tornare al lavoro regolare. Possiamo concordare che ci pensi e che rivediamo la questione la prossima volta?\"."
+
+#: src/components/modals/StepInformationModal.tsx:154
+msgid "“If your satisfaction with physical health was 7 (totally satisfied), what exactly would be different?”"
+msgstr "\"Se la sua soddisfazione per la salute fisica fosse pari a 7 (totalmente soddisfatto), cosa cambierebbe esattamente?\"."
+
+#: src/components/modals/StepInformationModal.tsx:338
+msgid "“Is there anyone else who could get involved in helping you to exercise more?”"
+msgstr "\"C'è qualcun altro che potrebbe essere coinvolto nell'aiutarla a fare più esercizio fisico?\"."
+
+#: src/components/modals/StepInformationModal.tsx:295
+msgid "“Is there anything I can do to help to make you less anxious about leaving the house to attend your meetings?”"
+msgstr "\"C'è qualcosa che posso fare per aiutarla a diminuire l'ansia di uscire di casa per partecipare alle sue riunioni?\"."
+
+#: src/components/modals/StepInformationModal.tsx:212
+msgid "“It can take time to adapt to new medication, especially when you are experiencing side effects. What would be the first sign that you were adjusting to it?”"
+msgstr "\"Può essere necessario del tempo per adattarsi a un nuovo farmaco, soprattutto quando si verificano degli effetti collaterali. Quale sarebbe il primo segno che si sta adattando?\"."
+
+#: src/components/modals/StepInformationModal.tsx:77
+msgid "“It’s encouraging that your satisfaction with your accommodation is 2 rather than 1. So what is working well with your accommodation?”"
+msgstr "\"È incoraggiante che la sua soddisfazione per l'alloggio sia pari a 2 piuttosto che a 1. Quindi, cosa funziona bene nel suo alloggio?\"."
+
+#: src/components/modals/StepInformationModal.tsx:397
+msgid "“Let’s decide on the best way forward. Which options shall we try out, before we meet again?”"
+msgstr "\"Decidiamo il modo migliore di procedere. Quali opzioni possiamo provare, prima di incontrarci di nuovo?\"."
+
+#: src/components/modals/StepInformationModal.tsx:390
+msgid "“Of all the options we’ve discussed, are there some in particular that you are leaning towards?”"
+msgstr "\"Di tutte le opzioni che abbiamo discusso, ce n'è qualcuna in particolare verso cui propende?\"."
+
+#: src/components/modals/StepInformationModal.tsx:423
+msgid "“Regarding your job situation, I suggest that you ask your partner to help you type up your C.V. and I’ll make an appointment on your behalf with the Back-to-Employment Officer. Is this alright with you?”"
+msgstr "\"Per quanto riguarda la sua situazione lavorativa, le suggerisco di chiedere al suo partner di aiutarla a scrivere il suo C.V. e io prenderò un appuntamento a suo nome con il funzionario per il ritorno al lavoro. Va bene per lei?\"."
+
+#: src/components/modals/StepInformationModal.tsx:268
+msgid "“The next time you hear voices, what can you try to prevent yourself from feeling so distressed?”"
+msgstr "\"La prossima volta che sente delle voci, cosa può provare per evitare di sentirsi così angosciato?\"."
+
+#: src/components/modals/StepInformationModal.tsx:316
+msgid "“There is a Hearing Voices group running here. Might that be something you would like to try?”"
+msgstr "\"Qui c'è un gruppo di ascolto delle voci. Potrebbe essere qualcosa che le piacerebbe provare?\"."
+
+#: src/components/modals/StepInformationModal.tsx:189
+msgid "“Until you are rehoused in the coming months, what small improvement to your accommodation would make it more acceptable to you?”"
+msgstr "\"In attesa di una nuova sistemazione nei prossimi mesi, quale piccolo miglioramento del suo alloggio lo renderebbe più accettabile per lei?\"."
+
+#: src/components/modals/StepInformationModal.tsx:385
+msgid "“We‘ve talked about a lot of different options today. Which ones will we go for?”"
+msgstr "\"Oggi abbiamo parlato di molte opzioni diverse. Quali sceglieremo?\""
+
+#: src/components/modals/StepInformationModal.tsx:255
+msgid "“We’ve talked about what needs to change in order for you to feel safe. What is the first thing you can do to ensure your own safety?\""
+msgstr "\"Abbiamo parlato di ciò che deve cambiare affinché lei si senta al sicuro. Qual è la prima cosa che può fare per garantire la sua sicurezza?\"."
+
+#: src/components/modals/StepInformationModal.tsx:263
+msgid "“What are some of the ways you could start to reach out to others in the community?”"
+msgstr "\"Quali sono alcuni dei modi in cui potrebbe iniziare a raggiungere gli altri nella comunità?\"."
+
+#: src/components/modals/StepInformationModal.tsx:275
+msgid "“What could you do to make sure you remember to take your medication in the morning?”"
+msgstr "\"Cosa potrebbe fare per assicurarsi di ricordare di prendere le medicine al mattino?\"."
+
+#: src/components/modals/StepInformationModal.tsx:355
+msgid "“What could your partner do to stop you two from arguing so often?”"
+msgstr "\"Cosa potrebbe fare il suo partner per evitare che voi due litighiate così spesso?\"."
+
+#: src/components/modals/StepInformationModal.tsx:38
+msgid "“What in particular makes you dissatisfied with your medication?”"
+msgstr "\"Che cosa in particolare la rende insoddisfatta della sua terapia farmacologica?\"."
+
+#: src/components/modals/StepInformationModal.tsx:205
+msgid "“What is the smallest noticeable change that you would see as a sign of improved mental health?”"
+msgstr "\"Qual è il più piccolo cambiamento evidente che vedrebbe come un segno di miglioramento della salute mentale?\"."
+
+#: src/components/modals/StepInformationModal.tsx:303
+msgid "“What kind of support from our team do you need to help you in finding a job?”"
+msgstr "\"Di che tipo di supporto da parte del nostro team ha bisogno per aiutarla a trovare un lavoro?\"."
+
+#: src/components/modals/StepInformationModal.tsx:169
+msgid "“What would rating 7 out of 7 for medication mean to you?”"
+msgstr "\"Cosa significherebbe per lei un punteggio di 7 su 7 per i farmaci?\"."
+
+#: src/components/modals/StepInformationModal.tsx:92
+msgid "“When you feel totally dissatisfied with your mental health, what helps you to cope? Are there moments when you feel less distressed?”"
+msgstr "\"Quando si sente totalmente insoddisfatto della sua salute mentale, che cosa la aiuta ad affrontare la situazione? Ci sono momenti in cui si sente meno angosciato?\"."
+
+#: src/components/modals/StepInformationModal.tsx:33
+msgid "“You asked for more help with physical health. What is lacking in that area?”"
+msgstr "\"Ha chiesto più aiuto per la salute fisica. Cosa manca in quell'area?\"."
+
+#: src/components/modals/StepInformationModal.tsx:197
+msgid "“You rate your friendships as 3 – what would need to be different for you to reach 4 - just one point higher on the scale?”"
+msgstr "\"Lei valuta le sue amicizie come 3 - cosa dovrebbe cambiare per raggiungere il 4, un punto in più sulla scala?\"."
+
+#: src/components/modals/StepInformationModal.tsx:43
+msgid "“You rated your satisfaction with accommodation as 3 out of 7, mainly dissatisfied. Why is that?”"
+msgstr "\"Ha valutato la sua soddisfazione per l'alloggio come 3 su 7, principalmente insoddisfatto. Come mai?\""
+
+#: src/components/modals/StepInformationModal.tsx:85
+msgid "“Your satisfaction with your relationship is 3. What makes your situation better than a 2 or a 1?”"
+msgstr "\"La sua soddisfazione per la sua relazione è 3. Cosa rende la sua situazione migliore di un 2 o di un 1?\"."
+
+#: src/components/modals/StepInformationModal.tsx:146
+msgid "“You’re unhappy with your employment situation: What would be the best possible employment situation for you?”"
+msgstr "\"Non è soddisfatto della sua situazione lavorativa: Quale sarebbe la migliore situazione lavorativa possibile per lei?\"."

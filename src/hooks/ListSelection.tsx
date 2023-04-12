@@ -2,7 +2,7 @@ import {useCallback, useState} from "react"
 import {Assessment} from "../types/Assessment"
 import {Client} from "../types/Client"
 
-export type ExportOrDeleteSelectionType = "none" | "export" | "delete"
+export type SelectionType = "none" | "export" | "delete" | "edit"
 
 export type ListSelection<EntityType extends Assessment | Client> = {
   selection: EntityType[]

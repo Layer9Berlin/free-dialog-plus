@@ -1,0 +1,68 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+$primary: #26579c
+$secondary: #83a1e5
+$info: #960051
+$warning: #ff8400
+
+$input-btn-focus-width:         .25rem !default
+$input-btn-focus-color-opacity: 0
+$input-btn-focus-box-shadow:    none
+
+$pagination-color: $info
+$pagination-focus-color: $info
+$pagination-active-bg: $info
+
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import ~bootstrap/scss/functions
+
+// 2. Include any default variable overrides here
+
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import ~bootstrap/scss/variables
+
+$list-group-active-color: $gray-800
+$list-group-active-bg: $gray-400
+$list-group-active-border-color: $gray-400
+
+// 4. Include any default map overrides here
+
+@import utilities
+
+// 5. Include remainder of required parts
+@import ~bootstrap/scss/maps
+@import ~bootstrap/scss/mixins
+@import ~bootstrap/scss/root
+
+// 6. Optionally include any other parts as needed
+@import ~bootstrap/scss/utilities
+@import ~bootstrap/scss/reboot
+@import ~bootstrap/scss/type
+@import ~bootstrap/scss/images
+@import ~bootstrap/scss/containers
+@import ~bootstrap/scss/grid
+@import ~bootstrap/scss/helpers
+@import ~bootstrap/scss/buttons
+@import ~bootstrap/scss/modal
+@import ~bootstrap/scss/card
+@import ~bootstrap/scss/alert
+@import ~bootstrap/scss/close
+@import ~bootstrap/scss/popover
+@import ~bootstrap/scss/transitions
+@import ~bootstrap/scss/forms
+@import ~bootstrap/scss/dropdown
+@import ~bootstrap/scss/list-group
+@import ~bootstrap/scss/progress
+@import ~bootstrap/scss/pagination
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import ~bootstrap/scss/utilities/api
+
+// 8. Add additional custom code here
+.d-flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+

@@ -1,4 +1,4 @@
-import {MutableQuestionProps, QuestionProps} from "./Questions"
+import {Question} from "./Questions"
 
 export type AssessmentMeta = {
   title?: string
@@ -10,23 +10,23 @@ export type AssessmentMeta = {
 export type LocalStorageAssessmentMeta = {
   title?: string
   date: string
-  lastUpdated: Date
+  lastUpdated: string
   clientId: string
 }
 
 export type Assessment = {
   id: string
   meta: AssessmentMeta
-  questions: QuestionProps[]
+  questions: Question[]
+}
+
+export type DeletedRecord = {
+  id: string
+  deletedAt: Date
 }
 
 export type LocalStorageAssessment = {
   id: string
   meta: LocalStorageAssessmentMeta
-  questions: QuestionProps[]
-}
-
-export type MutableAssessment = Assessment & {
-  questions: MutableQuestionProps[]
-  collapseAll: () => void
+  questions: Question[]
 }

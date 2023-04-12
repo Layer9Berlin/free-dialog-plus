@@ -1,5 +1,5 @@
 import {t, Trans} from "@lingui/macro"
-import React, {useEffect, useState} from "react"
+import {useEffect, useState} from "react"
 import {Modal} from "react-bootstrap"
 import {StepNumber} from "../pages/assessment/stages/discuss/DiscussStage"
 

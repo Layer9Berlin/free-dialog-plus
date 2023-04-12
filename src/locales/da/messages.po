@@ -1,0 +1,754 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: DIALOG+ Newest Translations\n"
+"Language: da\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/components/modals/StepInformationModal.tsx:348
+msgid "\"Is there a neighbour or friend who could help you bring your shopping to the top floor with you?”"
+msgstr "\"Er der en nabo eller ven, der kan hjælpe dig med at bringe dine indkøb til øverste etage med dig?\""
+
+#: src/hooks/QuestionTexts.ts:10
+msgid "Accommodation"
+msgstr "Indkvartering"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:173
+msgid "Action item"
+msgstr "Handlingspunkt"
+
+#: src/components/menu/StageNavigation.tsx:39
+msgid "Action items"
+msgstr "Action ting"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:208
+msgid "Add action item"
+msgstr "Tilføj handlingspunkt"
+
+#: src/components/modals/StepInformationModal.tsx:498
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:148
+msgid "Agreeing on actions"
+msgstr "Enighed om handlinger"
+
+#: src/components/menu/StageNavigation.tsx:23
+msgid "Assess"
+msgstr "Vurdere"
+
+#: src/components/pages/assessment/AssessmentPage.tsx:60
+msgid "Assessment not found"
+msgstr "Vurdering ikke fundet"
+
+#: src/components/pages/assessments/partials/AssessmentsHeader.tsx:11
+msgid "Assessments"
+msgstr "Vurderinger"
+
+#: src/components/pages/assessments/partials/AssessmentsHeader.tsx:14
+msgid "Back to Clients"
+msgstr "Tilbage til kunder"
+
+#: src/components/menu/StageNavigation.tsx:185
+msgid "Back to {0}"
+msgstr "Tilbage til {0}"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:103
+msgid "Best case scenario?"
+msgstr "Bedste scenario?"
+
+#: src/components/modals/DeleteAssessmentsModal.tsx:24
+#: src/components/modals/DeleteClientsModal.tsx:19
+#: src/components/modals/LanguageSwitchModal.tsx:94
+msgid "Cancel"
+msgstr "Afbestille"
+
+#: src/components/modals/LanguageSwitchModal.tsx:64
+msgid "Choose a language"
+msgstr "Vælg et sprog"
+
+#: src/components/modals/ExportPasswordModal.tsx:60
+msgid "Choose a password"
+msgstr "Vælg et kodeord"
+
+#: src/components/pages/clients/partials/ClientsHeader.tsx:18
+msgid "Clients"
+msgstr "Kunder"
+
+#: src/components/pages/register/RegisterPage.tsx:50
+#~ msgid "Close"
+#~ msgstr "Tæt"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:116
+msgid "Considering options"
+msgstr "Overvejer muligheder"
+
+#: src/components/modals/ClientDataModal.tsx:94
+msgid "Create"
+msgstr "skab"
+
+#: src/components/modals/DataLossWarningModal.tsx:32
+#: src/components/pages/register/RegisterPage.tsx:57
+#~ msgid "Create account"
+#~ msgstr "Opret konto"
+
+#: src/components/calendar/Calendar.tsx:58
+msgid "Current assessment"
+msgstr "Nuværende vurdering"
+
+#: src/components/menu/DataInfoPanel.tsx:21
+#~ msgid "Data protection"
+#~ msgstr "Data beskyttelse"
+
+#: src/components/modals/DeleteAssessmentsModal.tsx:27
+#: src/components/modals/DeleteClientsModal.tsx:22
+msgid "Delete"
+msgstr "Slet"
+
+#: src/components/modals/DeleteAssessmentsModal.tsx:16
+msgid "Delete assessment?"
+msgstr "Vil du slette vurderingen?"
+
+#: src/components/modals/DeleteClientsModal.tsx:9
+msgid "Delete this client?"
+msgstr "Vil du slette denne klient?"
+
+#: src/components/menu/DataInfoPanel.tsx:21
+msgid "Demo Version"
+msgstr "Demo-version"
+
+#: src/components/menu/StageNavigation.tsx:35
+msgid "Discuss"
+msgstr "Drøfte"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:72
+msgid "Do you need more help in this area?"
+msgstr "Har du brug for mere hjælp på dette område?"
+
+#: src/components/modals/DeleteClientsModal.tsx:13
+msgid "Do you really want to delete the selected client and all associated assessments? This cannot be undone."
+msgstr "Vil du virkelig slette den valgte klient og alle tilhørende vurderinger? Dette kan ikke fortrydes."
+
+#: src/components/modals/DeleteAssessmentsModal.tsx:20
+msgid "Do you really want to delete this assessment? This cannot be undone."
+msgstr "Vil du virkelig slette denne vurdering? Dette kan ikke fortrydes."
+
+#: src/components/pages/register/RegisterPage.tsx:75
+#~ msgid "E-Mail-Adresse"
+#~ msgstr "E-mail-adresse"
+
+#: src/components/modals/ClientDataModal.tsx:94
+msgid "Edit"
+msgstr "Redigere"
+
+#: src/components/modals/ClientDataModal.tsx:16
+msgid "Edit client"
+msgstr "Rediger klient"
+
+#: src/components/modals/ExportPasswordModal.tsx:38
+msgid "Enter a password to protect the exported file"
+msgstr "Indtast en adgangskode for at beskytte den eksporterede fil"
+
+#: src/components/modals/StepInformationModal.tsx:29
+#: src/components/modals/StepInformationModal.tsx:65
+#: src/components/modals/StepInformationModal.tsx:142
+#: src/components/modals/StepInformationModal.tsx:185
+#: src/components/modals/StepInformationModal.tsx:250
+#: src/components/modals/StepInformationModal.tsx:290
+#: src/components/modals/StepInformationModal.tsx:333
+#: src/components/modals/StepInformationModal.tsx:380
+#: src/components/modals/StepInformationModal.tsx:410
+#: src/components/modals/StepInformationModal.tsx:437
+msgid "Examples:"
+msgstr "Eksempler:"
+
+#: src/components/modals/StepInformationModal.tsx:19
+msgid "Exploring"
+msgstr "Udforsker"
+
+#: src/components/modals/StepInformationModal.tsx:493
+msgid "Exploring options"
+msgstr "Udforske muligheder"
+
+#: src/components/buttons/ExportButton.tsx:21
+msgid "Export"
+msgstr "Eksport"
+
+#: src/components/buttons/ExportButton.tsx:22
+msgid "Export selected"
+msgstr "Eksporter valgt"
+
+#: src/components/modals/StepInformationModal.tsx:326
+msgid "Finally, the clinician should ask what other people can do to help the patient improve their situation. This might be a friend, family member, relative, neighbour, colleague, befriender, support worker, fellow patient or another supporter."
+msgstr "Til sidst bør klinikeren spørge, hvad andre mennesker kan gøre for at hjælpe patienten med at forbedre deres situation. Dette kan være en ven, familiemedlem, slægtning, nabo, kollega, ven, støttemedarbejder, medpatient eller en anden støtte."
+
+#: src/components/menu/StageNavigation.tsx:204
+msgid "Finish"
+msgstr "Afslut"
+
+#: src/components/modals/ClientDataModal.tsx:79
+msgid "First name"
+msgstr "Fornavn"
+
+#: src/components/modals/StepInformationModal.tsx:135
+msgid "First, the clinician should ask the patient to describe the ideal outcome they would like to achieve; essentially, what would be different if the patient scored 7 out of 7 (totally satisfied). The best-case scenario is often, but not always, a long-term outcome."
+msgstr "Først bør klinikeren bede patienten om at beskrive det ideelle resultat, de gerne vil opnå; i det væsentlige, hvad ville være anderledes, hvis patienten scorede 7 ud af 7 (helt tilfreds). Det bedste scenario er ofte, men ikke altid, et langsigtet resultat."
+
+#: src/components/modals/StepInformationModal.tsx:22
+msgid "First, the clinician should explore the patient’s evaluation of the domain, and the reasons why they have requested more help for that domain, or given it a low rating. In the case of special attention to mental health, the clinician should explore the patient’s expression of distress or concern."
+msgstr "For det første bør klinikeren undersøge patientens vurdering af domænet og årsagerne til, at de har anmodet om mere hjælp til det pågældende domæne eller givet det en lav vurdering. I tilfælde af særlig opmærksomhed på mental sundhed bør klinikeren udforske patientens udtryk for nød eller bekymring."
+
+#: src/components/modals/StepInformationModal.tsx:244
+msgid "First, the clinician should invite the patient to think for themselves of all the possible things they might be able to do to help their own situation."
+msgstr "For det første bør klinikeren invitere patienten til selv at tænke på alle de mulige ting, de kan gøre for at hjælpe deres egen situation."
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:45
+msgid "For example, on iOS, tap<0><1/></0>in the bottom menu, followed by \"Add to Home Screen<2><3/></2>\"."
+msgstr "På iOS skal du f.eks. trykke på<0><1/></0>i den nederste menu efterfulgt af \"Tilføj til startskærmen<2><3/></2>\"."
+
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:9
+#~ msgid "Free DIALOG+"
+#~ msgstr "Gratis DIALOG+"
+
+#: src/hooks/QuestionTexts.ts:21
+msgid "Friendships"
+msgstr "Venskaber"
+
+#: src/components/modals/StepInformationModal.tsx:106
+msgid "Having explored both negative and positive aspects of the situation in Step 1, the aim of step 2 is to now focus on the future and establish the patient’s desired changes to their situation. The intention is to encourage the patient to think about and describe what an improvement in their situation would look like, and what changes would be a sign of progress. The clinician should seek to elicit a clear picture of the future from the patient that is:"
+msgstr "Efter at have udforsket både negative og positive aspekter af situationen i trin 1, er målet med trin 2 nu at fokusere på fremtiden og etablere patientens ønskede ændringer i sin situation. Hensigten er at opmuntre patienten til at tænke over og beskrive, hvordan en forbedring i deres situation ville se ud, og hvilke ændringer der ville være et tegn på fremskridt. Klinikeren bør søge at fremkalde et klart billede af fremtiden fra patienten, dvs."
+
+#: src/components/modals/StepInformationModal.tsx:226
+msgid "Having introduced a forward-looking perspective in Step 2, the aim of Step 3 is for the patient and the clinician to explore a number of options that may help to bring about the desired changes. These options involve things that patient can do by themselves, things the clinician can do with the help of the various services available to the patient, and things other people in the patient’s life can do.In Step 3 the clinician asks the patient what are all the options he/she can think of as potentially helpful. The clinician can also propose different options, and ask for the patient’s opinion about them. Step 3 is concerned with what is possible to do at the present time in order to achieve the patient’s desired changes."
+msgstr "Efter at have introduceret et fremadrettet perspektiv i trin 2, er målet med trin 3, at patienten og klinikeren skal udforske en række muligheder, der kan være med til at skabe de ønskede ændringer. Disse muligheder involverer ting, som patienten kan gøre selv, ting, klinikeren kan gøre ved hjælp af de forskellige tjenester, der er tilgængelige for patienten, og ting, som andre mennesker i patientens liv kan gøre. I trin 3 spørger klinikeren patienten, hvad det hele er. de muligheder han/hun kan tænke på som potentielt nyttige. Klinikeren kan også foreslå forskellige muligheder og bede om patientens mening om dem. Trin 3 handler om, hvad der er muligt at gøre på nuværende tidspunkt for at opnå patientens ønskede ændringer."
+
+#: src/hooks/QuestionTexts.ts:26
+msgid "How satisfied are you with the practical help you receive?"
+msgstr "Hvor tilfreds er du med den praktiske hjælp, du får?"
+
+#: src/hooks/QuestionTexts.ts:10
+msgid "How satisfied are you with your accommodation?"
+msgstr "Hvor tilfreds er du med din bolig?"
+
+#: src/hooks/QuestionTexts.ts:21
+msgid "How satisfied are you with your friendships?"
+msgstr "Hvor tilfreds er du med dine venskaber?"
+
+#: src/hooks/QuestionTexts.ts:9
+msgid "How satisfied are you with your job situation?"
+msgstr "Hvor tilfreds er du med din jobsituation?"
+
+#: src/hooks/QuestionTexts.ts:13
+msgid "How satisfied are you with your leisure activities?"
+msgstr "Hvor tilfreds er du med dine fritidsaktiviteter?"
+
+#: src/hooks/QuestionTexts.ts:23
+msgid "How satisfied are you with your medication?"
+msgstr "Hvor tilfreds er du med din medicin?"
+
+#: src/hooks/QuestionTexts.ts:31
+msgid "How satisfied are you with your meetings with mental health professionals?"
+msgstr "Hvor tilfreds er du med dine møder med psykiatriske fagfolk?"
+
+#: src/constants.ts:35
+#: src/hooks/QuestionTexts.ts:7
+msgid "How satisfied are you with your mental health?"
+msgstr "Hvor tilfreds er du med dit mentale helbred?"
+
+#: src/hooks/QuestionTexts.ts:22
+msgid "How satisfied are you with your personal safety?"
+msgstr "Hvor tilfreds er du med din personlige sikkerhed?"
+
+#: src/hooks/QuestionTexts.ts:8
+msgid "How satisfied are you with your physical health?"
+msgstr "Hvor tilfreds er du med dit fysiske helbred?"
+
+#: src/hooks/QuestionTexts.ts:18
+msgid "How satisfied are you with your relationship with your partner/family?"
+msgstr "Hvor tilfreds er du med dit forhold til din partner/familie?"
+
+#: src/components/modals/StepInformationModal.tsx:54
+msgid "Identifying what works"
+msgstr "At identificere, hvad der virker"
+
+#: src/components/menu/DataInfoPanel.tsx:29
+msgid "If used in the browser, deleting your browser cache will <0>permanently erase all client and session data</0>."
+msgstr "Hvis du bruger den i browseren, vil sletning af din browsercache <0>slette alle klient- og sessionsdata permanent</0>."
+
+#: src/components/buttons/ImportButton.tsx:31
+msgid "Import"
+msgstr "Importere"
+
+#: src/components/modals/DataLossWarningModal.tsx:20
+#~ msgid "Important information"
+#~ msgstr "Vigtig information"
+
+#: src/components/modals/StepInformationModal.tsx:238
+msgid "In step 3, three kinds of questions can be asked:"
+msgstr "I trin 3 kan der stilles tre slags spørgsmål:"
+
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:20
+msgid "Install App on iOS"
+msgstr "Installer app på iOS"
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:42
+msgid "Install this app on your <0>Home Screen</0> for a better experience."
+msgstr "Installer denne app på din <0>startskærm</0> for en bedre oplevelse."
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:21
+msgid "Installed"
+msgstr "Installeret"
+
+#: src/components/pages/login/LoginPage.tsx:63
+#: src/components/pages/register/RegisterPage.tsx:110
+#~ msgid "Invalid password"
+#~ msgstr "Forkert kodeord"
+
+#: src/hooks/QuestionTexts.ts:9
+msgid "Job situation"
+msgstr "Jobsituation"
+
+#: src/components/modals/ClientDataModal.tsx:89
+msgid "Last name"
+msgstr "Efternavn"
+
+#: src/hooks/QuestionTexts.ts:12
+msgid "Leisure activities"
+msgstr "Fritids aktiviteter"
+
+#: src/components/pages/login/LoginPage.tsx:77
+#~ msgid "Log in"
+#~ msgstr "Log på"
+
+#: src/components/pages/clients/partials/ClientsHeader.tsx:23
+#~ msgid "Log out"
+#~ msgstr "Log ud"
+
+#: src/components/pages/login/LoginPage.tsx:41
+#~ msgid "Login"
+#~ msgstr "Log på"
+
+#: src/components/modals/StepInformationModal.tsx:488
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:88
+msgid "Looking forward"
+msgstr "Ser frem til"
+
+#: src/components/pages/register/RegisterPage.tsx:46
+#~ msgid "Looks like the passwords you entered do not match. Please try again!"
+#~ msgstr "Det ser ud til, at de indtastede adgangskoder ikke stemmer overens. Prøv igen!"
+
+#: src/hooks/QuestionTexts.ts:23
+msgid "Medication"
+msgstr "Medicin"
+
+#: src/hooks/QuestionTexts.ts:30
+msgid "Meetings"
+msgstr "Møder"
+
+#: src/constants.ts:35
+#: src/hooks/QuestionTexts.ts:7
+msgid "Mental health"
+msgstr "Mentalt helbred"
+
+#: src/components/modals/ClientDataModal.tsx:85
+msgid "Middle name"
+msgstr "Mellemnavn"
+
+#: src/components/modals/ClientDataModal.tsx:25
+#: src/components/pages/clients/partials/ClientsHeader.tsx:25
+msgid "New client"
+msgstr "Ny klient"
+
+#: src/components/pages/assessments/partials/AssessmentsHeader.tsx:19
+msgid "New session"
+msgstr "Ny session"
+
+#: src/components/modals/StepInformationModal.tsx:176
+msgid "Next, the clinician should ask to patient to describe smaller changes that would make a meaningful difference to their life. It may be that the best-case scenario previously described cannot occur instantly, or at all. Here, the patient is asked to consider what small change would mean an improvement of just one point higher on the scale, and help in the long-term process of achieving the best-case scenario, where possible."
+msgstr "Dernæst bør klinikeren bede patienten om at beskrive mindre ændringer, der ville gøre en meningsfuld forskel for deres liv. Det kan være, at det tidligere beskrevne best-case scenario ikke kan opstå øjeblikkeligt eller overhovedet. Her bliver patienten bedt om at overveje, hvilken lille ændring, der ville betyde en forbedring på blot et point højere på skalaen, og hjælpe i den langsigtede proces med at opnå det bedste scenario, hvor det er muligt."
+
+#: src/components/modals/StepInformationModal.tsx:283
+msgid "Next, the clinician should ask what he/she can do to support the patient, and what resources or services he/she can provide. It may be appropriate to suggest specific resources that are available to the patient that might help in improving the situation."
+msgstr "Dernæst bør klinikeren spørge, hvad han/hun kan gøre for at støtte patienten, og hvilke ressourcer eller tjenester han/hun kan levere. Det kan være hensigtsmæssigt at foreslå specifikke ressourcer, som er tilgængelige for patienten, og som kan hjælpe med at forbedre situationen."
+
+#: src/components/modals/StepInformationModal.tsx:57
+msgid "Next, the clinician should now ask the patient to identify what is working well within the current situation. The assumption is that, no matter how bad things may be, the patient somehow manages to cope. Building an awareness of the strengths within the situation is intended to help promote the patient’s confidence and motivation for change."
+msgstr "Dernæst skal klinikeren nu bede patienten om at identificere, hvad der fungerer godt i den aktuelle situation. Antagelsen er, at uanset hvor slemt det måtte være, så formår patienten på en eller anden måde at klare sig. Opbygning af en bevidsthed om styrkerne i situationen skal bidrage til at fremme patientens selvtillid og motivation for forandring."
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:108
+msgid "No"
+msgstr "Ingen"
+
+#: src/components/pages/assessment/stages/action-items/ActionItemsStage.tsx:31
+#: src/components/pages/assessments/partials/AssessmentRow.tsx:81
+msgid "No action items defined"
+msgstr "Ingen handlingspunkter defineret"
+
+#: src/components/calendar/Calendar.tsx:44
+msgid "No past assessments yet"
+msgstr "Ingen tidligere vurderinger endnu"
+
+#: src/components/modals/NoSelectionModal.tsx:17
+msgid "No selection made"
+msgstr "Der er ikke foretaget noget valg"
+
+#: src/components/menu/DataInfoPanel.tsx:24
+#~ msgid "Note that all data is stored <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality or install the app (see below) to prevent accidental loss of data."
+#~ msgstr "Bemærk, at alle data kun gemmes <0>på denne enhed</0>. Vær forsigtig, når du sletter din browser-cache, og brug import/eksport-funktionen eller installer appen (se nedenfor) for at forhindre utilsigtet tab af data."
+
+#: src/components/modals/ExportPasswordModal.tsx:73
+#: src/components/modals/ImportErrorModal.tsx:28
+#: src/components/modals/NoSelectionModal.tsx:28
+msgid "OK"
+msgstr "Okay"
+
+#: src/components/modals/StepInformationModal.tsx:457
+msgid "Once an action item has been decided, the clinician should document it in the text box provided. Documentation should be brief, but precise. A reminder of the agreed action(s) will appear at the start of the next session, so that patient and clinician can review the progress since the last session before initiating a new session."
+msgstr "Når et handlingspunkt er blevet besluttet, skal klinikeren dokumentere det i den medfølgende tekstboks. Dokumentationen skal være kort, men præcis. En påmindelse om den eller de aftalte handlinger vil fremkomme ved starten af den næste session, så patient og kliniker kan gennemgå fremskridtene siden sidste session, før de påbegynder en ny session."
+
+#: src/components/pages/login/LoginPage.tsx:48
+#: src/components/pages/register/RegisterPage.tsx:90
+#~ msgid "Password"
+#~ msgstr "Adgangskode"
+
+#: src/components/pages/register/RegisterPage.tsx:105
+#~ msgid "Password confirmation"
+#~ msgstr "Kodeords bekræftelse"
+
+#: src/components/pages/register/RegisterPage.tsx:42
+#~ msgid "Password mismatch"
+#~ msgstr "Adgangskode uoverensstemmelse"
+
+#: src/hooks/QuestionTexts.ts:22
+msgid "Personal safety"
+msgstr "Personlig sikkerhed"
+
+#: src/hooks/QuestionTexts.ts:8
+msgid "Physical health"
+msgstr "Fysisk sundhed"
+
+#: src/components/modals/ExportPasswordModal.tsx:46
+msgid "Please enter the password used to protect the file"
+msgstr "Indtast venligst den adgangskode, der bruges til at beskytte filen"
+
+#: src/hooks/QuestionTexts.ts:25
+msgid "Practical help"
+msgstr "Praktisk hjælp"
+
+#: src/components/modals/DataLossWarningModal.tsx:35
+msgid "Proceed"
+msgstr "Fortsæt"
+
+#: src/hooks/QuestionTexts.ts:17
+msgid "Relationship with partner/family"
+msgstr "Relation til partner/familie"
+
+#: src/components/menu/StageNavigation.tsx:27
+msgid "Review"
+msgstr "Anmeldelse"
+
+#: src/components/menu/StageNavigation.tsx:31
+msgid "Select"
+msgstr "Vælg"
+
+#: src/components/pages/settings/partials/SettingsHeader.tsx:9
+#~ msgid "Settings"
+#~ msgstr "Indstillinger"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:106
+msgid "Smallest improvement?"
+msgstr "Mindste forbedring?"
+
+#: src/components/modals/StepInformationModal.tsx:374
+msgid "Sometimes, having considered the various options in Step 3, the patient will have a clear idea of what action should be taken and it is appropriate to invite the patient to take the lead with any decision."
+msgstr "Nogle gange, efter at have overvejet de forskellige muligheder i trin 3, vil patienten have en klar ide om, hvad der skal gøres, og det er hensigtsmæssigt at invitere patienten til at gå forrest med enhver beslutning."
+
+#: src/components/modals/StepInformationModal.tsx:404
+msgid "Sometimes, the clinician may take the lead in suggesting one or more actions and explore whether the patient agrees."
+msgstr "Nogle gange kan klinikeren tage føringen i at foreslå en eller flere handlinger og undersøge, om patienten er enig."
+
+#: src/components/modals/StepInformationModal.tsx:431
+msgid "Sometimes, the patient and clinician may not agree on an immediate ‘action’; instead, the patient might decide to spend more time thinking aboutthe different options discussed between now and the next meeting."
+msgstr "Nogle gange kan patienten og klinikeren ikke blive enige om en øjeblikkelig 'handling'; i stedet kan patienten beslutte sig for at bruge mere tid på at tænke over de forskellige muligheder, der diskuteres mellem nu og næste møde."
+
+#: src/components/modals/StepInformationModal.tsx:13
+msgid "The aim of step 1 is for both the patient and the clinician to gain a shared understanding of the patient’s current situation. There are two parts to understanding:"
+msgstr "Målet med trin 1 er, at både patienten og klinikeren får en fælles forståelse af patientens aktuelle situation. Der er to dele til forståelse:"
+
+#: src/components/menu/DataInfoPanel.tsx:24
+msgid "This app is meant for demo purposes only. All data generated in the app is stored <0>directly on this device</0>."
+msgstr "Denne app er kun beregnet til demoformål. Alle data, der genereres i appen, gemmes <0>direkte på denne enhed</0>."
+
+#: src/components/menu/DataInfoPanel.tsx:10
+msgid "This is a free, web-based implementation of the <0>DIALOG+ therapeutic intervention</0>."
+msgstr "Dette er en gratis, webbaseret implementering af <0>DIALOG+ terapeutiske intervention</0>."
+
+#: src/components/modals/StepInformationModal.tsx:366
+msgid "Through Steps 1 – 3, both the patient and the clinician have developed a thorough understanding of the patient’s current situation, thought about desired changes for the future, and identified options for moving forward. The goal of Step 4 is to reach an agreement on what action(s) should be taken, and by whom."
+msgstr "Gennem trin 1 – 3 har både patienten og klinikeren udviklet en grundig forståelse af patientens nuværende situation, tænkt over ønskede ændringer for fremtiden og identificeret muligheder for at komme videre. Målet med trin 4 er at nå til enighed om, hvilke handlinger der skal tages, og af hvem."
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:38
+msgid "Tip"
+msgstr "Tip"
+
+#: src/components/menu/DataInfoPanel.tsx:33
+msgid "To prevent accidental data loss, use the import/export functionality in the browser version, or install the app on iOS."
+msgstr "For at undgå tab af data ved et uheld skal du bruge import/eksport-funktionen i browserversionen eller installere appen på iOS for at undgå tab af data."
+
+#: src/components/modals/StepInformationModal.tsx:483
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:60
+msgid "Understanding"
+msgstr "Forståelse"
+
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:24
+msgid "Use in browser"
+msgstr "Brug i browser"
+
+#: src/components/modals/DataLossWarningModal.tsx:18
+msgid "Warning: Data Loss Possible"
+msgstr "Advarsel: Mulighed for tab af data"
+
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:11
+msgid "Welcome to Free DIALOG+"
+msgstr "Velkommen til gratis DIALOG+"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:137
+msgid "What can others do?"
+msgstr "Hvad kan andre gøre?"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:134
+msgid "What can the clinician do?"
+msgstr "Hvad kan klinikeren gøre?"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:131
+msgid "What can the patient do?"
+msgstr "Hvad kan patienten gøre?"
+
+#: src/components/modals/StepInformationModal.tsx:132
+msgid "What is the patient’s ‘best-case scenario’?"
+msgstr "Hvad er patientens 'best-case scenario'?"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:78
+msgid "What is working?"
+msgstr "Hvad virker?"
+
+#: src/components/modals/StepInformationModal.tsx:173
+msgid "What small changes would make a difference?"
+msgstr "Hvilke små ændringer ville gøre en forskel?"
+
+#: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:75
+msgid "Why is this rating not a lower one?"
+msgstr "Hvorfor er denne vurdering ikke lavere?"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:89
+msgid "Yes"
+msgstr "Ja"
+
+#: src/components/modals/DataLossWarningModal.tsx:22
+msgid "You are using the demo version of DIALOG+. Your data will be saved to this device and <0>will be deleted</0> if you clear your browser cache. Use the export functionality in the bottom left portion of the Clients page to back up your data."
+msgstr "Du bruger demoversionen af DIALOG+. Dine data gemmes på denne enhed og <0>slettes</0>, hvis du rydder din browsercache. Brug eksportfunktionaliteten nederst til venstre på klientsiden til at sikkerhedskopiere dine data."
+
+#: src/components/menu/AddToHomescreenInfoPanel.tsx:25
+msgid "You have successfully installed the app."
+msgstr "Du har installeret appen."
+
+#: src/components/modals/StepInformationModal.tsx:119
+msgid "characterised by tangible behaviours rather than vague feelings (e.g. “I would talk more to my neighbours” rather than “I would feel more included in my community”)"
+msgstr "kendetegnet ved håndgribelig adfærd snarere end vage følelser (f.eks. \"Jeg ville snakke mere med mine naboer\" i stedet for \"Jeg ville føle mig mere inkluderet i mit samfund\")"
+
+#: src/components/modals/StepInformationModal.tsx:125
+msgid "defined by the presence rather than the absence of something (e.g. “I would have the energy to get a part-time job” rather than “I would not feel as tired all the time”)."
+msgstr "defineret af tilstedeværelsen frem for fraværet af noget (f.eks. \"Jeg ville have energi til at få et deltidsjob\" frem for \"Jeg ville ikke føle mig så træt hele tiden\")."
+
+#: src/components/modals/StepInformationModal.tsx:116
+msgid "detailed"
+msgstr "detaljeret"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:11
+msgid "fairly dissatisfied"
+msgstr "ret utilfreds"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:13
+msgid "fairly satisfied"
+msgstr "nogenlunde tilfreds"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:12
+msgid "in the middle"
+msgstr "i midten"
+
+#: src/components/pages/assessments/partials/AssessmentRow.tsx:58
+msgid "last updated"
+msgstr "sidst opdateret"
+
+#: src/components/pages/register/RegisterPage.tsx:130
+#~ msgid "other options"
+#~ msgstr "andre muligheder"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:9
+msgid "totally dissatisfied"
+msgstr "totalt utilfreds"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:15
+msgid "totally satisfied"
+msgstr "helt tilfreds"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:10
+msgid "very dissatisfied"
+msgstr "Meget utilfreds"
+
+#: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:14
+msgid "very satisfied"
+msgstr "Meget tilfreds"
+
+#: src/components/modals/StepInformationModal.tsx:241
+msgid "‘What can the patient do?’"
+msgstr "'Hvad kan patienten gøre?'"
+
+#: src/components/modals/StepInformationModal.tsx:323
+msgid "‘What other people can do’"
+msgstr "'Hvad andre mennesker kan'"
+
+#: src/components/modals/StepInformationModal.tsx:280
+msgid "‘What the clinician can do’"
+msgstr "'Hvad klinikeren kan gøre'"
+
+#: src/components/modals/StepInformationModal.tsx:69
+msgid "“Although you are mainly dissatisfied with your physical health, at least you are not at the bottom end of the scale. What is helping to keep you from being totally dissatisfied?”"
+msgstr "“Selvom du hovedsageligt er utilfreds med dit fysiske helbred, er du i hvert fald ikke i den nederste ende af skalaen. Hvad er med til at holde dig fra at være totalt utilfreds?”"
+
+#: src/components/modals/StepInformationModal.tsx:50
+msgid "“Can you tell me more about the distressing voices you’ve been hearing?”"
+msgstr "\"Kan du fortælle mig mere om de foruroligende stemmer, du har hørt?\""
+
+#: src/components/modals/StepInformationModal.tsx:343
+msgid "“Can you think of anybody that could help you to get to your class on time?”"
+msgstr "\"Kan du komme i tanke om nogen, der kunne hjælpe dig med at komme til din klasse til tiden?\""
+
+#: src/components/modals/StepInformationModal.tsx:415
+msgid "“I think a visit to the Day Centre we talked about would be a good start to feeling less isolated. Can we agree that you will try that this month and we’ll see how you got on next time?”"
+msgstr "”Jeg tror, at et besøg på det dagcenter, vi talte om, ville være en god start på at føle sig mindre isoleret. Kan vi blive enige om, at du vil prøve det i denne måned, og så må vi se, hvordan det gik dig næste gang?\""
+
+#: src/components/modals/StepInformationModal.tsx:308
+msgid "“I wonder whether a leaflet describing pros and cons of taking medication would be something you may find helpful?”"
+msgstr "\"Jeg spekulerer på, om en folder, der beskriver fordele og ulemper ved at tage medicin, ville være noget, du kan finde nyttig?\""
+
+#: src/components/modals/StepInformationModal.tsx:161
+msgid "“If tomorrow morning you woke up and all your problems with your family had gone, how would the situation be?”"
+msgstr "\"Hvis du i morgen tidlig vågnede og alle dine problemer med din familie var forsvundet, hvordan ville situationen så være?\""
+
+#: src/components/modals/StepInformationModal.tsx:442
+msgid "“If you cannot decide today about whether you’re ready to come off medication. Do you want to think about it and let me know when you have come to a decision?”"
+msgstr "\"Hvis du ikke i dag kan beslutte dig for, om du er klar til at slippe medicin. Vil du tænke over det og fortælle mig, når du har truffet en beslutning?”"
+
+#: src/components/modals/StepInformationModal.tsx:450
+msgid "“If you feel uncomfortable, there is no need to decide today whether you want to go back to regular employment. Can we agree that you think about it and we revisit the issue next time?”"
+msgstr "”Hvis du føler dig utilpas, er der ingen grund til i dag at tage stilling til, om du vil tilbage til almindelig beskæftigelse. Kan vi blive enige om, at du tænker over det, og at vi gentager spørgsmålet næste gang?\""
+
+#: src/components/modals/StepInformationModal.tsx:154
+msgid "“If your satisfaction with physical health was 7 (totally satisfied), what exactly would be different?”"
+msgstr "\"Hvis din tilfredshed med det fysiske helbred var 7 (helt tilfreds), hvad ville præcis være anderledes?\""
+
+#: src/components/modals/StepInformationModal.tsx:338
+msgid "“Is there anyone else who could get involved in helping you to exercise more?”"
+msgstr "\"Er der andre, der kunne være med til at hjælpe dig med at træne mere?\""
+
+#: src/components/modals/StepInformationModal.tsx:295
+msgid "“Is there anything I can do to help to make you less anxious about leaving the house to attend your meetings?”"
+msgstr "\"Er der noget, jeg kan gøre for at gøre dig mindre bekymret for at forlade huset for at deltage i dine møder?\""
+
+#: src/components/modals/StepInformationModal.tsx:212
+msgid "“It can take time to adapt to new medication, especially when you are experiencing side effects. What would be the first sign that you were adjusting to it?”"
+msgstr "”Det kan tage tid at tilpasse sig ny medicin, især når man oplever bivirkninger. Hvad ville være det første tegn på, at du var ved at vænne dig til det?”"
+
+#: src/components/modals/StepInformationModal.tsx:77
+msgid "“It’s encouraging that your satisfaction with your accommodation is 2 rather than 1. So what is working well with your accommodation?”"
+msgstr "\"Det er opmuntrende, at din tilfredshed med din bolig er 2 i stedet for 1. Så hvad fungerer godt med din bolig?\""
+
+#: src/components/modals/StepInformationModal.tsx:397
+msgid "“Let’s decide on the best way forward. Which options shall we try out, before we meet again?”"
+msgstr "\"Lad os beslutte os for den bedste vej frem. Hvilke muligheder skal vi prøve, før vi mødes igen?”"
+
+#: src/components/modals/StepInformationModal.tsx:390
+msgid "“Of all the options we’ve discussed, are there some in particular that you are leaning towards?”"
+msgstr "\"Af alle de muligheder, vi har diskuteret, er der nogle særlige, du hælder til?\""
+
+#: src/components/modals/StepInformationModal.tsx:423
+msgid "“Regarding your job situation, I suggest that you ask your partner to help you type up your C.V. and I’ll make an appointment on your behalf with the Back-to-Employment Officer. Is this alright with you?”"
+msgstr "“Med hensyn til din jobsituation foreslår jeg, at du beder din partner om at hjælpe dig med at skrive dit C.V. og jeg laver en aftale på dine vegne med Back-to-Employment Officer. Er det i orden med dig?”"
+
+#: src/components/modals/StepInformationModal.tsx:268
+msgid "“The next time you hear voices, what can you try to prevent yourself from feeling so distressed?”"
+msgstr "\"Næste gang du hører stemmer, hvad kan du så prøve for at forhindre dig selv i at føle dig så ked af det?\""
+
+#: src/components/modals/StepInformationModal.tsx:316
+msgid "“There is a Hearing Voices group running here. Might that be something you would like to try?”"
+msgstr "\"Der kører en Hearing Voices-gruppe her. Kunne det være noget du kunne tænke dig at prøve?”"
+
+#: src/components/modals/StepInformationModal.tsx:189
+msgid "“Until you are rehoused in the coming months, what small improvement to your accommodation would make it more acceptable to you?”"
+msgstr "\"Indtil du bliver genhuset i de kommende måneder, hvilken lille forbedring af din bolig ville gøre det mere acceptabelt for dig?\""
+
+#: src/components/modals/StepInformationModal.tsx:385
+msgid "“We‘ve talked about a lot of different options today. Which ones will we go for?”"
+msgstr "\"Vi har talt om mange forskellige muligheder i dag. Hvilke skal vi gå efter?”"
+
+#: src/components/modals/StepInformationModal.tsx:255
+msgid "“We’ve talked about what needs to change in order for you to feel safe. What is the first thing you can do to ensure your own safety?\""
+msgstr "»Vi har talt om, hvad der skal ændres, for at du kan føle dig tryg. Hvad er det første du kan gøre for at sikre din egen sikkerhed?\""
+
+#: src/components/modals/StepInformationModal.tsx:263
+msgid "“What are some of the ways you could start to reach out to others in the community?”"
+msgstr "\"Hvad er nogle af de måder, du kan begynde at nå ud til andre i samfundet?\""
+
+#: src/components/modals/StepInformationModal.tsx:275
+msgid "“What could you do to make sure you remember to take your medication in the morning?”"
+msgstr "\"Hvad kan du gøre for at sikre, at du husker at tage din medicin om morgenen?\""
+
+#: src/components/modals/StepInformationModal.tsx:355
+msgid "“What could your partner do to stop you two from arguing so often?”"
+msgstr "\"Hvad kunne din partner gøre for at forhindre jer i at skændes så ofte?\""
+
+#: src/components/modals/StepInformationModal.tsx:38
+msgid "“What in particular makes you dissatisfied with your medication?”"
+msgstr "\"Hvad især gør dig utilfreds med din medicin?\""
+
+#: src/components/modals/StepInformationModal.tsx:205
+msgid "“What is the smallest noticeable change that you would see as a sign of improved mental health?”"
+msgstr "\"Hvad er den mindste mærkbare ændring, som du ville se som et tegn på forbedret mental sundhed?\""
+
+#: src/components/modals/StepInformationModal.tsx:303
+msgid "“What kind of support from our team do you need to help you in finding a job?”"
+msgstr "\"Hvilken slags støtte fra vores team har du brug for for at hjælpe dig med at finde et job?\""
+
+#: src/components/modals/StepInformationModal.tsx:169
+msgid "“What would rating 7 out of 7 for medication mean to you?”"
+msgstr "\"Hvad ville bedømmelsen 7 ud af 7 for medicin betyde for dig?\""
+
+#: src/components/modals/StepInformationModal.tsx:92
+msgid "“When you feel totally dissatisfied with your mental health, what helps you to cope? Are there moments when you feel less distressed?”"
+msgstr "\"Når du føler dig totalt utilfreds med dit mentale helbred, hvad hjælper dig så til at klare det? Er der øjeblikke, hvor du føler dig mindre ked af det?”"
+
+#: src/components/modals/StepInformationModal.tsx:33
+msgid "“You asked for more help with physical health. What is lacking in that area?”"
+msgstr "\"Du bad om mere hjælp til fysisk sundhed. Hvad mangler der på det område?”"
+
+#: src/components/modals/StepInformationModal.tsx:197
+msgid "“You rate your friendships as 3 – what would need to be different for you to reach 4 - just one point higher on the scale?”"
+msgstr "\"Du vurderer dine venskaber som 3 - hvad skulle være anderledes, for at du når 4 - bare et point højere på skalaen?\""
+
+#: src/components/modals/StepInformationModal.tsx:43
+msgid "“You rated your satisfaction with accommodation as 3 out of 7, mainly dissatisfied. Why is that?”"
+msgstr "“Du vurderede din tilfredshed med boligen som 3 ud af 7, hovedsagelig utilfreds. Hvorfor det?\""
+
+#: src/components/modals/StepInformationModal.tsx:85
+msgid "“Your satisfaction with your relationship is 3. What makes your situation better than a 2 or a 1?”"
+msgstr "\"Din tilfredshed med dit forhold er 3. Hvad gør din situation bedre end en 2'er eller en 1'er?\""
+
+#: src/components/modals/StepInformationModal.tsx:146
+msgid "“You’re unhappy with your employment situation: What would be the best possible employment situation for you?”"
+msgstr "\"Du er utilfreds med din ansættelsessituation: Hvad ville være den bedst mulige ansættelsessituation for dig?\""

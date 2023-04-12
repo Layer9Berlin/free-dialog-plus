@@ -1,6 +1,6 @@
 import {i18n} from "@lingui/core"
 import {detect, fromNavigator, fromStorage, fromUrl} from "@lingui/detect-locale"
-import {de, en} from "make-plural/plurals"
+import {da, de, en, es, fr, it} from "make-plural/plurals"
 
 /**
  * Add new locale and plurals data here
@@ -8,10 +8,18 @@ import {de, en} from "make-plural/plurals"
 export const locales = {
   en: "English",
   de: "Deutsch",
+  it: "Italiano",
+  es: "Español",
+  fr: "Français",
+  da: "Dansk",
 }
 i18n.loadLocaleData({
   en: {plurals: en},
   de: {plurals: de},
+  it: {plurals: it},
+  es: {plurals: es},
+  fr: {plurals: fr},
+  da: {plurals: da},
 })
 
 export const localeForCountryCodedLanguage = (lang: string): string => {
@@ -41,7 +49,7 @@ export async function dynamicActivate(locale: string) {
       locale = countryCodedLocale
     }
   }
-  const {messages} = await import(`@lingui/loader!./${locale}/messages.po`)
-  i18n.load(locale, messages)
+  // const {messages} = await import(`@lingui/loader!./${locale}/messages.po`)
+  // i18n.load(locale, messages)
   i18n.activate(locale)
 }
