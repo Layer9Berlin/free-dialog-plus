@@ -9,7 +9,6 @@ import {useRerouter} from "../../../hooks/Rerouter"
 import {Assessment} from "../../../types/Assessment"
 import {PageLayout} from "../../layouts/PageLayout"
 import {DeleteAssessmentsModal} from "../../modals/DeleteAssessmentsModal"
-import {ExportPasswordModal, useExportPasswordModal} from "../../modals/ExportPasswordModal"
 import {AssessmentRow} from "./partials/AssessmentRow"
 import {AssessmentsFooter} from "./partials/AssessmentsFooter"
 import {AssessmentsHeader} from "./partials/AssessmentsHeader"
@@ -28,14 +27,12 @@ export const AssessmentsPage = () => {
   const {assessments, refresh} = useAssessments({clientId})
 
   const deleteAssessmentsModal = useDeleteModal<Assessment>({dataStoreSlice: dataStore.assessments, refresh})
-  const exportPasswordModal = useExportPasswordModal()
 
   const questionTexts = useQuestionTexts()
 
   return (
     <>
       <DeleteAssessmentsModal {...deleteAssessmentsModal.props} />
-      <ExportPasswordModal {...exportPasswordModal.props} />
 
       <PageLayout
         header={

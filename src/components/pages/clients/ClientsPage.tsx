@@ -10,7 +10,6 @@ import {Client} from "../../../types/Client"
 import {PageLayout} from "../../layouts/PageLayout"
 import {ClientDataModal} from "../../modals/ClientDataModal"
 import {DeleteClientsModal} from "../../modals/DeleteClientsModal"
-import {ExportPasswordModal, useExportPasswordModal} from "../../modals/ExportPasswordModal"
 import {ClientRow} from "./partials/ClientRow"
 import {ClientsFooter} from "./partials/ClientsFooter"
 import {ClientsHeader} from "./partials/ClientsHeader"
@@ -41,13 +40,11 @@ export const ClientsPage = () => {
   })
 
   const deleteClientsModal = useDeleteClientModal({refresh})
-  const exportPasswordModal = useExportPasswordModal()
 
   return (
     <>
       <DeleteClientsModal {...deleteClientsModal.props} />
       <ClientDataModal {...clientDataModal.props} />
-      <ExportPasswordModal {...exportPasswordModal.props} />
 
       <PageLayout
         header={
