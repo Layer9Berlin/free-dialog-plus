@@ -8,7 +8,11 @@ At the time of writing, it is compatible with all modern browsers, both on deskt
 
 ## Demo
 
-Visit [the demo page](https://dialogplus.layer9.technology) to see Free DIALOG+ in action.
+Visit [the demo page](https://dialog-plus.org) to see Free DIALOG+ in action.
+
+### Old demo site
+
+The previous demo version at [https://dialogplus.layer9.technology](https://dialogplus.layer9.technology) is still available, but it is recommended to switch to the new site. Data can be migrated between the two sites using the export/import functionality (see below).
 
 ## Data protection, data safety & compliance
 
@@ -21,10 +25,6 @@ You are encouraged to make regular backups using the export functionality (see b
 To use Free DIALOG+ in a clinical setting, it is highly recommended that you deploy your own version of the application. You will probably want to adapt the code to satisfy your own technical and compliance requirements.
 
 The demo deployment is intended for demonstration purposes, for use in more casual settings where loss of patient data is of little consequence and as a foundation for further development.
-
-## Password recovery
-
-Due to the lack of a data server, there is currently no way to recover a lost password. If you forget your password, clearing the cache/re-installing the PWA will reset the password, but also cause all existing data to be irretrievably lost. Please perform regular exports to mitigate the risk of losing your data.
 
 ## Device synchronisation
 
@@ -42,9 +42,9 @@ In the clients screen, tap the ![arrow into box](public/box-arrow-in-down.svg) i
 
 ## Languages
 
-The application is currently available in British English and German.
+The application is currently available in British English, Danish, French, German, Italian and Spanish.
 
-If you would like to contribute a new translation, your translator will need [this file](https://raw.githubusercontent.com/Layer9Berlin/free-dialog-plus/main/src/locales/de/messages.po) to know what to translate. They should be familiar with this file type and should be able to convert it into the required language. Once you have the translated file, either open a pull request (if you know this works) or simply [get in touch](https://layer9.berlin).
+If you would like to contribute a new translation, your translator will need [this file](https://raw.githubusercontent.com/Layer9Berlin/free-dialog-plus/main/src/locales/de/messages.po) to know what to translate. They will likely be familiar with this file type and should be able to convert it into the required language. Once you have the translated file, either open a pull request (if you know this works) or simply [get in touch](https://layer9.berlin).
 
 ## Development
 
