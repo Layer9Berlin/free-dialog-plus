@@ -254,7 +254,7 @@ const BodyContent = ({activeStep}: {activeStep?: number}) => {
             <em>
               <Trans>
                 “We’ve talked about what needs to change in order for you to feel safe. What is the first thing you can
-                do to ensure your own safety?"
+                do to ensure your own safety?”
               </Trans>
             </em>
           </p>
@@ -346,7 +346,7 @@ const BodyContent = ({activeStep}: {activeStep?: number}) => {
           <p className="text-muted">
             <em>
               <Trans>
-                "Is there a neighbour or friend who could help you bring your shopping to the top floor with you?”
+                “Is there a neighbour or friend who could help you bring your shopping to the top floor with you?”
               </Trans>
             </em>
           </p>

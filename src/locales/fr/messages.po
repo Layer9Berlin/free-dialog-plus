@@ -13,10 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/modals/StepInformationModal.tsx:348
-msgid "\"Is there a neighbour or friend who could help you bring your shopping to the top floor with you?”"
-msgstr "« Y a-t-il un voisin ou un ami qui pourrait vous aider à apporter vos courses au dernier étage avec vous ? »"
-
 #: src/hooks/QuestionTexts.ts:10
 msgid "Accommodation"
 msgstr "Hébergement"
@@ -72,17 +68,9 @@ msgstr "Annuler"
 msgid "Choose a language"
 msgstr "Choisissez une langue"
 
-#: src/components/modals/ExportPasswordModal.tsx:60
-msgid "Choose a password"
-msgstr "Choisissez un mot de passe"
-
 #: src/components/pages/clients/partials/ClientsHeader.tsx:18
 msgid "Clients"
 msgstr "Clients"
-
-#: src/components/pages/register/RegisterPage.tsx:50
-#~ msgid "Close"
-#~ msgstr "Fermer"
 
 #: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:116
 msgid "Considering options"
@@ -92,18 +80,9 @@ msgstr "Considérer les options"
 msgid "Create"
 msgstr "Créer"
 
-#: src/components/modals/DataLossWarningModal.tsx:32
-#: src/components/pages/register/RegisterPage.tsx:57
-#~ msgid "Create account"
-#~ msgstr "Créer un compte"
-
 #: src/components/calendar/Calendar.tsx:58
 msgid "Current assessment"
 msgstr "Évaluation actuelle"
-
-#: src/components/menu/DataInfoPanel.tsx:21
-#~ msgid "Data protection"
-#~ msgstr "Protection des données"
 
 #: src/components/modals/DeleteAssessmentsModal.tsx:27
 #: src/components/modals/DeleteClientsModal.tsx:22
@@ -138,10 +117,6 @@ msgstr "Voulez-vous vraiment supprimer le client sélectionné et toutes les év
 msgid "Do you really want to delete this assessment? This cannot be undone."
 msgstr "Voulez-vous vraiment supprimer cette évaluation ? Ça ne peut pas être annulé."
 
-#: src/components/pages/register/RegisterPage.tsx:75
-#~ msgid "E-Mail-Adresse"
-#~ msgstr "Adresse email"
-
 #: src/components/modals/ClientDataModal.tsx:94
 msgid "Edit"
 msgstr "Modifier"
@@ -149,10 +124,6 @@ msgstr "Modifier"
 #: src/components/modals/ClientDataModal.tsx:16
 msgid "Edit client"
 msgstr "Modifier le client"
-
-#: src/components/modals/ExportPasswordModal.tsx:38
-msgid "Enter a password to protect the exported file"
-msgstr "Entrez un mot de passe pour protéger le fichier exporté"
 
 #: src/components/modals/StepInformationModal.tsx:29
 #: src/components/modals/StepInformationModal.tsx:65
@@ -207,13 +178,9 @@ msgstr "Tout d'abord, le clinicien doit explorer l'évaluation du domaine par le
 msgid "First, the clinician should invite the patient to think for themselves of all the possible things they might be able to do to help their own situation."
 msgstr "Tout d'abord, le clinicien doit inviter le patient à réfléchir par lui-même à toutes les choses possibles qu'il pourrait faire pour améliorer sa propre situation."
 
-#: src/components/menu/AddToHomescreenInfoPanel.tsx:45
+#: src/components/modals/AddToHomescreenInfoModal.tsx:21
 msgid "For example, on iOS, tap<0><1/></0>in the bottom menu, followed by \"Add to Home Screen<2><3/></2>\"."
 msgstr "Par exemple, sur iOS, appuyez sur <0><1/></0>dans le menu du bas, suivi de \"Ajouter à l'écran d'accueil<2><3/></2>\"."
-
-#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:9
-#~ msgid "Free DIALOG+"
-#~ msgstr "DIALOG+ gratuit"
 
 #: src/hooks/QuestionTexts.ts:21
 msgid "Friendships"
@@ -284,30 +251,18 @@ msgstr "S'il est utilisé dans le navigateur, l'effacement du cache du navigateu
 msgid "Import"
 msgstr "Importer"
 
-#: src/components/modals/DataLossWarningModal.tsx:20
-#~ msgid "Important information"
-#~ msgstr "Une information important"
-
 #: src/components/modals/StepInformationModal.tsx:238
 msgid "In step 3, three kinds of questions can be asked:"
 msgstr "À l'étape 3, trois types de questions peuvent être posées :"
 
-#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:20
-msgid "Install App on iOS"
-msgstr "Installer l'appli sur iOS"
+#: src/components/modals/AddToHomescreenInfoModal.tsx:9
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:39
+msgid "Install on Home Screen"
+msgstr "Ajouter à l'écran d'accueil"
 
-#: src/components/menu/AddToHomescreenInfoPanel.tsx:42
+#: src/components/modals/AddToHomescreenInfoModal.tsx:16
 msgid "Install this app on your <0>Home Screen</0> for a better experience."
 msgstr "Installez cette application sur votre <0>écran d'accueil</0> pour une meilleure expérience."
-
-#: src/components/menu/AddToHomescreenInfoPanel.tsx:21
-msgid "Installed"
-msgstr "installée"
-
-#: src/components/pages/login/LoginPage.tsx:63
-#: src/components/pages/register/RegisterPage.tsx:110
-#~ msgid "Invalid password"
-#~ msgstr "Mot de passe incorrect"
 
 #: src/hooks/QuestionTexts.ts:9
 msgid "Job situation"
@@ -321,26 +276,10 @@ msgstr "Nom de famille"
 msgid "Leisure activities"
 msgstr "Loisirs"
 
-#: src/components/pages/login/LoginPage.tsx:77
-#~ msgid "Log in"
-#~ msgstr "Connexion"
-
-#: src/components/pages/clients/partials/ClientsHeader.tsx:23
-#~ msgid "Log out"
-#~ msgstr "Se déconnecter"
-
-#: src/components/pages/login/LoginPage.tsx:41
-#~ msgid "Login"
-#~ msgstr "Connexion"
-
 #: src/components/modals/StepInformationModal.tsx:488
 #: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:88
 msgid "Looking forward"
 msgstr "Avoir hâte de"
-
-#: src/components/pages/register/RegisterPage.tsx:46
-#~ msgid "Looks like the passwords you entered do not match. Please try again!"
-#~ msgstr "Il semble que les mots de passe que vous avez saisis ne correspondent pas. Veuillez réessayer!"
 
 #: src/hooks/QuestionTexts.ts:23
 msgid "Medication"
@@ -397,11 +336,7 @@ msgstr "Pas encore d'évaluations passées"
 msgid "No selection made"
 msgstr "Aucune sélection effectuée"
 
-#: src/components/menu/DataInfoPanel.tsx:24
-#~ msgid "Note that all data is stored <0>on this device</0> only. Take care when deleting your browser cache and use the import/export functionality or install the app (see below) to prevent accidental loss of data."
-#~ msgstr "Notez que toutes les données sont stockées <0>sur cet appareil</0> uniquement. Soyez prudent lorsque vous supprimez le cache de votre navigateur et utilisez la fonctionnalité d'importation/exportation ou installez l'application (voir ci-dessous) pour éviter toute perte accidentelle de données."
-
-#: src/components/modals/ExportPasswordModal.tsx:73
+#: src/components/modals/AddToHomescreenInfoModal.tsx:38
 #: src/components/modals/ImportErrorModal.tsx:28
 #: src/components/modals/NoSelectionModal.tsx:28
 msgid "OK"
@@ -411,19 +346,6 @@ msgstr "D'ACCORD"
 msgid "Once an action item has been decided, the clinician should document it in the text box provided. Documentation should be brief, but precise. A reminder of the agreed action(s) will appear at the start of the next session, so that patient and clinician can review the progress since the last session before initiating a new session."
 msgstr "Une fois qu'un élément d'action a été décidé, le clinicien doit le documenter dans la zone de texte fournie. La documentation doit être brève, mais précise. Un rappel des actions convenues apparaîtra au début de la session suivante, afin que le patient et le clinicien puissent revoir les progrès depuis la dernière session avant de lancer une nouvelle session."
 
-#: src/components/pages/login/LoginPage.tsx:48
-#: src/components/pages/register/RegisterPage.tsx:90
-#~ msgid "Password"
-#~ msgstr "Mot de passe"
-
-#: src/components/pages/register/RegisterPage.tsx:105
-#~ msgid "Password confirmation"
-#~ msgstr "Confirmation mot de passe"
-
-#: src/components/pages/register/RegisterPage.tsx:42
-#~ msgid "Password mismatch"
-#~ msgstr "Non concordance des mots de passe"
-
 #: src/hooks/QuestionTexts.ts:22
 msgid "Personal safety"
 msgstr "Sécurité personnelle"
@@ -432,15 +354,11 @@ msgstr "Sécurité personnelle"
 msgid "Physical health"
 msgstr "Santé physique"
 
-#: src/components/modals/ExportPasswordModal.tsx:46
-msgid "Please enter the password used to protect the file"
-msgstr "Veuillez entrer le mot de passe utilisé pour protéger le fichier"
-
 #: src/hooks/QuestionTexts.ts:25
 msgid "Practical help"
 msgstr "Aide pratique"
 
-#: src/components/modals/DataLossWarningModal.tsx:35
+#: src/components/modals/DataLossWarningModal.tsx:31
 msgid "Proceed"
 msgstr "Procéder"
 
@@ -455,10 +373,6 @@ msgstr "Examen"
 #: src/components/menu/StageNavigation.tsx:31
 msgid "Select"
 msgstr "Sélectionner"
-
-#: src/components/pages/settings/partials/SettingsHeader.tsx:9
-#~ msgid "Settings"
-#~ msgstr "Paramètres"
 
 #: src/components/pages/assessment/stages/discuss/DiscussStage.tsx:106
 msgid "Smallest improvement?"
@@ -492,10 +406,6 @@ msgstr "Il s'agit d'une mise en œuvre gratuite et basée sur le Web de l'<0>int
 msgid "Through Steps 1 – 3, both the patient and the clinician have developed a thorough understanding of the patient’s current situation, thought about desired changes for the future, and identified options for moving forward. The goal of Step 4 is to reach an agreement on what action(s) should be taken, and by whom."
 msgstr "Au cours des étapes 1 à 3, le patient et le clinicien ont développé une compréhension approfondie de la situation actuelle du patient, réfléchi aux changements souhaités pour l'avenir et identifié des options pour aller de l'avant. L'objectif de l'étape 4 est de parvenir à un accord sur les actions à entreprendre et par qui."
 
-#: src/components/menu/AddToHomescreenInfoPanel.tsx:38
-msgid "Tip"
-msgstr "Conseil"
-
 #: src/components/menu/DataInfoPanel.tsx:33
 msgid "To prevent accidental data loss, use the import/export functionality in the browser version, or install the app on iOS."
 msgstr "Pour éviter toute perte accidentelle de données, utilisez la fonctionnalité d'importation/exportation dans la version du navigateur, ou installez l'application sur iOS."
@@ -505,7 +415,7 @@ msgstr "Pour éviter toute perte accidentelle de données, utilisez la fonctionn
 msgid "Understanding"
 msgstr "Compréhension"
 
-#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:24
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:45
 msgid "Use in browser"
 msgstr "Utiliser dans le navigateur"
 
@@ -513,7 +423,7 @@ msgstr "Utiliser dans le navigateur"
 msgid "Warning: Data Loss Possible"
 msgstr "Avertissement : Possibilité de perte de données"
 
-#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:11
+#: src/components/pages/welcome/partials/WelcomeInfoPanel.tsx:25
 msgid "Welcome to Free DIALOG+"
 msgstr "Bienvenue dans DIALOG+ gratuit"
 
@@ -553,10 +463,6 @@ msgstr "Oui"
 msgid "You are using the demo version of DIALOG+. Your data will be saved to this device and <0>will be deleted</0> if you clear your browser cache. Use the export functionality in the bottom left portion of the Clients page to back up your data."
 msgstr "Vous utilisez la version de démonstration de DIALOG+. Vos données seront enregistrées sur cet appareil et <0>seront supprimées</0> si vous videz la mémoire cache de votre navigateur. Utilisez la fonction d'exportation située dans la partie inférieure gauche de la page Clients pour sauvegarder vos données."
 
-#: src/components/menu/AddToHomescreenInfoPanel.tsx:25
-msgid "You have successfully installed the app."
-msgstr "Vous avez installé l'application avec succès."
-
 #: src/components/modals/StepInformationModal.tsx:119
 msgid "characterised by tangible behaviours rather than vague feelings (e.g. “I would talk more to my neighbours” rather than “I would feel more included in my community”)"
 msgstr "caractérisé par des comportements tangibles plutôt que par des sentiments vagues (par exemple « je parlerais plus à mes voisins » plutôt que « je me sentirais plus inclus dans ma communauté »)"
@@ -584,10 +490,6 @@ msgstr "au milieu"
 #: src/components/pages/assessments/partials/AssessmentRow.tsx:58
 msgid "last updated"
 msgstr "dernière mise à jour"
-
-#: src/components/pages/register/RegisterPage.tsx:130
-#~ msgid "other options"
-#~ msgstr "autres options"
 
 #: src/components/pages/assessment/stages/assess/partials/AssessStageRow.tsx:9
 msgid "totally dissatisfied"
@@ -653,6 +555,10 @@ msgstr "« Si vous vous sentez mal à l'aise, il n'est pas nécessaire de décid
 msgid "“If your satisfaction with physical health was 7 (totally satisfied), what exactly would be different?”"
 msgstr "« Si votre niveau de satisfaction vis-à-vis de votre santé physique était de 7 (entièrement satisfait), qu'est-ce qui serait exactement différent ? »"
 
+#: src/components/modals/StepInformationModal.tsx:348
+msgid "“Is there a neighbour or friend who could help you bring your shopping to the top floor with you?”"
+msgstr "« Y a-t-il un voisin ou un ami qui pourrait vous aider à apporter vos courses au dernier étage avec vous ? »"
+
 #: src/components/modals/StepInformationModal.tsx:338
 msgid "“Is there anyone else who could get involved in helping you to exercise more?”"
 msgstr "\"Y a-t-il quelqu'un d'autre qui pourrait s'impliquer pour vous aider à faire plus d'exercice?\""
@@ -698,8 +604,8 @@ msgid "“We‘ve talked about a lot of different options today. Which ones will
 msgstr "\"Nous avons parlé de beaucoup d'options différentes aujourd'hui. Lesquels allons-nous choisir ? »"
 
 #: src/components/modals/StepInformationModal.tsx:255
-msgid "“We’ve talked about what needs to change in order for you to feel safe. What is the first thing you can do to ensure your own safety?\""
-msgstr "« Nous avons parlé de ce qui doit changer pour que vous vous sentiez en sécurité. Quelle est la première chose que vous pouvez faire pour assurer votre propre sécurité ?\""
+msgid "“We’ve talked about what needs to change in order for you to feel safe. What is the first thing you can do to ensure your own safety?”"
+msgstr "« Nous avons parlé de ce qui doit changer pour que vous vous sentiez en sécurité. Quelle est la première chose que vous pouvez faire pour assurer votre propre sécurité ? »"
 
 #: src/components/modals/StepInformationModal.tsx:263
 msgid "“What are some of the ways you could start to reach out to others in the community?”"
