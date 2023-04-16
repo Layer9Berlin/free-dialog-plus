@@ -112,7 +112,7 @@ msgstr "Slet"
 
 #: src/components/modals/DeleteAssessmentsModal.tsx:16
 msgid "Delete assessment?"
-msgstr "Vil du slette vurderingen?"
+msgstr "Slet vurdering?"
 
 #: src/components/modals/DeleteClientsModal.tsx:9
 msgid "Delete this client?"
@@ -144,11 +144,11 @@ msgstr "Vil du virkelig slette denne vurdering? Dette kan ikke fortrydes."
 
 #: src/components/modals/ClientDataModal.tsx:94
 msgid "Edit"
-msgstr "Redigere"
+msgstr "Rediger"
 
 #: src/components/modals/ClientDataModal.tsx:16
 msgid "Edit client"
-msgstr "Rediger klient"
+msgstr "Rediger patient"
 
 #: src/components/modals/ExportPasswordModal.tsx:38
 msgid "Enter a password to protect the exported file"
@@ -177,7 +177,7 @@ msgstr "Udforske muligheder"
 
 #: src/components/buttons/ExportButton.tsx:21
 msgid "Export"
-msgstr "Eksport"
+msgstr "Eksporter"
 
 #: src/components/buttons/ExportButton.tsx:22
 msgid "Export selected"
@@ -278,11 +278,11 @@ msgstr "At identificere, hvad der virker"
 
 #: src/components/menu/DataInfoPanel.tsx:29
 msgid "If used in the browser, deleting your browser cache will <0>permanently erase all client and session data</0>."
-msgstr "Hvis du bruger den i browseren, vil sletning af din browsercache <0>slette alle klient- og sessionsdata permanent</0>."
+msgstr "Hvis du bruger browseren, vil sletning af din browserhistorik <0>slette alle patient- og sessionsdata permanent</0>."
 
 #: src/components/buttons/ImportButton.tsx:31
 msgid "Import"
-msgstr "Importere"
+msgstr "Importer"
 
 #: src/components/modals/DataLossWarningModal.tsx:20
 #~ msgid "Important information"
