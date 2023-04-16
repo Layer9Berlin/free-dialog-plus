@@ -23,6 +23,10 @@ export const CheckForWelcomeComponent = ({children}: {children?: ReactNode}) => 
         return
       }
       appContext.setUserWelcomed(true)
+      // skip welcome screen if app is installed as a PWA
+      if (window.matchMedia("(display-mode: standalone)").matches) {
+        return
+      }
       const fetchedClients = await dataStore.clients.list()
       const alreadyHaveClients = !!fetchedClients.length
       if (alreadyHaveClients) {
